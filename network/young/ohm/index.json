@@ -1,0 +1,127 @@
+{
+  "Main": {
+    "NetworkName": "BKC",
+    "ChainId": "12123",
+    "RPC": "http://49.0.198.24:8545",
+    "DaggerEndpoint": "wss://goerli.dagger.matic.network",
+    "WatcherAPI": "https://staking.api.subgraph.matic.today/api/v2",
+    "StakingAPI": "https://staking.api.subgraph.matic.today/api/v2",
+    "Explorer": "http://94.74.113.32",
+    "SubgraphUrl": "https://api.thegraph.com/subgraphs/name/maticnetwork/mumbai-root-subgraphs",
+    "SupportsEIP1559": false,
+    "Owner": "0x8A9a4147A0c3c4ff45c2DC14a3aC94D1c899E0Cf",
+    "Contracts": {
+      "Registry": "0x4435c8DF59DF9Fbd791602Df879F6411cb4d673c",
+      "RootChain": "0xd71BA4b33b03cb69b0D0B3ea4588a6DB6c2d635A",
+      "Governance": "0x3775fd492F1231f45dd3b726F257629Aa5eE6dB2",
+      "GovernanceProxy": "0x661Debd5140C1022f3814F605c0F64034146021B",
+      "RootChainProxy": "0xD9417e5D9E58B44d53650733F5687483C426207f",
+      "DepositManager": "0x98c6f938CaE2bd5c1692325AC9cBD5f191A8b1A9",
+      "DepositManagerProxy": "0x5f08eD5F9b0282B4B82181E9CbC4d4D25B248222",
+      "WithdrawManager": "0xF60E9412474Cc66266E7875Cdd2c3b90edF70905",
+      "WithdrawManagerProxy": "0x012B1fA38895600666683BE95F1C663B2eeDD817",
+      "StakeManager": "0x42d5ae13B63540Fc768cda80EFFef836E1137e98",
+      "StakeManagerProxy": "0x8B9ae0E93FDF53419aBaAcA403acDc315B1A9530",
+      "ValidatorShare": "0x0a010Dcc43e7eb33c89D47C7688fb9bC3Ac90C6F",
+      "SlashingManager": "0xA962fD5e16b121B101C8105f2220503A69b6ee3a",
+      "StakingInfo": "0xc8252005D4d0FF8fBcD6e96D171d81E2c59B60B5",
+      "ExitNFT": "0x85412CB0DCad5D6F32ABe36a5e6c59D135041AdE",
+      "StateSender": "0x1C6B235C7cF85F5c9f8D6dC47cF7bF22Cd4c2576",
+      "predicates": {
+        "ERC20Predicate": "0xd04755a190F22d898813317De0c4423Db2FF6B44",
+        "ERC721Predicate": "0x423BCC39b35c2bD40489d0fAC38581AB4552B720",
+        "MarketplacePredicate": "0x13e506eC9F196b8F65077616019957c73d9EE3F7",
+        "TransferWithSigPredicate": "0x66654FBE9628092d79461f78F544576BCb6bDf88"
+      },
+      "tokens": {
+        "MaticWeth": "0x68be3201E6c4C39C3cbB6Bf834ca8ef5a852cdBb",
+        "MaticToken": "0xeB4Df3961F4570c8da55e45F2be227812828246E",
+        "TestToken": "0x47c67Bd133F547973070865028a8A9F003ca0ed3",
+        "RootERC721": "0x09447DF53b2cb4DBcD202217720806b97CA2c760"
+      }
+    },
+    "POSContracts": {
+      "Merkle": "0x0ef207185e0c1631beb5514eb76501dd16ff9258",
+      "MerklePatriciaProof": "0xfa76e5b10a0131573176bd2802535b4a9e76fecb",
+      "RLPReader": "0x383b6b577298a35fd8ee18536d3915db6039468f",
+      "SafeERC20": "0xcf0902e21c85ba20633c89523c9a0bfa04de3ec5",
+      "RootChainManager": "0x0d2ae21bf7e72f646ef8e1f2aa92edbd13588691",
+      "RootChainManagerProxy": "0xBbD7cBFA79faee899Eaf900F13C9065bF03B1A74",
+      "DummyStateSender": "0x4Ad6FFD6D9b49E832e5ac56f5aEcaB137F9F91C6",
+      "ERC20Predicate": "0x7B276A55987E3020026Bb098F15E968313Bd1aF2",
+      "ERC20PredicateProxy": "0xdD6596F2029e6233DEFfaCa316e6A95217d4Dc34",
+      "ERC721Predicate": "0x7234aD18089B01211b11110587302e5c51a764E1",
+      "ERC721PredicateProxy": "0x74D83801586E9D3C4dc45FfCD30B54eA9C88cf9b",
+      "ERC1155Predicate": "0x295Eb5a0D8F6B3675013DC4ac2bBd218F0773DC7",
+      "ERC1155PredicateProxy": "0xB19a86ba1b50f0A395BfdC3557608789ee184dC8",
+      "EtherPredicate": "0xcfa4746e2ffa649ede74c78c30be0bd7860e54c2",
+      "EtherPredicateProxy": "0xe2B01f3978c03D6DdA5aE36b2f3Ac0d66C54a6D5",
+      "MintableERC20Predicate": "0xb63caE5C43D26d5689B4C80e80CF3Fdd76D25BFC",
+      "MintableERC20PredicateProxy": "0x37c3bfC05d5ebF9EBb3FF80ce0bd0133Bf221BC8",
+      "MintableERC721Predicate": "0x4B505061290CcFF164AEdf15E0D5B49De6FF3b49",
+      "MintableERC721PredicateProxy": "0x56E14C4C1748a818a5564D33cF774c59EB3eDF59",
+      "MintableERC1155Predicate": "0x26e0E8E6e9c9200D024437C336Fd3C31AA6DA90C",
+      "MintableERC1155PredicateProxy": "0x72d6066F486bd0052eefB9114B66ae40e0A6031a",
+      "Tokens": {
+        "DummyERC20": "0x655F2166b0709cd575202630952D71E2bB0d61Af",
+        "DummyERC721": "0x084297B12F204Adb74c689be08302FA3f12dB8A7",
+        "DummyERC1155": "0x2e3Ef7931F2d0e4a7da3dea950FF3F19269d9063",
+        "DummyMintableERC20": "0x6668BfceC8F6fE54B57Da04D487d1fC95FEd78cb",
+        "DummyMintableERC721": "0xFf3aD71e6323dD584348d3E5FfFD4d07d82a2355",
+        "DummyMintableERC1155": "0x9f5755D47fB80100E7ee65Bf7e136FCA85Dd9334"
+      }
+    },
+    "FxPortalContracts": {
+      "FxRoot": "0x3d1d3E34f7fB6D26245E6640E1c50710eFFf15bA",
+      "FxERC20RootTunnel": "0x79B77456684AEB0bf7c8Ec50FB9c714d52BdA46c",
+      "FxERC721RootTunnel": "0x823eF03B39C339337E451d82cEC57f31316de15F",
+      "FxERC1155RootTunnel": "0x186C72e49a3Db03E9161Ca18e52C09DE9468Bfc9"
+    }
+  },
+  "Matic": {
+    "NetworkName": "YoungOhm Matafvcker",
+    "ChainId": "191042",
+    "RPC": "http://159.138.229.6:8545",
+    "DaggerEndpoint": "wss://mumbai-dagger.matic.today",
+    "Explorer": "https://mumbai.polygonscan.com",
+    "NetworkAPI": "https://apis.matic.network/api/v1/mumbai",
+    "SupportsEIP1559": false,
+    "Contracts": {
+      "EIP1559Burn": "0x70bca57f4579f58670ab2d18ef16e02c17553c38",
+      "ChildChain": "0x8DF039df4EE9d866C75B7bCF599103022E643c48",
+      "tokens": {
+        "MaticWeth": "0xa083B7C7C353Aa8d7FD3cD59ce12c8CFF0E9F27A",
+        "MaticToken": "0x0000000000000000000000000000000000001010",
+        "TestToken": "0x0aAb14984b24E051B836c4126B90597878B5a517",
+        "RootERC721": "0x5B9CbFf6E8FCAAe0Ce01Ac9e876932d5F48580ee"
+      }
+    },
+    "POSContracts": {
+      "ChildChainManager": "0x2e5e27d50EFa501D90Ad3638ff8441a0C0C0d75e",
+      "ChildChainManagerProxy": "0xb5505a6d998549090530911180f38aC5130101c6",
+      "Tokens": {
+        "DummyERC20": "0xfe4F5145f6e09952a5ba9e956ED0C25e3Fa4c7F1",
+        "DummyERC721": "0x757b1BD7C12B81b52650463e7753d7f5D0565C0e",
+        "DummyERC1155": "0xA07e45A987F19E25176c877d98388878622623FA",
+        "DummyMintableERC20": "0x4d350e8A3C0D57714d3b80c9e2030ab8f1Bb7875",
+        "DummyMintableERC721": "0xd854928B54c408F1D38D869BE744c9E6Ce0A2448",
+        "DummyMintableERC1155": "0xfAc5F13459EB4241D2C3F8BbfC2789FC006BCBc8",
+        "MaticWETH": "0xA6FA4fB5f76172d178d61B04b0ecd319C5d1C0aa"
+      }
+    },
+    "FxPortalContracts": {
+      "FxChild": "0xCf73231F28B7331BBe3124B907840A94851f9f11",
+      "FxERC20ChildTunnel": "0x9dee38B0D819c78cEBAbc86707019dA18f25E6Cc",
+      "FxERC721ChildTunnel": "0x52001E25F365Fa1f03AC8f8aCc8c8eCcc662e5e1",
+      "FxERC1155ChildTunnel": "0x886425F120AC6d7E79dD7BB1fA5689B5887F985c"
+    },
+    "GenesisContracts": {
+      "BorValidatorSet": "0x0000000000000000000000000000000000001000",
+      "StateReceiver": "0x0000000000000000000000000000000000001001"
+    }
+  },
+  "Heimdall": {
+    "ChainId": "heimdall-80001",
+    "API": "https://heimdall.api.matic.today"
+  }
+}
