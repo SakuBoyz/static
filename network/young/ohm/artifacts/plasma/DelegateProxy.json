@@ -32,25 +32,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proxyType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"proxyTypeId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/common/misc/DelegateProxy.sol\":\"DelegateProxy\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/common/misc/DelegateProxy.sol\":{\"keccak256\":\"0xc79246d93015a8619b9dfa3af51a574eddbe3c6edcb26746746e28ee1e135468\",\"urls\":[\"bzz-raw://7e56f31293a88c18436420b3694ba5ac7d7ba6fef8c9b156cc6b14018bf350c8\",\"dweb:/ipfs/QmTwb6Qp3Nua9r1tvg5R5Zi1m4JzA1sfHSWHhJGhtyfYst\"]},\"project:/contracts/common/misc/DelegateProxyForwarder.sol\":{\"keccak256\":\"0x82b7c02a7817d0e48b6112eac9cbc3826647445f6d79870f99b281a3cc9d4852\",\"urls\":[\"bzz-raw://609daa0fc74f15b893926da22cc04ee8569c17854150376780b377f9fd614412\",\"dweb:/ipfs/QmbKhEQYDBJzHWv3sSaGmhsBZrTnxR5ZjB7B66xxhFCWk1\"]},\"project:/contracts/common/misc/ERCProxy.sol\":{\"keccak256\":\"0x11f0e51892de956981bccfbd1474fffc529d4d17802a10ff0fa27ad233955847\",\"urls\":[\"bzz-raw://7f3e9de730a5c32b0691785b9b1db6072196f14714c33c723e20d380a5f5fa29\",\"dweb:/ipfs/QmZjZ9j5UWgWW78xjKY3CFckAxMTtQu1tst9F4ci9tq6zP\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proxyType\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"proxyTypeId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/matic-cli/devnet/code/contracts/contracts/common/misc/DelegateProxy.sol\":\"DelegateProxy\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/root/matic-cli/devnet/code/contracts/contracts/common/misc/DelegateProxy.sol\":{\"keccak256\":\"0xc79246d93015a8619b9dfa3af51a574eddbe3c6edcb26746746e28ee1e135468\",\"urls\":[\"bzz-raw://7e56f31293a88c18436420b3694ba5ac7d7ba6fef8c9b156cc6b14018bf350c8\",\"dweb:/ipfs/QmTwb6Qp3Nua9r1tvg5R5Zi1m4JzA1sfHSWHhJGhtyfYst\"]},\"/root/matic-cli/devnet/code/contracts/contracts/common/misc/DelegateProxyForwarder.sol\":{\"keccak256\":\"0x82b7c02a7817d0e48b6112eac9cbc3826647445f6d79870f99b281a3cc9d4852\",\"urls\":[\"bzz-raw://609daa0fc74f15b893926da22cc04ee8569c17854150376780b377f9fd614412\",\"dweb:/ipfs/QmbKhEQYDBJzHWv3sSaGmhsBZrTnxR5ZjB7B66xxhFCWk1\"]},\"/root/matic-cli/devnet/code/contracts/contracts/common/misc/ERCProxy.sol\":{\"keccak256\":\"0x11f0e51892de956981bccfbd1474fffc529d4d17802a10ff0fa27ad233955847\",\"urls\":[\"bzz-raw://7f3e9de730a5c32b0691785b9b1db6072196f14714c33c723e20d380a5f5fa29\",\"dweb:/ipfs/QmZjZ9j5UWgWW78xjKY3CFckAxMTtQu1tst9F4ci9tq6zP\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\nimport {ERCProxy} from \"./ERCProxy.sol\";\nimport {DelegateProxyForwarder} from \"./DelegateProxyForwarder.sol\";\n\ncontract DelegateProxy is ERCProxy, DelegateProxyForwarder {\n    function proxyType() external pure returns (uint256 proxyTypeId) {\n        // Upgradeable proxy\n        proxyTypeId = 2;\n    }\n\n    function implementation() external view returns (address);\n}\n",
-  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/misc/DelegateProxy.sol",
+  "sourcePath": "/root/matic-cli/devnet/code/contracts/contracts/common/misc/DelegateProxy.sol",
   "ast": {
-    "absolutePath": "project:/contracts/common/misc/DelegateProxy.sol",
+    "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/misc/DelegateProxy.sol",
     "exportedSymbols": {
       "DelegateProxy": [
-        10115
+        7499
       ]
     },
-    "id": 10116,
+    "id": 7500,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10091,
+        "id": 7475,
         "literals": [
           "solidity",
           "^",
@@ -58,35 +58,35 @@
           ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:59"
+        "src": "0:23:35"
       },
       {
-        "absolutePath": "project:/contracts/common/misc/ERCProxy.sol",
+        "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/misc/ERCProxy.sol",
         "file": "./ERCProxy.sol",
-        "id": 10093,
+        "id": 7477,
         "nodeType": "ImportDirective",
-        "scope": 10116,
-        "sourceUnit": 10431,
-        "src": "25:40:59",
+        "scope": 7500,
+        "sourceUnit": 7815,
+        "src": "25:40:35",
         "symbolAliases": [
           {
-            "foreign": 10092,
+            "foreign": 7476,
             "local": null
           }
         ],
         "unitAlias": ""
       },
       {
-        "absolutePath": "project:/contracts/common/misc/DelegateProxyForwarder.sol",
+        "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/misc/DelegateProxyForwarder.sol",
         "file": "./DelegateProxyForwarder.sol",
-        "id": 10095,
+        "id": 7479,
         "nodeType": "ImportDirective",
-        "scope": 10116,
-        "sourceUnit": 10153,
-        "src": "66:68:59",
+        "scope": 7500,
+        "sourceUnit": 7537,
+        "src": "66:68:35",
         "symbolAliases": [
           {
-            "foreign": 10094,
+            "foreign": 7478,
             "local": null
           }
         ],
@@ -98,77 +98,77 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 10096,
+              "id": 7480,
               "name": "ERCProxy",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 10430,
-              "src": "162:8:59",
+              "referencedDeclaration": 7814,
+              "src": "162:8:35",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERCProxy_$10430",
+                "typeIdentifier": "t_contract$_ERCProxy_$7814",
                 "typeString": "contract ERCProxy"
               }
             },
-            "id": 10097,
+            "id": 7481,
             "nodeType": "InheritanceSpecifier",
-            "src": "162:8:59"
+            "src": "162:8:35"
           },
           {
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 10098,
+              "id": 7482,
               "name": "DelegateProxyForwarder",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 10152,
-              "src": "172:22:59",
+              "referencedDeclaration": 7536,
+              "src": "172:22:35",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DelegateProxyForwarder_$10152",
+                "typeIdentifier": "t_contract$_DelegateProxyForwarder_$7536",
                 "typeString": "contract DelegateProxyForwarder"
               }
             },
-            "id": 10099,
+            "id": 7483,
             "nodeType": "InheritanceSpecifier",
-            "src": "172:22:59"
+            "src": "172:22:35"
           }
         ],
         "contractDependencies": [
-          10152,
-          10430
+          7536,
+          7814
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 10115,
+        "id": 7499,
         "linearizedBaseContracts": [
-          10115,
-          10152,
-          10430
+          7499,
+          7536,
+          7814
         ],
         "name": "DelegateProxy",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 10108,
+              "id": 7492,
               "nodeType": "Block",
-              "src": "266:61:59",
+              "src": "266:61:35",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 10106,
+                    "id": 7490,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 10104,
+                      "id": 7488,
                       "name": "proxyTypeId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10102,
-                      "src": "305:11:59",
+                      "referencedDeclaration": 7486,
+                      "src": "305:11:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -179,14 +179,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "32",
-                      "id": 10105,
+                      "id": 7489,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "319:1:59",
+                      "src": "319:1:35",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_2_by_1",
@@ -194,42 +194,42 @@
                       },
                       "value": "2"
                     },
-                    "src": "305:15:59",
+                    "src": "305:15:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 10107,
+                  "id": 7491,
                   "nodeType": "ExpressionStatement",
-                  "src": "305:15:59"
+                  "src": "305:15:35"
                 }
               ]
             },
             "documentation": null,
-            "id": 10109,
+            "id": 7493,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "proxyType",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10100,
+              "id": 7484,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "219:2:59"
+              "src": "219:2:35"
             },
             "returnParameters": {
-              "id": 10103,
+              "id": 7487,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10102,
+                  "id": 7486,
                   "name": "proxyTypeId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10109,
-                  "src": "245:19:59",
+                  "scope": 7493,
+                  "src": "245:19:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -237,10 +237,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 10101,
+                    "id": 7485,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "245:7:59",
+                    "src": "245:7:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -250,40 +250,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "244:21:59"
+              "src": "244:21:35"
             },
-            "scope": 10115,
-            "src": "201:126:59",
+            "scope": 7499,
+            "src": "201:126:35",
             "stateMutability": "pure",
-            "superFunction": 10424,
+            "superFunction": 7808,
             "visibility": "external"
           },
           {
             "body": null,
             "documentation": null,
-            "id": 10114,
+            "id": 7498,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "implementation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 10110,
+              "id": 7494,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "356:2:59"
+              "src": "356:2:35"
             },
             "returnParameters": {
-              "id": 10113,
+              "id": 7497,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 10112,
+                  "id": 7496,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 10114,
-                  "src": "382:7:59",
+                  "scope": 7498,
+                  "src": "382:7:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -291,10 +291,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 10111,
+                    "id": 7495,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "382:7:59",
+                    "src": "382:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -305,350 +305,309 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "381:9:59"
+              "src": "381:9:35"
             },
-            "scope": 10115,
-            "src": "333:58:59",
+            "scope": 7499,
+            "src": "333:58:35",
             "stateMutability": "view",
-            "superFunction": 10429,
+            "superFunction": 7813,
             "visibility": "external"
           }
         ],
-        "scope": 10116,
-        "src": "136:257:59"
+        "scope": 7500,
+        "src": "136:257:35"
       }
     ],
-    "src": "0:394:59"
+    "src": "0:394:35"
   },
   "legacyAST": {
-    "attributes": {
-      "absolutePath": "project:/contracts/common/misc/DelegateProxy.sol",
-      "exportedSymbols": {
-        "DelegateProxy": [
-          10115
-        ]
-      }
+    "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/misc/DelegateProxy.sol",
+    "exportedSymbols": {
+      "DelegateProxy": [
+        7499
+      ]
     },
-    "children": [
+    "id": 7500,
+    "nodeType": "SourceUnit",
+    "nodes": [
       {
-        "attributes": {
-          "literals": [
-            "solidity",
-            "^",
-            "0.5",
-            ".2"
-          ]
-        },
-        "id": 10091,
-        "name": "PragmaDirective",
-        "src": "0:23:59"
+        "id": 7475,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
       },
       {
-        "attributes": {
-          "SourceUnit": 10431,
-          "absolutePath": "project:/contracts/common/misc/ERCProxy.sol",
-          "file": "./ERCProxy.sol",
-          "scope": 10116,
-          "symbolAliases": [
-            {
-              "foreign": 10092,
-              "local": null
-            }
-          ],
-          "unitAlias": ""
-        },
-        "id": 10093,
-        "name": "ImportDirective",
-        "src": "25:40:59"
-      },
-      {
-        "attributes": {
-          "SourceUnit": 10153,
-          "absolutePath": "project:/contracts/common/misc/DelegateProxyForwarder.sol",
-          "file": "./DelegateProxyForwarder.sol",
-          "scope": 10116,
-          "symbolAliases": [
-            {
-              "foreign": 10094,
-              "local": null
-            }
-          ],
-          "unitAlias": ""
-        },
-        "id": 10095,
-        "name": "ImportDirective",
-        "src": "66:68:59"
-      },
-      {
-        "attributes": {
-          "contractDependencies": [
-            10152,
-            10430
-          ],
-          "contractKind": "contract",
-          "documentation": null,
-          "fullyImplemented": false,
-          "linearizedBaseContracts": [
-            10115,
-            10152,
-            10430
-          ],
-          "name": "DelegateProxy",
-          "scope": 10116
-        },
-        "children": [
+        "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/misc/ERCProxy.sol",
+        "file": "./ERCProxy.sol",
+        "id": 7477,
+        "nodeType": "ImportDirective",
+        "scope": 7500,
+        "sourceUnit": 7815,
+        "src": "25:40:35",
+        "symbolAliases": [
           {
-            "attributes": {
-              "arguments": null
-            },
-            "children": [
-              {
-                "attributes": {
-                  "contractScope": null,
-                  "name": "ERCProxy",
-                  "referencedDeclaration": 10430,
-                  "type": "contract ERCProxy"
-                },
-                "id": 10096,
-                "name": "UserDefinedTypeName",
-                "src": "162:8:59"
-              }
-            ],
-            "id": 10097,
-            "name": "InheritanceSpecifier",
-            "src": "162:8:59"
-          },
-          {
-            "attributes": {
-              "arguments": null
-            },
-            "children": [
-              {
-                "attributes": {
-                  "contractScope": null,
-                  "name": "DelegateProxyForwarder",
-                  "referencedDeclaration": 10152,
-                  "type": "contract DelegateProxyForwarder"
-                },
-                "id": 10098,
-                "name": "UserDefinedTypeName",
-                "src": "172:22:59"
-              }
-            ],
-            "id": 10099,
-            "name": "InheritanceSpecifier",
-            "src": "172:22:59"
-          },
-          {
-            "attributes": {
-              "documentation": null,
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "proxyType",
-              "scope": 10115,
-              "stateMutability": "pure",
-              "superFunction": 10424,
-              "visibility": "external"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 10100,
-                "name": "ParameterList",
-                "src": "219:2:59"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "proxyTypeId",
-                      "scope": 10109,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 10101,
-                        "name": "ElementaryTypeName",
-                        "src": "245:7:59"
-                      }
-                    ],
-                    "id": 10102,
-                    "name": "VariableDeclaration",
-                    "src": "245:19:59"
-                  }
-                ],
-                "id": 10103,
-                "name": "ParameterList",
-                "src": "244:21:59"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "uint256"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 10102,
-                              "type": "uint256",
-                              "value": "proxyTypeId"
-                            },
-                            "id": 10104,
-                            "name": "Identifier",
-                            "src": "305:11:59"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "hexvalue": "32",
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "lValueRequested": false,
-                              "subdenomination": null,
-                              "token": "number",
-                              "type": "int_const 2",
-                              "value": "2"
-                            },
-                            "id": 10105,
-                            "name": "Literal",
-                            "src": "319:1:59"
-                          }
-                        ],
-                        "id": 10106,
-                        "name": "Assignment",
-                        "src": "305:15:59"
-                      }
-                    ],
-                    "id": 10107,
-                    "name": "ExpressionStatement",
-                    "src": "305:15:59"
-                  }
-                ],
-                "id": 10108,
-                "name": "Block",
-                "src": "266:61:59"
-              }
-            ],
-            "id": 10109,
-            "name": "FunctionDefinition",
-            "src": "201:126:59"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "documentation": null,
-              "implemented": false,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "implementation",
-              "scope": 10115,
-              "stateMutability": "view",
-              "superFunction": 10429,
-              "visibility": "external"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 10110,
-                "name": "ParameterList",
-                "src": "356:2:59"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "",
-                      "scope": 10114,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
-                        },
-                        "id": 10111,
-                        "name": "ElementaryTypeName",
-                        "src": "382:7:59"
-                      }
-                    ],
-                    "id": 10112,
-                    "name": "VariableDeclaration",
-                    "src": "382:7:59"
-                  }
-                ],
-                "id": 10113,
-                "name": "ParameterList",
-                "src": "381:9:59"
-              }
-            ],
-            "id": 10114,
-            "name": "FunctionDefinition",
-            "src": "333:58:59"
+            "foreign": 7476,
+            "local": null
           }
         ],
-        "id": 10115,
-        "name": "ContractDefinition",
-        "src": "136:257:59"
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/misc/DelegateProxyForwarder.sol",
+        "file": "./DelegateProxyForwarder.sol",
+        "id": 7479,
+        "nodeType": "ImportDirective",
+        "scope": 7500,
+        "sourceUnit": 7537,
+        "src": "66:68:35",
+        "symbolAliases": [
+          {
+            "foreign": 7478,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7480,
+              "name": "ERCProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7814,
+              "src": "162:8:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERCProxy_$7814",
+                "typeString": "contract ERCProxy"
+              }
+            },
+            "id": 7481,
+            "nodeType": "InheritanceSpecifier",
+            "src": "162:8:35"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 7482,
+              "name": "DelegateProxyForwarder",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7536,
+              "src": "172:22:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DelegateProxyForwarder_$7536",
+                "typeString": "contract DelegateProxyForwarder"
+              }
+            },
+            "id": 7483,
+            "nodeType": "InheritanceSpecifier",
+            "src": "172:22:35"
+          }
+        ],
+        "contractDependencies": [
+          7536,
+          7814
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7499,
+        "linearizedBaseContracts": [
+          7499,
+          7536,
+          7814
+        ],
+        "name": "DelegateProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 7492,
+              "nodeType": "Block",
+              "src": "266:61:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7490,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7488,
+                      "name": "proxyTypeId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7486,
+                      "src": "305:11:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "32",
+                      "id": 7489,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "319:1:35",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "305:15:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 7491,
+                  "nodeType": "ExpressionStatement",
+                  "src": "305:15:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7493,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proxyType",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7484,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "219:2:35"
+            },
+            "returnParameters": {
+              "id": 7487,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7486,
+                  "name": "proxyTypeId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7493,
+                  "src": "245:19:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7485,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "245:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "244:21:35"
+            },
+            "scope": 7499,
+            "src": "201:126:35",
+            "stateMutability": "pure",
+            "superFunction": 7808,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 7498,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "implementation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7494,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "356:2:35"
+            },
+            "returnParameters": {
+              "id": 7497,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7496,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7498,
+                  "src": "382:7:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7495,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "382:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "381:9:35"
+            },
+            "scope": 7499,
+            "src": "333:58:35",
+            "stateMutability": "view",
+            "superFunction": 7813,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7500,
+        "src": "136:257:35"
       }
     ],
-    "id": 10116,
-    "name": "SourceUnit",
-    "src": "0:394:59"
+    "src": "0:394:35"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.17+commit.d19bba13.Linux.g++"
   },
   "networks": {},
-  "schemaVersion": "3.4.7",
-  "updatedAt": "2022-07-08T08:23:54.052Z",
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2022-07-06T10:05:10.487Z",
   "devdoc": {
     "methods": {}
   },
