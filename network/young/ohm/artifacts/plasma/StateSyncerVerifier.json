@@ -2,79 +2,29 @@
   "contractName": "StateSyncerVerifier",
   "abi": [
     {
-      "constant": false,
       "inputs": [],
-      "name": "renounceOwnership",
-      "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "constructor"
     },
     {
-      "constant": true,
-      "inputs": [],
-      "name": "owner",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "isOwner",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
+      "anonymous": false,
       "inputs": [
         {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
           "internalType": "address",
           "name": "newOwner",
           "type": "address"
         }
       ],
-      "name": "transferOwnership",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "stateSyncer",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
+      "name": "OwnershipTransferred",
+      "type": "event"
     },
     {
       "anonymous": false,
@@ -96,23 +46,73 @@
       "type": "event"
     },
     {
-      "anonymous": false,
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "stateSyncer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
       "inputs": [
         {
-          "indexed": true,
-          "internalType": "address",
-          "name": "previousOwner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
           "internalType": "address",
           "name": "newOwner",
           "type": "address"
         }
       ],
-      "name": "OwnershipTransferred",
-      "type": "event"
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
       "constant": true,
@@ -145,25 +145,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"isOnlyStateSyncerContract\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"}],\"name\":\"changeStateSyncerAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"stateSyncer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousAddress\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"}],\"name\":\"StateSyncerAddressChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"isOnlyStateSyncerContract()\":{\"details\":\"Returns true if the caller is the state syncer contract TODO: replace onlyOwner ownership with 0x1000 for validator majority\"},\"isOwner()\":{\"return\":\"true if `msg.sender` is the owner of the contract.\"},\"owner()\":{\"return\":\"the address of the owner.\"},\"renounceOwnership()\":{\"details\":\"Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore.\"},\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"renounceOwnership()\":{\"notice\":\"Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/child/bor/StateSyncerVerifier.sol\":\"StateSyncerVerifier\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/child/bor/StateSyncerVerifier.sol\":{\"keccak256\":\"0xa7218e8824dc770243df63b7c790951817c3c28ceae14a81be7519c86617d095\",\"urls\":[\"bzz-raw://7e10ebfc1909fd010823658bd530de6ad15b714d2180327dae73ee92abc4f43a\",\"dweb:/ipfs/QmbiR3toKB1VTHfTntSJmbgZBopDmDjhZm2ZAdgixXKgTw\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50600080546001600160a01b03191633178082556040516001600160a01b039190911691907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a3600180546001600160a01b03191661100117908190556040516001600160a01b0391909116906000907f98e6a46aa139a033b9c7f3ae4ad1c103ffdce3e7cf509326808ba8c4b5af11c0908290a361036f806100b76000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80638f32d59b1161005b5780638f32d59b146100cc578063df555007146100d4578063f2fde38b146100fa578063f4ef4d69146101205761007d565b806355651f7114610082578063715018a61461009e5780638da5cb5b146100a8575b600080fd5b61008a610128565b604080519115158252519081900360200190f35b6100a6610139565b005b6100b0610194565b604080516001600160a01b039092168252519081900360200190f35b61008a6101a3565b6100a6600480360360208110156100ea57600080fd5b50356001600160a01b03166101b4565b6100a66004803603602081101561011057600080fd5b50356001600160a01b0316610266565b6100b0610283565b6001546001600160a01b0316331490565b6101416101a3565b61014a57600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b6101bc6101a3565b6101c557600080fd5b6001600160a01b03811661020a5760405162461bcd60e51b815260040180806020018281038252603a815260200180610301603a913960400191505060405180910390fd5b6001546040516001600160a01b038084169216907f98e6a46aa139a033b9c7f3ae4ad1c103ffdce3e7cf509326808ba8c4b5af11c090600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b61026e6101a3565b61027757600080fd5b61028081610292565b50565b6001546001600160a01b031681565b6001600160a01b0381166102a557600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe53746174652073796e6365723a206e65772073746174652073796e636572206164647265737320697320746865207a65726f2061646472657373a265627a7a7231582004712f038148cca08dc10e3d49b054ce3f0369a2dbb98fc0ca30bffcbfb5631e64736f6c634300050b0032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80638f32d59b1161005b5780638f32d59b146100cc578063df555007146100d4578063f2fde38b146100fa578063f4ef4d69146101205761007d565b806355651f7114610082578063715018a61461009e5780638da5cb5b146100a8575b600080fd5b61008a610128565b604080519115158252519081900360200190f35b6100a6610139565b005b6100b0610194565b604080516001600160a01b039092168252519081900360200190f35b61008a6101a3565b6100a6600480360360208110156100ea57600080fd5b50356001600160a01b03166101b4565b6100a66004803603602081101561011057600080fd5b50356001600160a01b0316610266565b6100b0610283565b6001546001600160a01b0316331490565b6101416101a3565b61014a57600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b6101bc6101a3565b6101c557600080fd5b6001600160a01b03811661020a5760405162461bcd60e51b815260040180806020018281038252603a815260200180610301603a913960400191505060405180910390fd5b6001546040516001600160a01b038084169216907f98e6a46aa139a033b9c7f3ae4ad1c103ffdce3e7cf509326808ba8c4b5af11c090600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b61026e6101a3565b61027757600080fd5b61028081610292565b50565b6001546001600160a01b031681565b6001600160a01b0381166102a557600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe53746174652073796e6365723a206e65772073746174652073796e636572206164647265737320697320746865207a65726f2061646472657373a265627a7a7231582004712f038148cca08dc10e3d49b054ce3f0369a2dbb98fc0ca30bffcbfb5631e64736f6c634300050b0032",
-  "sourceMap": "105:1361:9:-;;;594:240;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;515:6:92;:19;;-1:-1:-1;;;;;;515:19:92;524:10;515:19;;;;549:40;;-1:-1:-1;;;;;582:6:92;;;;;515;549:40;;515:6;;549:40;666:11:9;:56;;-1:-1:-1;;;;;;666:56:9;680:42;666:56;;;;;777:50;;-1:-1:-1;;;;;815:11:9;;;;;666;;777:50;;666:11;;777:50;105:1361;;;;;;",
-  "deployedSourceMap": "105:1361:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;105:1361:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;994:113;;;:::i;:::-;;;;;;;;;;;;;;;;;;1423:137:92;;;:::i;:::-;;659:77;;;:::i;:::-;;;;-1:-1:-1;;;;;659:77:92;;;;;;;;;;;;;;979:90;;;:::i;1148:316:9:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1148:316:9;-1:-1:-1;;;;;1148:316:9;;:::i;1731:107:92:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1731:107:92;-1:-1:-1;;;;;1731:107:92;;:::i;151:26:9:-;;;:::i;994:113::-;1089:11;;-1:-1:-1;;;;;1089:11:9;1075:10;:25;;994:113::o;1423:137:92:-;863:9;:7;:9::i;:::-;855:18;;;;;;1521:1;1505:6;;1484:40;;-1:-1:-1;;;;;1505:6:92;;;;1484:40;;1521:1;;1484:40;1551:1;1534:19;;-1:-1:-1;;;;;;1534:19:92;;;1423:137::o;659:77::-;697:7;723:6;-1:-1:-1;;;;;723:6:92;659:77;:::o;979:90::-;1019:4;1056:6;-1:-1:-1;;;;;1056:6:92;1042:10;:20;;979:90::o;1148:316:9:-;863:9:92;:7;:9::i;:::-;855:18;;;;;;-1:-1:-1;;;;;1250:24:9;;1229:129;;;;-1:-1:-1;;;1229:129:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1399:11;;1373:50;;-1:-1:-1;;;;;1373:50:9;;;;1399:11;;1373:50;;1399:11;;1373:50;1433:11;:24;;-1:-1:-1;;;;;;1433:24:9;-1:-1:-1;;;;;1433:24:9;;;;;;;;;;1148:316::o;1731:107:92:-;863:9;:7;:9::i;:::-;855:18;;;;;;1803:28;1822:8;1803:18;:28::i;:::-;1731:107;:::o;151:26:9:-;;;-1:-1:-1;;;;;151:26:9;;:::o;1982:183:92:-;-1:-1:-1;;;;;2055:22:92;;2047:31;;;;;;2114:6;;;2093:38;;-1:-1:-1;;;;;2093:38:92;;;;2114:6;;;2093:38;;;2141:6;:17;;-1:-1:-1;;;;;;2141:17:92;-1:-1:-1;;;;;2141:17:92;;;;;;;;;;1982:183::o",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousAddress\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"}],\"name\":\"StateSyncerAddressChanged\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"}],\"name\":\"changeStateSyncerAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOnlyStateSyncerContract\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"stateSyncer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOnlyStateSyncerContract()\":{\"details\":\"Returns true if the caller is the state syncer contract TODO: replace onlyOwner ownership with 0x1000 for validator majority\"},\"isOwner()\":{\"return\":\"true if `msg.sender` is the owner of the contract.\"},\"owner()\":{\"return\":\"the address of the owner.\"},\"renounceOwnership()\":{\"details\":\"Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore.\"},\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"renounceOwnership()\":{\"notice\":\"Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"}}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/child/bor/StateSyncerVerifier.sol\":\"StateSyncerVerifier\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]},\"project:/contracts/child/bor/StateSyncerVerifier.sol\":{\"keccak256\":\"0xa7218e8824dc770243df63b7c790951817c3c28ceae14a81be7519c86617d095\",\"urls\":[\"bzz-raw://7e10ebfc1909fd010823658bd530de6ad15b714d2180327dae73ee92abc4f43a\",\"dweb:/ipfs/QmbiR3toKB1VTHfTntSJmbgZBopDmDjhZm2ZAdgixXKgTw\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50600080546001600160a01b03191633178082556040516001600160a01b039190911691907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a3600180546001600160a01b03191661100117908190556040516001600160a01b0391909116906000907f98e6a46aa139a033b9c7f3ae4ad1c103ffdce3e7cf509326808ba8c4b5af11c0908290a361036f806100b76000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80638f32d59b1161005b5780638f32d59b146100cc578063df555007146100d4578063f2fde38b146100fa578063f4ef4d69146101205761007d565b806355651f7114610082578063715018a61461009e5780638da5cb5b146100a8575b600080fd5b61008a610128565b604080519115158252519081900360200190f35b6100a6610139565b005b6100b0610194565b604080516001600160a01b039092168252519081900360200190f35b61008a6101a3565b6100a6600480360360208110156100ea57600080fd5b50356001600160a01b03166101b4565b6100a66004803603602081101561011057600080fd5b50356001600160a01b0316610266565b6100b0610283565b6001546001600160a01b0316331490565b6101416101a3565b61014a57600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b6101bc6101a3565b6101c557600080fd5b6001600160a01b03811661020a5760405162461bcd60e51b815260040180806020018281038252603a815260200180610301603a913960400191505060405180910390fd5b6001546040516001600160a01b038084169216907f98e6a46aa139a033b9c7f3ae4ad1c103ffdce3e7cf509326808ba8c4b5af11c090600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b61026e6101a3565b61027757600080fd5b61028081610292565b50565b6001546001600160a01b031681565b6001600160a01b0381166102a557600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe53746174652073796e6365723a206e65772073746174652073796e636572206164647265737320697320746865207a65726f2061646472657373a265627a7a72315820983511888d1ed39e1318d0f26d53e3dc8f8ee9963b627f848c270cca79dacc2664736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80638f32d59b1161005b5780638f32d59b146100cc578063df555007146100d4578063f2fde38b146100fa578063f4ef4d69146101205761007d565b806355651f7114610082578063715018a61461009e5780638da5cb5b146100a8575b600080fd5b61008a610128565b604080519115158252519081900360200190f35b6100a6610139565b005b6100b0610194565b604080516001600160a01b039092168252519081900360200190f35b61008a6101a3565b6100a6600480360360208110156100ea57600080fd5b50356001600160a01b03166101b4565b6100a66004803603602081101561011057600080fd5b50356001600160a01b0316610266565b6100b0610283565b6001546001600160a01b0316331490565b6101416101a3565b61014a57600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b6101bc6101a3565b6101c557600080fd5b6001600160a01b03811661020a5760405162461bcd60e51b815260040180806020018281038252603a815260200180610301603a913960400191505060405180910390fd5b6001546040516001600160a01b038084169216907f98e6a46aa139a033b9c7f3ae4ad1c103ffdce3e7cf509326808ba8c4b5af11c090600090a3600180546001600160a01b0319166001600160a01b0392909216919091179055565b61026e6101a3565b61027757600080fd5b61028081610292565b50565b6001546001600160a01b031681565b6001600160a01b0381166102a557600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe53746174652073796e6365723a206e65772073746174652073796e636572206164647265737320697320746865207a65726f2061646472657373a265627a7a72315820983511888d1ed39e1318d0f26d53e3dc8f8ee9963b627f848c270cca79dacc2664736f6c63430005110032",
+  "sourceMap": "105:1361:34:-;;;594:240;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;515:6:7;:19;;-1:-1:-1;;;;;;515:19:7;524:10;515:19;;;;549:40;;-1:-1:-1;;;;;582:6:7;;;;;515;549:40;;515:6;;549:40;666:11:34;:56;;-1:-1:-1;;;;;;666:56:34;680:42;666:56;;;;;777:50;;-1:-1:-1;;;;;815:11:34;;;;;666;;777:50;;666:11;;777:50;105:1361;;;;;;",
+  "deployedSourceMap": "105:1361:34:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;105:1361:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;994:113;;;:::i;:::-;;;;;;;;;;;;;;;;;;1423:137:7;;;:::i;:::-;;659:77;;;:::i;:::-;;;;-1:-1:-1;;;;;659:77:7;;;;;;;;;;;;;;979:90;;;:::i;1148:316:34:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1148:316:34;-1:-1:-1;;;;;1148:316:34;;:::i;1731:107:7:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1731:107:7;-1:-1:-1;;;;;1731:107:7;;:::i;151:26:34:-;;;:::i;994:113::-;1089:11;;-1:-1:-1;;;;;1089:11:34;1075:10;:25;;994:113::o;1423:137:7:-;863:9;:7;:9::i;:::-;855:18;;;;;;1521:1;1505:6;;1484:40;;-1:-1:-1;;;;;1505:6:7;;;;1484:40;;1521:1;;1484:40;1551:1;1534:19;;-1:-1:-1;;;;;;1534:19:7;;;1423:137::o;659:77::-;697:7;723:6;-1:-1:-1;;;;;723:6:7;659:77;:::o;979:90::-;1019:4;1056:6;-1:-1:-1;;;;;1056:6:7;1042:10;:20;;979:90::o;1148:316:34:-;863:9:7;:7;:9::i;:::-;855:18;;;;;;-1:-1:-1;;;;;1250:24:34;;1229:129;;;;-1:-1:-1;;;1229:129:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1399:11;;1373:50;;-1:-1:-1;;;;;1373:50:34;;;;1399:11;;1373:50;;1399:11;;1373:50;1433:11;:24;;-1:-1:-1;;;;;;1433:24:34;-1:-1:-1;;;;;1433:24:34;;;;;;;;;;1148:316::o;1731:107:7:-;863:9;:7;:9::i;:::-;855:18;;;;;;1803:28;1822:8;1803:18;:28::i;:::-;1731:107;:::o;151:26:34:-;;;-1:-1:-1;;;;;151:26:34;;:::o;1982:183:7:-;-1:-1:-1;;;;;2055:22:7;;2047:31;;;;;;2114:6;;;2093:38;;-1:-1:-1;;;;;2093:38:7;;;;2114:6;;;2093:38;;;2141:6;:17;;-1:-1:-1;;;;;;2141:17:7;-1:-1:-1;;;;;2141:17:7;;;;;;;;;;1982:183::o",
   "source": "pragma solidity ^0.5.2;\n\nimport {Ownable} from \"openzeppelin-solidity/contracts/ownership/Ownable.sol\";\n\ncontract StateSyncerVerifier is Ownable {\n    address public stateSyncer;\n\n    event StateSyncerAddressChanged(\n        address indexed previousAddress,\n        address indexed newAddress\n    );\n\n    /**\n   * @dev Throws if called by any account other than state syncer\n   */\n    modifier onlyStateSyncer() {\n        require(\n            isOnlyStateSyncerContract(),\n            \"State syncer: caller is not the state syncer contract\"\n        );\n        _;\n    }\n\n    // initial setup\n    constructor() public {\n        // default state syncer contract\n        stateSyncer = 0x0000000000000000000000000000000000001001;\n\n        // emit event for first change\n        emit StateSyncerAddressChanged(address(0), stateSyncer);\n    }\n\n    /**\n   * @dev Returns true if the caller is the state syncer contract\n   * TODO: replace onlyOwner ownership with 0x1000 for validator majority\n   */\n    function isOnlyStateSyncerContract() public view returns (bool) {\n        return msg.sender == stateSyncer;\n    }\n\n    // change state syncer address\n    function changeStateSyncerAddress(address newAddress) public onlyOwner {\n        require(\n            newAddress != address(0),\n            \"State syncer: new state syncer address is the zero address\"\n        );\n        emit StateSyncerAddressChanged(stateSyncer, newAddress);\n        stateSyncer = newAddress;\n    }\n}\n",
   "sourcePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/child/bor/StateSyncerVerifier.sol",
   "ast": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/child/bor/StateSyncerVerifier.sol",
+    "absolutePath": "project:/contracts/child/bor/StateSyncerVerifier.sol",
     "exportedSymbols": {
       "StateSyncerVerifier": [
-        1731
+        4503
       ]
     },
-    "id": 1732,
+    "id": 4504,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1656,
+        "id": 4428,
         "literals": [
           "solidity",
           "^",
@@ -171,19 +171,19 @@
           ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:9"
+        "src": "0:23:34"
       },
       {
         "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 1658,
+        "id": 4430,
         "nodeType": "ImportDirective",
-        "scope": 1732,
-        "sourceUnit": 21509,
-        "src": "25:78:9",
+        "scope": 4504,
+        "sourceUnit": 613,
+        "src": "25:78:34",
         "symbolAliases": [
           {
-            "foreign": 1657,
+            "foreign": 4429,
             "local": null
           }
         ],
@@ -195,42 +195,42 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1659,
+              "id": 4431,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 21508,
-              "src": "137:7:9",
+              "referencedDeclaration": 612,
+              "src": "137:7:34",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$21508",
+                "typeIdentifier": "t_contract$_Ownable_$612",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 1660,
+            "id": 4432,
             "nodeType": "InheritanceSpecifier",
-            "src": "137:7:9"
+            "src": "137:7:34"
           }
         ],
         "contractDependencies": [
-          21508
+          612
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1731,
+        "id": 4503,
         "linearizedBaseContracts": [
-          1731,
-          21508
+          4503,
+          612
         ],
         "name": "StateSyncerVerifier",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1662,
+            "id": 4434,
             "name": "stateSyncer",
             "nodeType": "VariableDeclaration",
-            "scope": 1731,
-            "src": "151:26:9",
+            "scope": 4503,
+            "src": "151:26:34",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -238,10 +238,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 1661,
+              "id": 4433,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "151:7:9",
+              "src": "151:7:34",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -254,21 +254,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1668,
+            "id": 4440,
             "name": "StateSyncerAddressChanged",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1667,
+              "id": 4439,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1664,
+                  "id": 4436,
                   "indexed": true,
                   "name": "previousAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1668,
-                  "src": "225:31:9",
+                  "scope": 4440,
+                  "src": "225:31:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -276,10 +276,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1663,
+                    "id": 4435,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "225:7:9",
+                    "src": "225:7:34",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -291,12 +291,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1666,
+                  "id": 4438,
                   "indexed": true,
                   "name": "newAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1668,
-                  "src": "266:26:9",
+                  "scope": 4440,
+                  "src": "266:26:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -304,10 +304,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1665,
+                    "id": 4437,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "266:7:9",
+                    "src": "266:7:34",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -318,15 +318,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "215:83:9"
+              "src": "215:83:34"
             },
-            "src": "184:115:9"
+            "src": "184:115:34"
           },
           {
             "body": {
-              "id": 1677,
+              "id": 4449,
               "nodeType": "Block",
-              "src": "412:155:9",
+              "src": "412:155:34",
               "statements": [
                 {
                   "expression": {
@@ -337,18 +337,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 1671,
+                          "id": 4443,
                           "name": "isOnlyStateSyncerContract",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1704,
-                          "src": "443:25:9",
+                          "referencedDeclaration": 4476,
+                          "src": "443:25:34",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                             "typeString": "function () view returns (bool)"
                           }
                         },
-                        "id": 1672,
+                        "id": 4444,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -356,7 +356,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "443:27:9",
+                        "src": "443:27:34",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -365,14 +365,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "53746174652073796e6365723a2063616c6c6572206973206e6f74207468652073746174652073796e63657220636f6e7472616374",
-                        "id": 1673,
+                        "id": 4445,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "484:55:9",
+                        "src": "484:55:34",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_a443e7868aeecdb393810f65a087417626d8ff6506dad93587ea39a0308fd9f6",
@@ -392,21 +392,21 @@
                           "typeString": "literal_string \"State syncer: caller is not the state syncer contract\""
                         }
                       ],
-                      "id": 1670,
+                      "id": 4442,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        24120,
-                        24121
+                        29779,
+                        29780
                       ],
-                      "referencedDeclaration": 24121,
-                      "src": "422:7:9",
+                      "referencedDeclaration": 29780,
+                      "src": "422:7:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 1674,
+                    "id": 4446,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -414,58 +414,58 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "422:127:9",
+                    "src": "422:127:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1675,
+                  "id": 4447,
                   "nodeType": "ExpressionStatement",
-                  "src": "422:127:9"
+                  "src": "422:127:34"
                 },
                 {
-                  "id": 1676,
+                  "id": 4448,
                   "nodeType": "PlaceholderStatement",
-                  "src": "559:1:9"
+                  "src": "559:1:34"
                 }
               ]
             },
             "documentation": "@dev Throws if called by any account other than state syncer",
-            "id": 1678,
+            "id": 4450,
             "name": "onlyStateSyncer",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 1669,
+              "id": 4441,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "409:2:9"
+              "src": "409:2:34"
             },
-            "src": "385:182:9",
+            "src": "385:182:34",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 1692,
+              "id": 4464,
               "nodeType": "Block",
-              "src": "615:219:9",
+              "src": "615:219:34",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1683,
+                    "id": 4455,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1681,
+                      "id": 4453,
                       "name": "stateSyncer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1662,
-                      "src": "666:11:9",
+                      "referencedDeclaration": 4434,
+                      "src": "666:11:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -476,14 +476,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "307830303030303030303030303030303030303030303030303030303030303030303030303031303031",
-                      "id": 1682,
+                      "id": 4454,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "680:42:9",
+                      "src": "680:42:34",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
@@ -491,15 +491,15 @@
                       },
                       "value": "0x0000000000000000000000000000000000001001"
                     },
-                    "src": "666:56:9",
+                    "src": "666:56:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 1684,
+                  "id": 4456,
                   "nodeType": "ExpressionStatement",
-                  "src": "666:56:9"
+                  "src": "666:56:34"
                 },
                 {
                   "eventCall": {
@@ -511,14 +511,14 @@
                           {
                             "argumentTypes": null,
                             "hexValue": "30",
-                            "id": 1687,
+                            "id": 4459,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "811:1:9",
+                            "src": "811:1:34",
                             "subdenomination": null,
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
@@ -534,20 +534,20 @@
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 1686,
+                          "id": 4458,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "803:7:9",
+                          "src": "803:7:34",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": "address"
                         },
-                        "id": 1688,
+                        "id": 4460,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -555,7 +555,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "803:10:9",
+                        "src": "803:10:34",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -563,12 +563,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1689,
+                        "id": 4461,
                         "name": "stateSyncer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1662,
-                        "src": "815:11:9",
+                        "referencedDeclaration": 4434,
+                        "src": "815:11:34",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -586,18 +586,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1685,
+                      "id": 4457,
                       "name": "StateSyncerAddressChanged",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1668,
-                      "src": "777:25:9",
+                      "referencedDeclaration": 4440,
+                      "src": "777:25:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
                         "typeString": "function (address,address)"
                       }
                     },
-                    "id": 1690,
+                    "id": 4462,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -605,48 +605,48 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "777:50:9",
+                    "src": "777:50:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1691,
+                  "id": 4463,
                   "nodeType": "EmitStatement",
-                  "src": "772:55:9"
+                  "src": "772:55:34"
                 }
               ]
             },
             "documentation": null,
-            "id": 1693,
+            "id": 4465,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1679,
+              "id": 4451,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "605:2:9"
+              "src": "605:2:34"
             },
             "returnParameters": {
-              "id": 1680,
+              "id": 4452,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "615:0:9"
+              "src": "615:0:34"
             },
-            "scope": 1731,
-            "src": "594:240:9",
+            "scope": 4503,
+            "src": "594:240:34",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1703,
+              "id": 4475,
               "nodeType": "Block",
-              "src": "1058:49:9",
+              "src": "1058:49:34",
               "statements": [
                 {
                   "expression": {
@@ -655,7 +655,7 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 1701,
+                    "id": 4473,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -664,18 +664,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1698,
+                        "id": 4470,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 24117,
-                        "src": "1075:3:9",
+                        "referencedDeclaration": 29776,
+                        "src": "1075:3:34",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 1699,
+                      "id": 4471,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -683,7 +683,7 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "1075:10:9",
+                      "src": "1075:10:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
@@ -693,54 +693,54 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 1700,
+                      "id": 4472,
                       "name": "stateSyncer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1662,
-                      "src": "1089:11:9",
+                      "referencedDeclaration": 4434,
+                      "src": "1089:11:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "1075:25:9",
+                    "src": "1075:25:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 1697,
-                  "id": 1702,
+                  "functionReturnParameters": 4469,
+                  "id": 4474,
                   "nodeType": "Return",
-                  "src": "1068:32:9"
+                  "src": "1068:32:34"
                 }
               ]
             },
             "documentation": "@dev Returns true if the caller is the state syncer contract\nTODO: replace onlyOwner ownership with 0x1000 for validator majority",
-            "id": 1704,
+            "id": 4476,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isOnlyStateSyncerContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1694,
+              "id": 4466,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1028:2:9"
+              "src": "1028:2:34"
             },
             "returnParameters": {
-              "id": 1697,
+              "id": 4469,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1696,
+                  "id": 4468,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1704,
-                  "src": "1052:4:9",
+                  "scope": 4476,
+                  "src": "1052:4:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -748,10 +748,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1695,
+                    "id": 4467,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1052:4:9",
+                    "src": "1052:4:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -761,19 +761,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1051:6:9"
+              "src": "1051:6:34"
             },
-            "scope": 1731,
-            "src": "994:113:9",
+            "scope": 4503,
+            "src": "994:113:34",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 1729,
+              "id": 4501,
               "nodeType": "Block",
-              "src": "1219:245:9",
+              "src": "1219:245:34",
               "statements": [
                 {
                   "expression": {
@@ -785,19 +785,19 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 1716,
+                        "id": 4488,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 1712,
+                          "id": 4484,
                           "name": "newAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1706,
-                          "src": "1250:10:9",
+                          "referencedDeclaration": 4478,
+                          "src": "1250:10:34",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -811,14 +811,14 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 1714,
+                              "id": 4486,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "kind": "number",
                               "lValueRequested": false,
                               "nodeType": "Literal",
-                              "src": "1272:1:9",
+                              "src": "1272:1:34",
                               "subdenomination": null,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_rational_0_by_1",
@@ -834,20 +834,20 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 1713,
+                            "id": 4485,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
                             "nodeType": "ElementaryTypeNameExpression",
-                            "src": "1264:7:9",
+                            "src": "1264:7:34",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_address_$",
                               "typeString": "type(address)"
                             },
                             "typeName": "address"
                           },
-                          "id": 1715,
+                          "id": 4487,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -855,13 +855,13 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1264:10:9",
+                          "src": "1264:10:34",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           }
                         },
-                        "src": "1250:24:9",
+                        "src": "1250:24:34",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -870,14 +870,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "53746174652073796e6365723a206e65772073746174652073796e636572206164647265737320697320746865207a65726f2061646472657373",
-                        "id": 1717,
+                        "id": 4489,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1288:60:9",
+                        "src": "1288:60:34",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_e864c78e117dcf718ff1efa8bb219ef439f83308e11abe2ab2a37edfccdf7d48",
@@ -897,21 +897,21 @@
                           "typeString": "literal_string \"State syncer: new state syncer address is the zero address\""
                         }
                       ],
-                      "id": 1711,
+                      "id": 4483,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        24120,
-                        24121
+                        29779,
+                        29780
                       ],
-                      "referencedDeclaration": 24121,
-                      "src": "1229:7:9",
+                      "referencedDeclaration": 29780,
+                      "src": "1229:7:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 1718,
+                    "id": 4490,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -919,15 +919,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1229:129:9",
+                    "src": "1229:129:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1719,
+                  "id": 4491,
                   "nodeType": "ExpressionStatement",
-                  "src": "1229:129:9"
+                  "src": "1229:129:34"
                 },
                 {
                   "eventCall": {
@@ -935,12 +935,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1721,
+                        "id": 4493,
                         "name": "stateSyncer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1662,
-                        "src": "1399:11:9",
+                        "referencedDeclaration": 4434,
+                        "src": "1399:11:34",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -948,12 +948,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1722,
+                        "id": 4494,
                         "name": "newAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1706,
-                        "src": "1412:10:9",
+                        "referencedDeclaration": 4478,
+                        "src": "1412:10:34",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -971,18 +971,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1720,
+                      "id": 4492,
                       "name": "StateSyncerAddressChanged",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1668,
-                      "src": "1373:25:9",
+                      "referencedDeclaration": 4440,
+                      "src": "1373:25:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
                         "typeString": "function (address,address)"
                       }
                     },
-                    "id": 1723,
+                    "id": 4495,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -990,32 +990,32 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1373:50:9",
+                    "src": "1373:50:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1724,
+                  "id": 4496,
                   "nodeType": "EmitStatement",
-                  "src": "1368:55:9"
+                  "src": "1368:55:34"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1727,
+                    "id": 4499,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1725,
+                      "id": 4497,
                       "name": "stateSyncer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1662,
-                      "src": "1433:11:9",
+                      "referencedDeclaration": 4434,
+                      "src": "1433:11:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -1025,67 +1025,67 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1726,
+                      "id": 4498,
                       "name": "newAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1706,
-                      "src": "1447:10:9",
+                      "referencedDeclaration": 4478,
+                      "src": "1447:10:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "1433:24:9",
+                    "src": "1433:24:34",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 1728,
+                  "id": 4500,
                   "nodeType": "ExpressionStatement",
-                  "src": "1433:24:9"
+                  "src": "1433:24:34"
                 }
               ]
             },
             "documentation": null,
-            "id": 1730,
+            "id": 4502,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1709,
+                "id": 4481,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1708,
+                  "id": 4480,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 21442,
-                  "src": "1209:9:9",
+                  "referencedDeclaration": 546,
+                  "src": "1209:9:34",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1209:9:9"
+                "src": "1209:9:34"
               }
             ],
             "name": "changeStateSyncerAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1707,
+              "id": 4479,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1706,
+                  "id": 4478,
                   "name": "newAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1730,
-                  "src": "1182:18:9",
+                  "scope": 4502,
+                  "src": "1182:18:34",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1093,10 +1093,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1705,
+                    "id": 4477,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1182:7:9",
+                    "src": "1182:7:34",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1107,1010 +1107,1118 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1181:20:9"
+              "src": "1181:20:34"
             },
             "returnParameters": {
-              "id": 1710,
+              "id": 4482,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1219:0:9"
+              "src": "1219:0:34"
             },
-            "scope": 1731,
-            "src": "1148:316:9",
+            "scope": 4503,
+            "src": "1148:316:34",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1732,
-        "src": "105:1361:9"
+        "scope": 4504,
+        "src": "105:1361:34"
       }
     ],
-    "src": "0:1467:9"
+    "src": "0:1467:34"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/child/bor/StateSyncerVerifier.sol",
-    "exportedSymbols": {
-      "StateSyncerVerifier": [
-        1731
-      ]
+    "attributes": {
+      "absolutePath": "project:/contracts/child/bor/StateSyncerVerifier.sol",
+      "exportedSymbols": {
+        "StateSyncerVerifier": [
+          4503
+        ]
+      }
     },
-    "id": 1732,
-    "nodeType": "SourceUnit",
-    "nodes": [
+    "children": [
       {
-        "id": 1656,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".2"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "0:23:9"
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".2"
+          ]
+        },
+        "id": 4428,
+        "name": "PragmaDirective",
+        "src": "0:23:34"
       },
       {
-        "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 1658,
-        "nodeType": "ImportDirective",
-        "scope": 1732,
-        "sourceUnit": 21509,
-        "src": "25:78:9",
-        "symbolAliases": [
-          {
-            "foreign": 1657,
-            "local": null
-          }
-        ],
-        "unitAlias": ""
+        "attributes": {
+          "SourceUnit": 613,
+          "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+          "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+          "scope": 4504,
+          "symbolAliases": [
+            {
+              "foreign": 4429,
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 4430,
+        "name": "ImportDirective",
+        "src": "25:78:34"
       },
       {
-        "baseContracts": [
+        "attributes": {
+          "contractDependencies": [
+            612
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            4503,
+            612
+          ],
+          "name": "StateSyncerVerifier",
+          "scope": 4504
+        },
+        "children": [
           {
-            "arguments": null,
-            "baseName": {
-              "contractScope": null,
-              "id": 1659,
-              "name": "Ownable",
-              "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 21508,
-              "src": "137:7:9",
-              "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$21508",
-                "typeString": "contract Ownable"
-              }
+            "attributes": {
+              "arguments": null
             },
-            "id": 1660,
-            "nodeType": "InheritanceSpecifier",
-            "src": "137:7:9"
-          }
-        ],
-        "contractDependencies": [
-          21508
-        ],
-        "contractKind": "contract",
-        "documentation": null,
-        "fullyImplemented": true,
-        "id": 1731,
-        "linearizedBaseContracts": [
-          1731,
-          21508
-        ],
-        "name": "StateSyncerVerifier",
-        "nodeType": "ContractDefinition",
-        "nodes": [
-          {
-            "constant": false,
-            "id": 1662,
-            "name": "stateSyncer",
-            "nodeType": "VariableDeclaration",
-            "scope": 1731,
-            "src": "151:26:9",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_address",
-              "typeString": "address"
-            },
-            "typeName": {
-              "id": 1661,
-              "name": "address",
-              "nodeType": "ElementaryTypeName",
-              "src": "151:7:9",
-              "stateMutability": "nonpayable",
-              "typeDescriptions": {
-                "typeIdentifier": "t_address",
-                "typeString": "address"
-              }
-            },
-            "value": null,
-            "visibility": "public"
-          },
-          {
-            "anonymous": false,
-            "documentation": null,
-            "id": 1668,
-            "name": "StateSyncerAddressChanged",
-            "nodeType": "EventDefinition",
-            "parameters": {
-              "id": 1667,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 1664,
-                  "indexed": true,
-                  "name": "previousAddress",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 1668,
-                  "src": "225:31:9",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 1663,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "225:7:9",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 612,
+                  "type": "contract Ownable"
                 },
-                {
-                  "constant": false,
-                  "id": 1666,
-                  "indexed": true,
-                  "name": "newAddress",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 1668,
-                  "src": "266:26:9",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 1665,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "266:7:9",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "215:83:9"
-            },
-            "src": "184:115:9"
+                "id": 4431,
+                "name": "UserDefinedTypeName",
+                "src": "137:7:34"
+              }
+            ],
+            "id": 4432,
+            "name": "InheritanceSpecifier",
+            "src": "137:7:34"
           },
           {
-            "body": {
-              "id": 1677,
-              "nodeType": "Block",
-              "src": "412:155:9",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
+            "attributes": {
+              "constant": false,
+              "name": "stateSyncer",
+              "scope": 4503,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 4433,
+                "name": "ElementaryTypeName",
+                "src": "151:7:34"
+              }
+            ],
+            "id": 4434,
+            "name": "VariableDeclaration",
+            "src": "151:26:34"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "StateSyncerAddressChanged"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "previousAddress",
+                      "scope": 4440,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
                       {
-                        "argumentTypes": null,
-                        "arguments": [],
-                        "expression": {
-                          "argumentTypes": [],
-                          "id": 1671,
-                          "name": "isOnlyStateSyncerContract",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 1704,
-                          "src": "443:25:9",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
-                            "typeString": "function () view returns (bool)"
-                          }
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
                         },
-                        "id": 1672,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "kind": "functionCall",
-                        "lValueRequested": false,
-                        "names": [],
-                        "nodeType": "FunctionCall",
-                        "src": "443:27:9",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "53746174652073796e6365723a2063616c6c6572206973206e6f74207468652073746174652073796e63657220636f6e7472616374",
-                        "id": 1673,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "string",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "484:55:9",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_a443e7868aeecdb393810f65a087417626d8ff6506dad93587ea39a0308fd9f6",
-                          "typeString": "literal_string \"State syncer: caller is not the state syncer contract\""
-                        },
-                        "value": "State syncer: caller is not the state syncer contract"
+                        "id": 4435,
+                        "name": "ElementaryTypeName",
+                        "src": "225:7:34"
                       }
                     ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        },
-                        {
-                          "typeIdentifier": "t_stringliteral_a443e7868aeecdb393810f65a087417626d8ff6506dad93587ea39a0308fd9f6",
-                          "typeString": "literal_string \"State syncer: caller is not the state syncer contract\""
-                        }
-                      ],
-                      "id": 1670,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        24120,
-                        24121
-                      ],
-                      "referencedDeclaration": 24121,
-                      "src": "422:7:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
-                        "typeString": "function (bool,string memory) pure"
-                      }
-                    },
-                    "id": 1674,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "422:127:9",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
+                    "id": 4436,
+                    "name": "VariableDeclaration",
+                    "src": "225:31:34"
                   },
-                  "id": 1675,
-                  "nodeType": "ExpressionStatement",
-                  "src": "422:127:9"
-                },
-                {
-                  "id": 1676,
-                  "nodeType": "PlaceholderStatement",
-                  "src": "559:1:9"
-                }
-              ]
-            },
-            "documentation": "@dev Throws if called by any account other than state syncer",
-            "id": 1678,
-            "name": "onlyStateSyncer",
-            "nodeType": "ModifierDefinition",
-            "parameters": {
-              "id": 1669,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "409:2:9"
-            },
-            "src": "385:182:9",
-            "visibility": "internal"
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "newAddress",
+                      "scope": 4440,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 4437,
+                        "name": "ElementaryTypeName",
+                        "src": "266:7:34"
+                      }
+                    ],
+                    "id": 4438,
+                    "name": "VariableDeclaration",
+                    "src": "266:26:34"
+                  }
+                ],
+                "id": 4439,
+                "name": "ParameterList",
+                "src": "215:83:34"
+              }
+            ],
+            "id": 4440,
+            "name": "EventDefinition",
+            "src": "184:115:34"
           },
           {
-            "body": {
-              "id": 1692,
-              "nodeType": "Block",
-              "src": "615:219:9",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 1683,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 1681,
-                      "name": "stateSyncer",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 1662,
-                      "src": "666:11:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "hexValue": "307830303030303030303030303030303030303030303030303030303030303030303030303031303031",
-                      "id": 1682,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "680:42:9",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
-                      },
-                      "value": "0x0000000000000000000000000000000000001001"
-                    },
-                    "src": "666:56:9",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "id": 1684,
-                  "nodeType": "ExpressionStatement",
-                  "src": "666:56:9"
+            "attributes": {
+              "documentation": "@dev Throws if called by any account other than state syncer",
+              "name": "onlyStateSyncer",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
                 },
-                {
-                  "eventCall": {
-                    "argumentTypes": null,
-                    "arguments": [
+                "children": [],
+                "id": 4441,
+                "name": "ParameterList",
+                "src": "409:2:34"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
                       {
-                        "argumentTypes": null,
-                        "arguments": [
-                          {
-                            "argumentTypes": null,
-                            "hexValue": "30",
-                            "id": 1687,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": true,
-                            "kind": "number",
-                            "lValueRequested": false,
-                            "nodeType": "Literal",
-                            "src": "811:1:9",
-                            "subdenomination": null,
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_rational_0_by_1",
-                              "typeString": "int_const 0"
-                            },
-                            "value": "0"
-                          }
-                        ],
-                        "expression": {
-                          "argumentTypes": [
-                            {
-                              "typeIdentifier": "t_rational_0_by_1",
-                              "typeString": "int_const 0"
-                            }
-                          ],
-                          "id": 1686,
+                        "attributes": {
+                          "argumentTypes": null,
                           "isConstant": false,
                           "isLValue": false,
-                          "isPure": true,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "nodeType": "ElementaryTypeNameExpression",
-                          "src": "803:7:9",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_address_$",
-                            "typeString": "type(address)"
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_a443e7868aeecdb393810f65a087417626d8ff6506dad93587ea39a0308fd9f6",
+                                  "typeString": "literal_string \"State syncer: caller is not the state syncer contract\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                29779,
+                                29780
+                              ],
+                              "referencedDeclaration": 29780,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 4442,
+                            "name": "Identifier",
+                            "src": "422:7:34"
                           },
-                          "typeName": "address"
-                        },
-                        "id": 1688,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "typeConversion",
-                        "lValueRequested": false,
-                        "names": [],
-                        "nodeType": "FunctionCall",
-                        "src": "803:10:9",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address_payable",
-                          "typeString": "address payable"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "id": 1689,
-                        "name": "stateSyncer",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 1662,
-                        "src": "815:11:9",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_address_payable",
-                          "typeString": "address payable"
-                        },
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      ],
-                      "id": 1685,
-                      "name": "StateSyncerAddressChanged",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 1668,
-                      "src": "777:25:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
-                        "typeString": "function (address,address)"
-                      }
-                    },
-                    "id": 1690,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "777:50:9",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 1691,
-                  "nodeType": "EmitStatement",
-                  "src": "772:55:9"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 1693,
-            "implemented": true,
-            "kind": "constructor",
-            "modifiers": [],
-            "name": "",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 1679,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "605:2:9"
-            },
-            "returnParameters": {
-              "id": 1680,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "615:0:9"
-            },
-            "scope": 1731,
-            "src": "594:240:9",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 1703,
-              "nodeType": "Block",
-              "src": "1058:49:9",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    },
-                    "id": 1701,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 1698,
-                        "name": "msg",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 24117,
-                        "src": "1075:3:9",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_magic_message",
-                          "typeString": "msg"
-                        }
-                      },
-                      "id": 1699,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "sender",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "1075:10:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": "==",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "id": 1700,
-                      "name": "stateSyncer",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 1662,
-                      "src": "1089:11:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "src": "1075:25:9",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "functionReturnParameters": 1697,
-                  "id": 1702,
-                  "nodeType": "Return",
-                  "src": "1068:32:9"
-                }
-              ]
-            },
-            "documentation": "@dev Returns true if the caller is the state syncer contract\nTODO: replace onlyOwner ownership with 0x1000 for validator majority",
-            "id": 1704,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "isOnlyStateSyncerContract",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 1694,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1028:2:9"
-            },
-            "returnParameters": {
-              "id": 1697,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 1696,
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 1704,
-                  "src": "1052:4:9",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 1695,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1052:4:9",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "1051:6:9"
-            },
-            "scope": 1731,
-            "src": "994:113:9",
-            "stateMutability": "view",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 1729,
-              "nodeType": "Block",
-              "src": "1219:245:9",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "commonType": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        },
-                        "id": 1716,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "leftExpression": {
-                          "argumentTypes": null,
-                          "id": 1712,
-                          "name": "newAddress",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 1706,
-                          "src": "1250:10:9",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          }
-                        },
-                        "nodeType": "BinaryOperation",
-                        "operator": "!=",
-                        "rightExpression": {
-                          "argumentTypes": null,
-                          "arguments": [
-                            {
+                          {
+                            "attributes": {
                               "argumentTypes": null,
-                              "hexValue": "30",
-                              "id": 1714,
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bool",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4476,
+                                  "type": "function () view returns (bool)",
+                                  "value": "isOnlyStateSyncerContract"
+                                },
+                                "id": 4443,
+                                "name": "Identifier",
+                                "src": "443:25:34"
+                              }
+                            ],
+                            "id": 4444,
+                            "name": "FunctionCall",
+                            "src": "443:27:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "53746174652073796e6365723a2063616c6c6572206973206e6f74207468652073746174652073796e63657220636f6e7472616374",
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
-                              "kind": "number",
                               "lValueRequested": false,
-                              "nodeType": "Literal",
-                              "src": "1272:1:9",
                               "subdenomination": null,
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_rational_0_by_1",
-                                "typeString": "int_const 0"
-                              },
-                              "value": "0"
-                            }
-                          ],
-                          "expression": {
-                            "argumentTypes": [
-                              {
-                                "typeIdentifier": "t_rational_0_by_1",
-                                "typeString": "int_const 0"
-                              }
-                            ],
-                            "id": 1713,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": true,
-                            "lValueRequested": false,
-                            "nodeType": "ElementaryTypeNameExpression",
-                            "src": "1264:7:9",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_address_$",
-                              "typeString": "type(address)"
+                              "token": "string",
+                              "type": "literal_string \"State syncer: caller is not the state syncer contract\"",
+                              "value": "State syncer: caller is not the state syncer contract"
                             },
-                            "typeName": "address"
-                          },
-                          "id": 1715,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "kind": "typeConversion",
-                          "lValueRequested": false,
-                          "names": [],
-                          "nodeType": "FunctionCall",
-                          "src": "1264:10:9",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address_payable",
-                            "typeString": "address payable"
+                            "id": 4445,
+                            "name": "Literal",
+                            "src": "484:55:34"
                           }
-                        },
-                        "src": "1250:24:9",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "53746174652073796e6365723a206e65772073746174652073796e636572206164647265737320697320746865207a65726f2061646472657373",
-                        "id": 1717,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "string",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "1288:60:9",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_e864c78e117dcf718ff1efa8bb219ef439f83308e11abe2ab2a37edfccdf7d48",
-                          "typeString": "literal_string \"State syncer: new state syncer address is the zero address\""
-                        },
-                        "value": "State syncer: new state syncer address is the zero address"
+                        ],
+                        "id": 4446,
+                        "name": "FunctionCall",
+                        "src": "422:127:34"
                       }
                     ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        },
-                        {
-                          "typeIdentifier": "t_stringliteral_e864c78e117dcf718ff1efa8bb219ef439f83308e11abe2ab2a37edfccdf7d48",
-                          "typeString": "literal_string \"State syncer: new state syncer address is the zero address\""
-                        }
-                      ],
-                      "id": 1711,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        24120,
-                        24121
-                      ],
-                      "referencedDeclaration": 24121,
-                      "src": "1229:7:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
-                        "typeString": "function (bool,string memory) pure"
-                      }
-                    },
-                    "id": 1718,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "1229:129:9",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
+                    "id": 4447,
+                    "name": "ExpressionStatement",
+                    "src": "422:127:34"
                   },
-                  "id": 1719,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1229:129:9"
-                },
-                {
-                  "eventCall": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "id": 1721,
-                        "name": "stateSyncer",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 1662,
-                        "src": "1399:11:9",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "id": 1722,
-                        "name": "newAddress",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 1706,
-                        "src": "1412:10:9",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        },
-                        {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        }
-                      ],
-                      "id": 1720,
-                      "name": "StateSyncerAddressChanged",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 1668,
-                      "src": "1373:25:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
-                        "typeString": "function (address,address)"
-                      }
-                    },
-                    "id": 1723,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "1373:50:9",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 1724,
-                  "nodeType": "EmitStatement",
-                  "src": "1368:55:9"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 1727,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 1725,
-                      "name": "stateSyncer",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 1662,
-                      "src": "1433:11:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "id": 1726,
-                      "name": "newAddress",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 1706,
-                      "src": "1447:10:9",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "src": "1433:24:9",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "id": 1728,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1433:24:9"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 1730,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [
-              {
-                "arguments": null,
-                "id": 1709,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 1708,
-                  "name": "onlyOwner",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 21442,
-                  "src": "1209:9:9",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$__$",
-                    "typeString": "modifier ()"
+                  {
+                    "id": 4448,
+                    "name": "PlaceholderStatement",
+                    "src": "559:1:34"
                   }
-                },
-                "nodeType": "ModifierInvocation",
-                "src": "1209:9:9"
+                ],
+                "id": 4449,
+                "name": "Block",
+                "src": "412:155:34"
               }
             ],
-            "name": "changeStateSyncerAddress",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 1707,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 1706,
-                  "name": "newAddress",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 1730,
-                  "src": "1182:18:9",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 1705,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1182:7:9",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
+            "id": 4450,
+            "name": "ModifierDefinition",
+            "src": "385:182:34"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
               ],
-              "src": "1181:20:9"
+              "name": "",
+              "scope": 4503,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
             },
-            "returnParameters": {
-              "id": 1710,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1219:0:9"
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4451,
+                "name": "ParameterList",
+                "src": "605:2:34"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4452,
+                "name": "ParameterList",
+                "src": "615:0:34"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4434,
+                              "type": "address",
+                              "value": "stateSyncer"
+                            },
+                            "id": 4453,
+                            "name": "Identifier",
+                            "src": "666:11:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "307830303030303030303030303030303030303030303030303030303030303030303030303031303031",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "address payable",
+                              "value": "0x0000000000000000000000000000000000001001"
+                            },
+                            "id": 4454,
+                            "name": "Literal",
+                            "src": "680:42:34"
+                          }
+                        ],
+                        "id": 4455,
+                        "name": "Assignment",
+                        "src": "666:56:34"
+                      }
+                    ],
+                    "id": 4456,
+                    "name": "ExpressionStatement",
+                    "src": "666:56:34"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4440,
+                              "type": "function (address,address)",
+                              "value": "StateSyncerAddressChanged"
+                            },
+                            "id": 4457,
+                            "name": "Identifier",
+                            "src": "777:25:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "address payable",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_rational_0_by_1",
+                                      "typeString": "int_const 0"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)",
+                                  "value": "address"
+                                },
+                                "id": 4458,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "803:7:34"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 4459,
+                                "name": "Literal",
+                                "src": "811:1:34"
+                              }
+                            ],
+                            "id": 4460,
+                            "name": "FunctionCall",
+                            "src": "803:10:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4434,
+                              "type": "address",
+                              "value": "stateSyncer"
+                            },
+                            "id": 4461,
+                            "name": "Identifier",
+                            "src": "815:11:34"
+                          }
+                        ],
+                        "id": 4462,
+                        "name": "FunctionCall",
+                        "src": "777:50:34"
+                      }
+                    ],
+                    "id": 4463,
+                    "name": "EmitStatement",
+                    "src": "772:55:34"
+                  }
+                ],
+                "id": 4464,
+                "name": "Block",
+                "src": "615:219:34"
+              }
+            ],
+            "id": 4465,
+            "name": "FunctionDefinition",
+            "src": "594:240:34"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev Returns true if the caller is the state syncer contract\nTODO: replace onlyOwner ownership with 0x1000 for validator majority",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "isOnlyStateSyncerContract",
+              "scope": 4503,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
             },
-            "scope": 1731,
-            "src": "1148:316:9",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4466,
+                "name": "ParameterList",
+                "src": "1028:2:34"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 4476,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 4467,
+                        "name": "ElementaryTypeName",
+                        "src": "1052:4:34"
+                      }
+                    ],
+                    "id": 4468,
+                    "name": "VariableDeclaration",
+                    "src": "1052:4:34"
+                  }
+                ],
+                "id": 4469,
+                "name": "ParameterList",
+                "src": "1051:6:34"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 4469
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29776,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 4470,
+                                "name": "Identifier",
+                                "src": "1075:3:34"
+                              }
+                            ],
+                            "id": 4471,
+                            "name": "MemberAccess",
+                            "src": "1075:10:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4434,
+                              "type": "address",
+                              "value": "stateSyncer"
+                            },
+                            "id": 4472,
+                            "name": "Identifier",
+                            "src": "1089:11:34"
+                          }
+                        ],
+                        "id": 4473,
+                        "name": "BinaryOperation",
+                        "src": "1075:25:34"
+                      }
+                    ],
+                    "id": 4474,
+                    "name": "Return",
+                    "src": "1068:32:34"
+                  }
+                ],
+                "id": 4475,
+                "name": "Block",
+                "src": "1058:49:34"
+              }
+            ],
+            "id": 4476,
+            "name": "FunctionDefinition",
+            "src": "994:113:34"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "changeStateSyncerAddress",
+              "scope": 4503,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "newAddress",
+                      "scope": 4502,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 4477,
+                        "name": "ElementaryTypeName",
+                        "src": "1182:7:34"
+                      }
+                    ],
+                    "id": 4478,
+                    "name": "VariableDeclaration",
+                    "src": "1182:18:34"
+                  }
+                ],
+                "id": 4479,
+                "name": "ParameterList",
+                "src": "1181:20:34"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4482,
+                "name": "ParameterList",
+                "src": "1219:0:34"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 546,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 4480,
+                    "name": "Identifier",
+                    "src": "1209:9:34"
+                  }
+                ],
+                "id": 4481,
+                "name": "ModifierInvocation",
+                "src": "1209:9:34"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_e864c78e117dcf718ff1efa8bb219ef439f83308e11abe2ab2a37edfccdf7d48",
+                                  "typeString": "literal_string \"State syncer: new state syncer address is the zero address\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                29779,
+                                29780
+                              ],
+                              "referencedDeclaration": 29780,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 4483,
+                            "name": "Identifier",
+                            "src": "1229:7:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4478,
+                                  "type": "address",
+                                  "value": "newAddress"
+                                },
+                                "id": 4484,
+                                "name": "Identifier",
+                                "src": "1250:10:34"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "address payable",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_rational_0_by_1",
+                                          "typeString": "int_const 0"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(address)",
+                                      "value": "address"
+                                    },
+                                    "id": 4485,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "1264:7:34"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "30",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 0",
+                                      "value": "0"
+                                    },
+                                    "id": 4486,
+                                    "name": "Literal",
+                                    "src": "1272:1:34"
+                                  }
+                                ],
+                                "id": 4487,
+                                "name": "FunctionCall",
+                                "src": "1264:10:34"
+                              }
+                            ],
+                            "id": 4488,
+                            "name": "BinaryOperation",
+                            "src": "1250:24:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "53746174652073796e6365723a206e65772073746174652073796e636572206164647265737320697320746865207a65726f2061646472657373",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"State syncer: new state syncer address is the zero address\"",
+                              "value": "State syncer: new state syncer address is the zero address"
+                            },
+                            "id": 4489,
+                            "name": "Literal",
+                            "src": "1288:60:34"
+                          }
+                        ],
+                        "id": 4490,
+                        "name": "FunctionCall",
+                        "src": "1229:129:34"
+                      }
+                    ],
+                    "id": 4491,
+                    "name": "ExpressionStatement",
+                    "src": "1229:129:34"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4440,
+                              "type": "function (address,address)",
+                              "value": "StateSyncerAddressChanged"
+                            },
+                            "id": 4492,
+                            "name": "Identifier",
+                            "src": "1373:25:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4434,
+                              "type": "address",
+                              "value": "stateSyncer"
+                            },
+                            "id": 4493,
+                            "name": "Identifier",
+                            "src": "1399:11:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4478,
+                              "type": "address",
+                              "value": "newAddress"
+                            },
+                            "id": 4494,
+                            "name": "Identifier",
+                            "src": "1412:10:34"
+                          }
+                        ],
+                        "id": 4495,
+                        "name": "FunctionCall",
+                        "src": "1373:50:34"
+                      }
+                    ],
+                    "id": 4496,
+                    "name": "EmitStatement",
+                    "src": "1368:55:34"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4434,
+                              "type": "address",
+                              "value": "stateSyncer"
+                            },
+                            "id": 4497,
+                            "name": "Identifier",
+                            "src": "1433:11:34"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4478,
+                              "type": "address",
+                              "value": "newAddress"
+                            },
+                            "id": 4498,
+                            "name": "Identifier",
+                            "src": "1447:10:34"
+                          }
+                        ],
+                        "id": 4499,
+                        "name": "Assignment",
+                        "src": "1433:24:34"
+                      }
+                    ],
+                    "id": 4500,
+                    "name": "ExpressionStatement",
+                    "src": "1433:24:34"
+                  }
+                ],
+                "id": 4501,
+                "name": "Block",
+                "src": "1219:245:34"
+              }
+            ],
+            "id": 4502,
+            "name": "FunctionDefinition",
+            "src": "1148:316:34"
           }
         ],
-        "scope": 1732,
-        "src": "105:1361:9"
+        "id": 4503,
+        "name": "ContractDefinition",
+        "src": "105:1361:34"
       }
     ],
-    "src": "0:1467:9"
+    "id": 4504,
+    "name": "SourceUnit",
+    "src": "0:1467:34"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
   },
   "networks": {},
-  "schemaVersion": "3.0.14",
-  "updatedAt": "2022-06-14T12:01:14.311Z",
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-07-08T08:23:53.423Z",
   "devdoc": {
     "methods": {
       "isOnlyStateSyncerContract()": {

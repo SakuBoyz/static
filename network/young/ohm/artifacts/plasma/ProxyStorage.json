@@ -2,12 +2,37 @@
   "contractName": "ProxyStorage",
   "abi": [
     {
-      "constant": false,
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
       "inputs": [],
-      "name": "renounceOwnership",
-      "outputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
       "payable": false,
-      "stateMutability": "nonpayable",
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -26,18 +51,12 @@
       "type": "function"
     },
     {
-      "constant": true,
+      "constant": false,
       "inputs": [],
-      "name": "isOwner",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
+      "name": "renounceOwnership",
+      "outputs": [],
       "payable": false,
-      "stateMutability": "view",
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -54,46 +73,27 @@
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "previousOwner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "OwnershipTransferred",
-      "type": "event"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"return\":\"true if `msg.sender` is the owner of the contract.\"},\"owner()\":{\"return\":\"the address of the owner.\"},\"renounceOwnership()\":{\"details\":\"Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore.\"},\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"renounceOwnership()\":{\"notice\":\"Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/misc/ProxyStorage.sol\":\"ProxyStorage\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/misc/ProxyStorage.sol\":{\"keccak256\":\"0x0e5e5f5817051530eca15e416300236610a50e096015f51d8bf44e89e3a87995\",\"urls\":[\"bzz-raw://55a953138a02a8091b290ae40f27d18e1e8ffcb886f9461b0e3bfad7dd8e46d7\",\"dweb:/ipfs/QmRw1doqSgJxyPVfaYTWNJu5P83u3JECXPAfEFNJPQjGsP\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]}},\"version\":1}",
-  "bytecode": "0x60806040819052600080546001600160a01b03191633178082556001600160a01b0316917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a36101fc806100576000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063715018a6146100515780638da5cb5b1461005b5780638f32d59b1461007f578063f2fde38b1461009b575b600080fd5b6100596100c1565b005b61006361011c565b604080516001600160a01b039092168252519081900360200190f35b61008761012b565b604080519115158252519081900360200190f35b610059600480360360208110156100b157600080fd5b50356001600160a01b031661013c565b6100c961012b565b6100d257600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b61014461012b565b61014d57600080fd5b61015681610159565b50565b6001600160a01b03811661016c57600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fea265627a7a723158207a8e497e283bcda3fe44e98ac181dda10e7d61acbcfe5e08137da534696c865664736f6c634300050b0032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063715018a6146100515780638da5cb5b1461005b5780638f32d59b1461007f578063f2fde38b1461009b575b600080fd5b6100596100c1565b005b61006361011c565b604080516001600160a01b039092168252519081900360200190f35b61008761012b565b604080519115158252519081900360200190f35b610059600480360360208110156100b157600080fd5b50356001600160a01b031661013c565b6100c961012b565b6100d257600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b61014461012b565b61014d57600080fd5b61015681610159565b50565b6001600160a01b03811661016c57600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fea265627a7a723158207a8e497e283bcda3fe44e98ac181dda10e7d61acbcfe5e08137da534696c865664736f6c634300050b0032",
-  "sourceMap": "104:66:33:-;;;;;515:6:92;:19;;-1:-1:-1;;;;;;515:19:92;524:10;515:19;;;;-1:-1:-1;;;;;582:6:92;;549:40;;515:6;;549:40;104:66:33;;;;;;",
-  "deployedSourceMap": "104:66:33:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:66:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1423:137:92;;;:::i;:::-;;659:77;;;:::i;:::-;;;;-1:-1:-1;;;;;659:77:92;;;;;;;;;;;;;;979:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;1731:107;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1731:107:92;-1:-1:-1;;;;;1731:107:92;;:::i;1423:137::-;863:9;:7;:9::i;:::-;855:18;;;;;;1521:1;1505:6;;1484:40;;-1:-1:-1;;;;;1505:6:92;;;;1484:40;;1521:1;;1484:40;1551:1;1534:19;;-1:-1:-1;;;;;;1534:19:92;;;1423:137::o;659:77::-;697:7;723:6;-1:-1:-1;;;;;723:6:92;659:77;:::o;979:90::-;1019:4;1056:6;-1:-1:-1;;;;;1056:6:92;1042:10;:20;;979:90::o;1731:107::-;863:9;:7;:9::i;:::-;855:18;;;;;;1803:28;1822:8;1803:18;:28::i;:::-;1731:107;:::o;1982:183::-;-1:-1:-1;;;;;2055:22:92;;2047:31;;;;;;2114:6;;;2093:38;;-1:-1:-1;;;;;2093:38:92;;;;2114:6;;;2093:38;;;2141:6;:17;;-1:-1:-1;;;;;;2141:17:92;-1:-1:-1;;;;;2141:17:92;;;;;;;;;;1982:183::o",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"return\":\"true if `msg.sender` is the owner of the contract.\"},\"owner()\":{\"return\":\"the address of the owner.\"},\"renounceOwnership()\":{\"details\":\"Allows the current owner to relinquish control of the contract. It will not be possible to call the functions with the `onlyOwner` modifier anymore.\"},\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"renounceOwnership()\":{\"notice\":\"Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"}}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/common/misc/ProxyStorage.sol\":\"ProxyStorage\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]},\"project:/contracts/common/misc/ProxyStorage.sol\":{\"keccak256\":\"0x0e5e5f5817051530eca15e416300236610a50e096015f51d8bf44e89e3a87995\",\"urls\":[\"bzz-raw://55a953138a02a8091b290ae40f27d18e1e8ffcb886f9461b0e3bfad7dd8e46d7\",\"dweb:/ipfs/QmRw1doqSgJxyPVfaYTWNJu5P83u3JECXPAfEFNJPQjGsP\"]}},\"version\":1}",
+  "bytecode": "0x60806040819052600080546001600160a01b03191633178082556001600160a01b0316917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a36101fc806100576000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063715018a6146100515780638da5cb5b1461005b5780638f32d59b1461007f578063f2fde38b1461009b575b600080fd5b6100596100c1565b005b61006361011c565b604080516001600160a01b039092168252519081900360200190f35b61008761012b565b604080519115158252519081900360200190f35b610059600480360360208110156100b157600080fd5b50356001600160a01b031661013c565b6100c961012b565b6100d257600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b61014461012b565b61014d57600080fd5b61015681610159565b50565b6001600160a01b03811661016c57600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fea265627a7a723158206d3fbfef9e02663ad091bae77bb558edc0ce2ad4fd916f26eee56bfb9907cd1264736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063715018a6146100515780638da5cb5b1461005b5780638f32d59b1461007f578063f2fde38b1461009b575b600080fd5b6100596100c1565b005b61006361011c565b604080516001600160a01b039092168252519081900360200190f35b61008761012b565b604080519115158252519081900360200190f35b610059600480360360208110156100b157600080fd5b50356001600160a01b031661013c565b6100c961012b565b6100d257600080fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b61014461012b565b61014d57600080fd5b61015681610159565b50565b6001600160a01b03811661016c57600080fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fea265627a7a723158206d3fbfef9e02663ad091bae77bb558edc0ce2ad4fd916f26eee56bfb9907cd1264736f6c63430005110032",
+  "sourceMap": "104:66:65:-;;;;;515:6:7;:19;;-1:-1:-1;;;;;;515:19:7;524:10;515:19;;;;-1:-1:-1;;;;;582:6:7;;549:40;;515:6;;549:40;104:66:65;;;;;;",
+  "deployedSourceMap": "104:66:65:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:66:65;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1423:137:7;;;:::i;:::-;;659:77;;;:::i;:::-;;;;-1:-1:-1;;;;;659:77:7;;;;;;;;;;;;;;979:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;1731:107;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1731:107:7;-1:-1:-1;;;;;1731:107:7;;:::i;1423:137::-;863:9;:7;:9::i;:::-;855:18;;;;;;1521:1;1505:6;;1484:40;;-1:-1:-1;;;;;1505:6:7;;;;1484:40;;1521:1;;1484:40;1551:1;1534:19;;-1:-1:-1;;;;;;1534:19:7;;;1423:137::o;659:77::-;697:7;723:6;-1:-1:-1;;;;;723:6:7;659:77;:::o;979:90::-;1019:4;1056:6;-1:-1:-1;;;;;1056:6:7;1042:10;:20;;979:90::o;1731:107::-;863:9;:7;:9::i;:::-;855:18;;;;;;1803:28;1822:8;1803:18;:28::i;:::-;1731:107;:::o;1982:183::-;-1:-1:-1;;;;;2055:22:7;;2047:31;;;;;;2114:6;;;2093:38;;-1:-1:-1;;;;;2093:38:7;;;;2114:6;;;2093:38;;;2141:6;:17;;-1:-1:-1;;;;;;2141:17:7;-1:-1:-1;;;;;2141:17:7;;;;;;;;;;1982:183::o",
   "source": "pragma solidity ^0.5.2;\nimport {Ownable} from \"openzeppelin-solidity/contracts/ownership/Ownable.sol\";\n\ncontract ProxyStorage is Ownable {\n    address internal proxyTo;\n}\n",
   "sourcePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/misc/ProxyStorage.sol",
   "ast": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/misc/ProxyStorage.sol",
+    "absolutePath": "project:/contracts/common/misc/ProxyStorage.sol",
     "exportedSymbols": {
       "ProxyStorage": [
-        4672
+        10548
       ]
     },
-    "id": 4673,
+    "id": 10549,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4665,
+        "id": 10541,
         "literals": [
           "solidity",
           "^",
@@ -101,19 +101,19 @@
           ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:33"
+        "src": "0:23:65"
       },
       {
         "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 4667,
+        "id": 10543,
         "nodeType": "ImportDirective",
-        "scope": 4673,
-        "sourceUnit": 21509,
-        "src": "24:78:33",
+        "scope": 10549,
+        "sourceUnit": 613,
+        "src": "24:78:65",
         "symbolAliases": [
           {
-            "foreign": 4666,
+            "foreign": 10542,
             "local": null
           }
         ],
@@ -125,42 +125,42 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 4668,
+              "id": 10544,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 21508,
-              "src": "129:7:33",
+              "referencedDeclaration": 612,
+              "src": "129:7:65",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$21508",
+                "typeIdentifier": "t_contract$_Ownable_$612",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 4669,
+            "id": 10545,
             "nodeType": "InheritanceSpecifier",
-            "src": "129:7:33"
+            "src": "129:7:65"
           }
         ],
         "contractDependencies": [
-          21508
+          612
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 4672,
+        "id": 10548,
         "linearizedBaseContracts": [
-          4672,
-          21508
+          10548,
+          612
         ],
         "name": "ProxyStorage",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4671,
+            "id": 10547,
             "name": "proxyTo",
             "nodeType": "VariableDeclaration",
-            "scope": 4672,
-            "src": "143:24:33",
+            "scope": 10548,
+            "src": "143:24:65",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -168,10 +168,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 4670,
+              "id": 10546,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "143:7:33",
+              "src": "143:7:65",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -182,125 +182,134 @@
             "visibility": "internal"
           }
         ],
-        "scope": 4673,
-        "src": "104:66:33"
+        "scope": 10549,
+        "src": "104:66:65"
       }
     ],
-    "src": "0:171:33"
+    "src": "0:171:65"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/misc/ProxyStorage.sol",
-    "exportedSymbols": {
-      "ProxyStorage": [
-        4672
-      ]
+    "attributes": {
+      "absolutePath": "project:/contracts/common/misc/ProxyStorage.sol",
+      "exportedSymbols": {
+        "ProxyStorage": [
+          10548
+        ]
+      }
     },
-    "id": 4673,
-    "nodeType": "SourceUnit",
-    "nodes": [
+    "children": [
       {
-        "id": 4665,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".2"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "0:23:33"
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".2"
+          ]
+        },
+        "id": 10541,
+        "name": "PragmaDirective",
+        "src": "0:23:65"
       },
       {
-        "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 4667,
-        "nodeType": "ImportDirective",
-        "scope": 4673,
-        "sourceUnit": 21509,
-        "src": "24:78:33",
-        "symbolAliases": [
-          {
-            "foreign": 4666,
-            "local": null
-          }
-        ],
-        "unitAlias": ""
+        "attributes": {
+          "SourceUnit": 613,
+          "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+          "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+          "scope": 10549,
+          "symbolAliases": [
+            {
+              "foreign": 10542,
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 10543,
+        "name": "ImportDirective",
+        "src": "24:78:65"
       },
       {
-        "baseContracts": [
+        "attributes": {
+          "contractDependencies": [
+            612
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            10548,
+            612
+          ],
+          "name": "ProxyStorage",
+          "scope": 10549
+        },
+        "children": [
           {
-            "arguments": null,
-            "baseName": {
-              "contractScope": null,
-              "id": 4668,
-              "name": "Ownable",
-              "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 21508,
-              "src": "129:7:33",
-              "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$21508",
-                "typeString": "contract Ownable"
-              }
+            "attributes": {
+              "arguments": null
             },
-            "id": 4669,
-            "nodeType": "InheritanceSpecifier",
-            "src": "129:7:33"
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 612,
+                  "type": "contract Ownable"
+                },
+                "id": 10544,
+                "name": "UserDefinedTypeName",
+                "src": "129:7:65"
+              }
+            ],
+            "id": 10545,
+            "name": "InheritanceSpecifier",
+            "src": "129:7:65"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "proxyTo",
+              "scope": 10548,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 10546,
+                "name": "ElementaryTypeName",
+                "src": "143:7:65"
+              }
+            ],
+            "id": 10547,
+            "name": "VariableDeclaration",
+            "src": "143:24:65"
           }
         ],
-        "contractDependencies": [
-          21508
-        ],
-        "contractKind": "contract",
-        "documentation": null,
-        "fullyImplemented": true,
-        "id": 4672,
-        "linearizedBaseContracts": [
-          4672,
-          21508
-        ],
-        "name": "ProxyStorage",
-        "nodeType": "ContractDefinition",
-        "nodes": [
-          {
-            "constant": false,
-            "id": 4671,
-            "name": "proxyTo",
-            "nodeType": "VariableDeclaration",
-            "scope": 4672,
-            "src": "143:24:33",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_address",
-              "typeString": "address"
-            },
-            "typeName": {
-              "id": 4670,
-              "name": "address",
-              "nodeType": "ElementaryTypeName",
-              "src": "143:7:33",
-              "stateMutability": "nonpayable",
-              "typeDescriptions": {
-                "typeIdentifier": "t_address",
-                "typeString": "address"
-              }
-            },
-            "value": null,
-            "visibility": "internal"
-          }
-        ],
-        "scope": 4673,
-        "src": "104:66:33"
+        "id": 10548,
+        "name": "ContractDefinition",
+        "src": "104:66:65"
       }
     ],
-    "src": "0:171:33"
+    "id": 10549,
+    "name": "SourceUnit",
+    "src": "0:171:65"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
   },
   "networks": {},
-  "schemaVersion": "3.0.14",
-  "updatedAt": "2022-06-14T12:01:14.535Z",
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-07-08T08:23:54.093Z",
   "devdoc": {
     "methods": {
       "isOwner()": {

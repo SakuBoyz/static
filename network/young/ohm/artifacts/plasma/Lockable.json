@@ -4,21 +4,6 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "governance",
-      "outputs": [
-        {
-          "internalType": "contract IGovernance",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
       "name": "locked",
       "outputs": [
         {
@@ -30,18 +15,6 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_governance",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
     },
     {
       "constant": false,
@@ -62,25 +35,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"governance\",\"outputs\":[{\"internalType\":\"contract IGovernance\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_governance\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/mixin/Lockable.sol\":\"Lockable\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0x38ecd54850256c7f03fd236d4fd95de3f2e307cb6f3fd843994d588e0f2fbc04\",\"urls\":[\"bzz-raw://5ce3e82b37ad1e5a5475355729bb731434bfc47a1b865c3589f666907b6b0b7b\",\"dweb:/ipfs/QmUMRzD27ab7gEecNwoUdZRMysxik9RduLqyym9nhLvevT\"]},\"/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]},\"/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x818879aa3633b40320f4ecb0b404e02db25990fe59c3063fe757d653f180185d\",\"urls\":[\"bzz-raw://24c40cd51e74e450be138240c39ad05d5148638324f3fcf3507209d8a43eec79\",\"dweb:/ipfs/QmVaFn8L59wm2R95iRyCvqn1CwzVSq2QW2BSqGmhAhC2Ch\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516102383803806102388339818101604052602081101561003357600080fd5b5051600080546001600160a01b039092166001600160a01b03199092169190911790556101d3806100656000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80635aa6e67514610051578063a69df4b514610075578063cf3090121461007f578063f83d08ba1461009b575b600080fd5b6100596100a3565b604080516001600160a01b039092168252519081900360200190f35b61007d6100b2565b005b61008761010a565b604080519115158252519081900360200190f35b61007d61011a565b6000546001600160a01b031681565b6000546001600160a01b031633146100fb5760405162461bcd60e51b81526004018080602001828103825260268152602001806101796026913960400191505060405180910390fd5b6000805460ff60a01b19169055565b600054600160a01b900460ff1681565b6000546001600160a01b031633146101635760405162461bcd60e51b81526004018080602001828103825260268152602001806101796026913960400191505060405180910390fd5b6000805460ff60a01b1916600160a01b17905556fe4f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820506541b51559bcd4958d2aa050dcaf8ba6400a55bb8e84cf8c0aa68c2d2406a264736f6c634300050b0032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80635aa6e67514610051578063a69df4b514610075578063cf3090121461007f578063f83d08ba1461009b575b600080fd5b6100596100a3565b604080516001600160a01b039092168252519081900360200190f35b61007d6100b2565b005b61008761010a565b604080519115158252519081900360200190f35b61007d61011a565b6000546001600160a01b031681565b6000546001600160a01b031633146100fb5760405162461bcd60e51b81526004018080602001828103825260268152602001806101796026913960400191505060405180910390fd5b6000805460ff60a01b19169055565b600054600160a01b900460ff1681565b6000546001600160a01b031633146101635760405162461bcd60e51b81526004018080602001828103825260268152602001806101796026913960400191505060405180910390fd5b6000805460ff60a01b1916600160a01b17905556fe4f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820506541b51559bcd4958d2aa050dcaf8ba6400a55bb8e84cf8c0aa68c2d2406a264736f6c634300050b0032",
-  "sourceMap": "83:377:35:-;;;237:66;8:9:-1;5:2;;;30:1;27;20:12;5:2;237:66:35;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;237:66:35;185:10:16;:37;;-1:-1:-1;;;;;185:37:16;;;-1:-1:-1;;;;;;185:37:16;;;;;;;;;83:377:35;;;;;;",
-  "deployedSourceMap": "83:377:35:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;83:377:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:29:16;;;:::i;:::-;;;;-1:-1:-1;;;;;99:29:16;;;;;;;;;;;;;;385:73:35;;;:::i;:::-;;121:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;309:70;;;:::i;99:29:16:-;;;-1:-1:-1;;;;;99:29:16;;:::o;385:73:35:-;314:10:16;;-1:-1:-1;;;;;314:10:16;292;:33;271:118;;;;-1:-1:-1;;;271:118:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;446:5:35;437:14;;-1:-1:-1;;;;437:14:35;;;385:73::o;121:18::-;;;-1:-1:-1;;;121:18:35;;;;;:::o;309:70::-;314:10:16;;-1:-1:-1;;;;;314:10:16;292;:33;271:118;;;;-1:-1:-1;;;271:118:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;359:6:35;:13;;-1:-1:-1;;;;359:13:35;-1:-1:-1;;;359:13:35;;;309:70::o",
-  "source": "pragma solidity ^0.5.2;\n\nimport {Governable} from \"../governance/Governable.sol\";\n\ncontract Lockable is Governable {\n    bool public locked;\n\n    modifier onlyWhenUnlocked() {\n        require(!locked, \"Is Locked\");\n        _;\n    }\n\n    constructor(address _governance) public Governable(_governance) {}\n\n    function lock() external onlyGovernance {\n        locked = true;\n    }\n\n    function unlock() external onlyGovernance {\n        locked = false;\n    }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/common/mixin/Lockable.sol\":\"Lockable\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x59d2acf07b49a615d1bb5be488fdbc819a4b31c318a99800802455fc8ea1d562\",\"urls\":[\"bzz-raw://165e0ff5c1cb060ec4ffc7f2e352d38402959ecab77de2de1e39d6a637058220\",\"dweb:/ipfs/QmXtFFpKq5VBLwmfabs9oBiH56aTmWQzJqRWmyJnmbi5cT\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060c28061001f6000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c8063a69df4b5146041578063cf309012146049578063f83d08ba146063575b600080fd5b60476069565b005b604f6075565b604080519115158252519081900360200190f35b6047607e565b6000805460ff19169055565b60005460ff1681565b6000805460ff1916600117905556fea265627a7a72315820a8d7ab2c8e513d07dfca155ab60ae2ac5869221f126b4381e824558d6f4333a164736f6c63430005110032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c8063a69df4b5146041578063cf309012146049578063f83d08ba146063575b600080fd5b60476069565b005b604f6075565b604080519115158252519081900360200190f35b6047607e565b6000805460ff19169055565b60005460ff1681565b6000805460ff1916600117905556fea265627a7a72315820a8d7ab2c8e513d07dfca155ab60ae2ac5869221f126b4381e824558d6f4333a164736f6c63430005110032",
+  "sourceMap": "25:334:70:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:334:70;;;;;;;",
+  "deployedSourceMap": "25:334:70:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:334:70;;;;;;;;;;;;;;;;;;;;;;;;;;;;;301:56;;;:::i;:::-;;49:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;242:53;;;:::i;301:56::-;345:5;336:14;;-1:-1:-1;;336:14:70;;;301:56::o;49:18::-;;;;;;:::o;242:53::-;275:6;:13;;-1:-1:-1;;275:13:70;284:4;275:13;;;242:53::o",
+  "source": "pragma solidity ^0.5.2;\n\ncontract Lockable {\n    bool public locked;\n\n    modifier onlyWhenUnlocked() {\n        _assertUnlocked();\n        _;\n    }\n\n    function _assertUnlocked() private view {\n        require(!locked, \"locked\");\n    }\n\n    function lock() public {\n        locked = true;\n    }\n\n    function unlock() public {\n        locked = false;\n    }\n}\n",
   "sourcePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/mixin/Lockable.sol",
   "ast": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/mixin/Lockable.sol",
+    "absolutePath": "project:/contracts/common/mixin/Lockable.sol",
     "exportedSymbols": {
       "Lockable": [
-        4729
+        10894
       ]
     },
-    "id": 4730,
+    "id": 10895,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4683,
+        "id": 10858,
         "literals": [
           "solidity",
           "^",
@@ -88,66 +61,28 @@
           ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:35"
+        "src": "0:23:70"
       },
       {
-        "absolutePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/governance/Governable.sol",
-        "file": "../governance/Governable.sol",
-        "id": 4685,
-        "nodeType": "ImportDirective",
-        "scope": 4730,
-        "sourceUnit": 2591,
-        "src": "25:56:35",
-        "symbolAliases": [
-          {
-            "foreign": 4684,
-            "local": null
-          }
-        ],
-        "unitAlias": ""
-      },
-      {
-        "baseContracts": [
-          {
-            "arguments": null,
-            "baseName": {
-              "contractScope": null,
-              "id": 4686,
-              "name": "Governable",
-              "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2590,
-              "src": "104:10:35",
-              "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Governable_$2590",
-                "typeString": "contract Governable"
-              }
-            },
-            "id": 4687,
-            "nodeType": "InheritanceSpecifier",
-            "src": "104:10:35"
-          }
-        ],
-        "contractDependencies": [
-          2590
-        ],
+        "baseContracts": [],
+        "contractDependencies": [],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 4729,
+        "id": 10894,
         "linearizedBaseContracts": [
-          4729,
-          2590
+          10894
         ],
         "name": "Lockable",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4689,
+            "id": 10860,
             "name": "locked",
             "nodeType": "VariableDeclaration",
-            "scope": 4729,
-            "src": "121:18:35",
+            "scope": 10894,
+            "src": "49:18:70",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -155,10 +90,10 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 4688,
+              "id": 10859,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
-              "src": "121:4:35",
+              "src": "49:4:70",
               "typeDescriptions": {
                 "typeIdentifier": "t_bool",
                 "typeString": "bool"
@@ -169,9 +104,70 @@
           },
           {
             "body": {
-              "id": 4698,
+              "id": 10866,
               "nodeType": "Block",
-              "src": "174:57:35",
+              "src": "102:45:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 10862,
+                      "name": "_assertUnlocked",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10877,
+                      "src": "112:15:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$__$",
+                        "typeString": "function () view"
+                      }
+                    },
+                    "id": 10863,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "112:17:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10864,
+                  "nodeType": "ExpressionStatement",
+                  "src": "112:17:70"
+                },
+                {
+                  "id": 10865,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "139:1:70"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10867,
+            "name": "onlyWhenUnlocked",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 10861,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "99:2:70"
+            },
+            "src": "74:73:70",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 10876,
+              "nodeType": "Block",
+              "src": "193:43:70",
               "statements": [
                 {
                   "expression": {
@@ -179,7 +175,7 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 4693,
+                        "id": 10872,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -187,15 +183,15 @@
                         "nodeType": "UnaryOperation",
                         "operator": "!",
                         "prefix": true,
-                        "src": "192:7:35",
+                        "src": "211:7:70",
                         "subExpression": {
                           "argumentTypes": null,
-                          "id": 4692,
+                          "id": 10871,
                           "name": "locked",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4689,
-                          "src": "193:6:35",
+                          "referencedDeclaration": 10860,
+                          "src": "212:6:70",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
@@ -208,21 +204,21 @@
                       },
                       {
                         "argumentTypes": null,
-                        "hexValue": "4973204c6f636b6564",
-                        "id": 4694,
+                        "hexValue": "6c6f636b6564",
+                        "id": 10873,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "201:11:35",
+                        "src": "220:8:70",
                         "subdenomination": null,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_203197d3afe92d5a2e3571709a8992150457639ae59c2817fec6a1e09fc4e91d",
-                          "typeString": "literal_string \"Is Locked\""
+                          "typeIdentifier": "t_stringliteral_ab99c6d7581cbb37d2e578d3097bfdd3323e05447f1fd7670b6c3a3fb9d9ff79",
+                          "typeString": "literal_string \"locked\""
                         },
-                        "value": "Is Locked"
+                        "value": "locked"
                       }
                     ],
                     "expression": {
@@ -232,25 +228,25 @@
                           "typeString": "bool"
                         },
                         {
-                          "typeIdentifier": "t_stringliteral_203197d3afe92d5a2e3571709a8992150457639ae59c2817fec6a1e09fc4e91d",
-                          "typeString": "literal_string \"Is Locked\""
+                          "typeIdentifier": "t_stringliteral_ab99c6d7581cbb37d2e578d3097bfdd3323e05447f1fd7670b6c3a3fb9d9ff79",
+                          "typeString": "literal_string \"locked\""
                         }
                       ],
-                      "id": 4691,
+                      "id": 10870,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        24120,
-                        24121
+                        29779,
+                        29780
                       ],
-                      "referencedDeclaration": 24121,
-                      "src": "184:7:35",
+                      "referencedDeclaration": 29780,
+                      "src": "203:7:70",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 4695,
+                    "id": 10874,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -258,152 +254,65 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "184:29:35",
+                    "src": "203:26:70",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 4696,
+                  "id": 10875,
                   "nodeType": "ExpressionStatement",
-                  "src": "184:29:35"
-                },
-                {
-                  "id": 4697,
-                  "nodeType": "PlaceholderStatement",
-                  "src": "223:1:35"
+                  "src": "203:26:70"
                 }
               ]
             },
             "documentation": null,
-            "id": 4699,
-            "name": "onlyWhenUnlocked",
-            "nodeType": "ModifierDefinition",
-            "parameters": {
-              "id": 4690,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "171:2:35"
-            },
-            "src": "146:85:35",
-            "visibility": "internal"
-          },
-          {
-            "body": {
-              "id": 4707,
-              "nodeType": "Block",
-              "src": "301:2:35",
-              "statements": []
-            },
-            "documentation": null,
-            "id": 4708,
+            "id": 10877,
             "implemented": true,
-            "kind": "constructor",
-            "modifiers": [
-              {
-                "arguments": [
-                  {
-                    "argumentTypes": null,
-                    "id": 4704,
-                    "name": "_governance",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 4701,
-                    "src": "288:11:35",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  }
-                ],
-                "id": 4705,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 4703,
-                  "name": "Governable",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 2590,
-                  "src": "277:10:35",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_Governable_$2590_$",
-                    "typeString": "type(contract Governable)"
-                  }
-                },
-                "nodeType": "ModifierInvocation",
-                "src": "277:23:35"
-              }
-            ],
-            "name": "",
+            "kind": "function",
+            "modifiers": [],
+            "name": "_assertUnlocked",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4702,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 4701,
-                  "name": "_governance",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 4708,
-                  "src": "249:19:35",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 4700,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "249:7:35",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "248:21:35"
-            },
-            "returnParameters": {
-              "id": 4706,
+              "id": 10868,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "301:0:35"
+              "src": "177:2:70"
             },
-            "scope": 4729,
-            "src": "237:66:35",
-            "stateMutability": "nonpayable",
+            "returnParameters": {
+              "id": 10869,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "193:0:70"
+            },
+            "scope": 10894,
+            "src": "153:83:70",
+            "stateMutability": "view",
             "superFunction": null,
-            "visibility": "public"
+            "visibility": "private"
           },
           {
             "body": {
-              "id": 4717,
+              "id": 10884,
               "nodeType": "Block",
-              "src": "349:30:35",
+              "src": "265:30:70",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4715,
+                    "id": 10882,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4713,
+                      "id": 10880,
                       "name": "locked",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4689,
-                      "src": "359:6:35",
+                      "referencedDeclaration": 10860,
+                      "src": "275:6:70",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -414,14 +323,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 4714,
+                      "id": 10881,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "368:4:35",
+                      "src": "284:4:70",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -429,85 +338,65 @@
                       },
                       "value": "true"
                     },
-                    "src": "359:13:35",
+                    "src": "275:13:70",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 4716,
+                  "id": 10883,
                   "nodeType": "ExpressionStatement",
-                  "src": "359:13:35"
+                  "src": "275:13:70"
                 }
               ]
             },
             "documentation": null,
-            "id": 4718,
+            "id": 10885,
             "implemented": true,
             "kind": "function",
-            "modifiers": [
-              {
-                "arguments": null,
-                "id": 4711,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 4710,
-                  "name": "onlyGovernance",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 2589,
-                  "src": "334:14:35",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$__$",
-                    "typeString": "modifier ()"
-                  }
-                },
-                "nodeType": "ModifierInvocation",
-                "src": "334:14:35"
-              }
-            ],
+            "modifiers": [],
             "name": "lock",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4709,
+              "id": 10878,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "322:2:35"
+              "src": "255:2:70"
             },
             "returnParameters": {
-              "id": 4712,
+              "id": 10879,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "349:0:35"
+              "src": "265:0:70"
             },
-            "scope": 4729,
-            "src": "309:70:35",
+            "scope": 10894,
+            "src": "242:53:70",
             "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "external"
+            "superFunction": 26905,
+            "visibility": "public"
           },
           {
             "body": {
-              "id": 4727,
+              "id": 10892,
               "nodeType": "Block",
-              "src": "427:31:35",
+              "src": "326:31:70",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 4725,
+                    "id": 10890,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 4723,
+                      "id": 10888,
                       "name": "locked",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4689,
-                      "src": "437:6:35",
+                      "referencedDeclaration": 10860,
+                      "src": "336:6:70",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -518,14 +407,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 4724,
+                      "id": 10889,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "446:5:35",
+                      "src": "345:5:70",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -533,605 +422,572 @@
                       },
                       "value": "false"
                     },
-                    "src": "437:14:35",
+                    "src": "336:14:70",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 4726,
+                  "id": 10891,
                   "nodeType": "ExpressionStatement",
-                  "src": "437:14:35"
+                  "src": "336:14:70"
                 }
               ]
             },
             "documentation": null,
-            "id": 4728,
+            "id": 10893,
             "implemented": true,
             "kind": "function",
-            "modifiers": [
-              {
-                "arguments": null,
-                "id": 4721,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 4720,
-                  "name": "onlyGovernance",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 2589,
-                  "src": "412:14:35",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$__$",
-                    "typeString": "modifier ()"
-                  }
-                },
-                "nodeType": "ModifierInvocation",
-                "src": "412:14:35"
-              }
-            ],
+            "modifiers": [],
             "name": "unlock",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4719,
+              "id": 10886,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "400:2:35"
+              "src": "316:2:70"
             },
             "returnParameters": {
-              "id": 4722,
+              "id": 10887,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "427:0:35"
+              "src": "326:0:70"
             },
-            "scope": 4729,
-            "src": "385:73:35",
+            "scope": 10894,
+            "src": "301:56:70",
             "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "external"
+            "superFunction": 26902,
+            "visibility": "public"
           }
         ],
-        "scope": 4730,
-        "src": "83:377:35"
+        "scope": 10895,
+        "src": "25:334:70"
       }
     ],
-    "src": "0:461:35"
+    "src": "0:360:70"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/mixin/Lockable.sol",
-    "exportedSymbols": {
-      "Lockable": [
-        4729
-      ]
+    "attributes": {
+      "absolutePath": "project:/contracts/common/mixin/Lockable.sol",
+      "exportedSymbols": {
+        "Lockable": [
+          10894
+        ]
+      }
     },
-    "id": 4730,
-    "nodeType": "SourceUnit",
-    "nodes": [
+    "children": [
       {
-        "id": 4683,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".2"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "0:23:35"
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".2"
+          ]
+        },
+        "id": 10858,
+        "name": "PragmaDirective",
+        "src": "0:23:70"
       },
       {
-        "absolutePath": "/Users/ohm.jirapon/playground/blockhain/pos/plasma-ploygon/contracts/contracts/common/governance/Governable.sol",
-        "file": "../governance/Governable.sol",
-        "id": 4685,
-        "nodeType": "ImportDirective",
-        "scope": 4730,
-        "sourceUnit": 2591,
-        "src": "25:56:35",
-        "symbolAliases": [
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            10894
+          ],
+          "name": "Lockable",
+          "scope": 10895
+        },
+        "children": [
           {
-            "foreign": 4684,
-            "local": null
-          }
-        ],
-        "unitAlias": ""
-      },
-      {
-        "baseContracts": [
-          {
-            "arguments": null,
-            "baseName": {
-              "contractScope": null,
-              "id": 4686,
-              "name": "Governable",
-              "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2590,
-              "src": "104:10:35",
-              "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Governable_$2590",
-                "typeString": "contract Governable"
+            "attributes": {
+              "constant": false,
+              "name": "locked",
+              "scope": 10894,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 10859,
+                "name": "ElementaryTypeName",
+                "src": "49:4:70"
               }
-            },
-            "id": 4687,
-            "nodeType": "InheritanceSpecifier",
-            "src": "104:10:35"
-          }
-        ],
-        "contractDependencies": [
-          2590
-        ],
-        "contractKind": "contract",
-        "documentation": null,
-        "fullyImplemented": true,
-        "id": 4729,
-        "linearizedBaseContracts": [
-          4729,
-          2590
-        ],
-        "name": "Lockable",
-        "nodeType": "ContractDefinition",
-        "nodes": [
-          {
-            "constant": false,
-            "id": 4689,
-            "name": "locked",
-            "nodeType": "VariableDeclaration",
-            "scope": 4729,
-            "src": "121:18:35",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_bool",
-              "typeString": "bool"
-            },
-            "typeName": {
-              "id": 4688,
-              "name": "bool",
-              "nodeType": "ElementaryTypeName",
-              "src": "121:4:35",
-              "typeDescriptions": {
-                "typeIdentifier": "t_bool",
-                "typeString": "bool"
-              }
-            },
-            "value": null,
-            "visibility": "public"
+            ],
+            "id": 10860,
+            "name": "VariableDeclaration",
+            "src": "49:18:70"
           },
           {
-            "body": {
-              "id": 4698,
-              "nodeType": "Block",
-              "src": "174:57:35",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
+            "attributes": {
+              "documentation": null,
+              "name": "onlyWhenUnlocked",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10861,
+                "name": "ParameterList",
+                "src": "99:2:70"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
                       {
-                        "argumentTypes": null,
-                        "id": 4693,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "nodeType": "UnaryOperation",
-                        "operator": "!",
-                        "prefix": true,
-                        "src": "192:7:35",
-                        "subExpression": {
+                        "attributes": {
                           "argumentTypes": null,
-                          "id": 4692,
-                          "name": "locked",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 4689,
-                          "src": "193:6:35",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10877,
+                              "type": "function () view",
+                              "value": "_assertUnlocked"
+                            },
+                            "id": 10862,
+                            "name": "Identifier",
+                            "src": "112:15:70"
                           }
-                        },
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      },
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "4973204c6f636b6564",
-                        "id": 4694,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "string",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "201:11:35",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_203197d3afe92d5a2e3571709a8992150457639ae59c2817fec6a1e09fc4e91d",
-                          "typeString": "literal_string \"Is Locked\""
-                        },
-                        "value": "Is Locked"
+                        ],
+                        "id": 10863,
+                        "name": "FunctionCall",
+                        "src": "112:17:70"
                       }
                     ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        },
-                        {
-                          "typeIdentifier": "t_stringliteral_203197d3afe92d5a2e3571709a8992150457639ae59c2817fec6a1e09fc4e91d",
-                          "typeString": "literal_string \"Is Locked\""
-                        }
-                      ],
-                      "id": 4691,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        24120,
-                        24121
-                      ],
-                      "referencedDeclaration": 24121,
-                      "src": "184:7:35",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
-                        "typeString": "function (bool,string memory) pure"
-                      }
-                    },
-                    "id": 4695,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "184:29:35",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
+                    "id": 10864,
+                    "name": "ExpressionStatement",
+                    "src": "112:17:70"
                   },
-                  "id": 4696,
-                  "nodeType": "ExpressionStatement",
-                  "src": "184:29:35"
-                },
-                {
-                  "id": 4697,
-                  "nodeType": "PlaceholderStatement",
-                  "src": "223:1:35"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 4699,
-            "name": "onlyWhenUnlocked",
-            "nodeType": "ModifierDefinition",
-            "parameters": {
-              "id": 4690,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "171:2:35"
-            },
-            "src": "146:85:35",
-            "visibility": "internal"
-          },
-          {
-            "body": {
-              "id": 4707,
-              "nodeType": "Block",
-              "src": "301:2:35",
-              "statements": []
-            },
-            "documentation": null,
-            "id": 4708,
-            "implemented": true,
-            "kind": "constructor",
-            "modifiers": [
-              {
-                "arguments": [
                   {
-                    "argumentTypes": null,
-                    "id": 4704,
-                    "name": "_governance",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 4701,
-                    "src": "288:11:35",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
+                    "id": 10865,
+                    "name": "PlaceholderStatement",
+                    "src": "139:1:70"
                   }
                 ],
-                "id": 4705,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 4703,
-                  "name": "Governable",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 2590,
-                  "src": "277:10:35",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_Governable_$2590_$",
-                    "typeString": "type(contract Governable)"
-                  }
-                },
-                "nodeType": "ModifierInvocation",
-                "src": "277:23:35"
+                "id": 10866,
+                "name": "Block",
+                "src": "102:45:70"
               }
             ],
-            "name": "",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 4702,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 4701,
-                  "name": "_governance",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 4708,
-                  "src": "249:19:35",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 4700,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "249:7:35",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
+            "id": 10867,
+            "name": "ModifierDefinition",
+            "src": "74:73:70"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
               ],
-              "src": "248:21:35"
+              "name": "_assertUnlocked",
+              "scope": 10894,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "private"
             },
-            "returnParameters": {
-              "id": 4706,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "301:0:35"
-            },
-            "scope": 4729,
-            "src": "237:66:35",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 4717,
-              "nodeType": "Block",
-              "src": "349:30:35",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 4715,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 4713,
-                      "name": "locked",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 4689,
-                      "src": "359:6:35",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "hexValue": "74727565",
-                      "id": 4714,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "bool",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "368:4:35",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      },
-                      "value": "true"
-                    },
-                    "src": "359:13:35",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "id": 4716,
-                  "nodeType": "ExpressionStatement",
-                  "src": "359:13:35"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 4718,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [
+            "children": [
               {
-                "arguments": null,
-                "id": 4711,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 4710,
-                  "name": "onlyGovernance",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 2589,
-                  "src": "334:14:35",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$__$",
-                    "typeString": "modifier ()"
-                  }
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
                 },
-                "nodeType": "ModifierInvocation",
-                "src": "334:14:35"
+                "children": [],
+                "id": 10868,
+                "name": "ParameterList",
+                "src": "177:2:70"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10869,
+                "name": "ParameterList",
+                "src": "193:0:70"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_ab99c6d7581cbb37d2e578d3097bfdd3323e05447f1fd7670b6c3a3fb9d9ff79",
+                                  "typeString": "literal_string \"locked\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                29779,
+                                29780
+                              ],
+                              "referencedDeclaration": 29780,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 10870,
+                            "name": "Identifier",
+                            "src": "203:7:70"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!",
+                              "prefix": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10860,
+                                  "type": "bool",
+                                  "value": "locked"
+                                },
+                                "id": 10871,
+                                "name": "Identifier",
+                                "src": "212:6:70"
+                              }
+                            ],
+                            "id": 10872,
+                            "name": "UnaryOperation",
+                            "src": "211:7:70"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "6c6f636b6564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"locked\"",
+                              "value": "locked"
+                            },
+                            "id": 10873,
+                            "name": "Literal",
+                            "src": "220:8:70"
+                          }
+                        ],
+                        "id": 10874,
+                        "name": "FunctionCall",
+                        "src": "203:26:70"
+                      }
+                    ],
+                    "id": 10875,
+                    "name": "ExpressionStatement",
+                    "src": "203:26:70"
+                  }
+                ],
+                "id": 10876,
+                "name": "Block",
+                "src": "193:43:70"
               }
             ],
-            "name": "lock",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 4709,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "322:2:35"
-            },
-            "returnParameters": {
-              "id": 4712,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "349:0:35"
-            },
-            "scope": 4729,
-            "src": "309:70:35",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "external"
+            "id": 10877,
+            "name": "FunctionDefinition",
+            "src": "153:83:70"
           },
           {
-            "body": {
-              "id": 4727,
-              "nodeType": "Block",
-              "src": "427:31:35",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 4725,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 4723,
-                      "name": "locked",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 4689,
-                      "src": "437:6:35",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "hexValue": "66616c7365",
-                      "id": 4724,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "bool",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "446:5:35",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
-                      },
-                      "value": "false"
-                    },
-                    "src": "437:14:35",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "id": 4726,
-                  "nodeType": "ExpressionStatement",
-                  "src": "437:14:35"
-                }
-              ]
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "lock",
+              "scope": 10894,
+              "stateMutability": "nonpayable",
+              "superFunction": 26905,
+              "visibility": "public"
             },
-            "documentation": null,
-            "id": 4728,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [
+            "children": [
               {
-                "arguments": null,
-                "id": 4721,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 4720,
-                  "name": "onlyGovernance",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 2589,
-                  "src": "412:14:35",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$__$",
-                    "typeString": "modifier ()"
-                  }
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
                 },
-                "nodeType": "ModifierInvocation",
-                "src": "412:14:35"
+                "children": [],
+                "id": 10878,
+                "name": "ParameterList",
+                "src": "255:2:70"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10879,
+                "name": "ParameterList",
+                "src": "265:0:70"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10860,
+                              "type": "bool",
+                              "value": "locked"
+                            },
+                            "id": 10880,
+                            "name": "Identifier",
+                            "src": "275:6:70"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 10881,
+                            "name": "Literal",
+                            "src": "284:4:70"
+                          }
+                        ],
+                        "id": 10882,
+                        "name": "Assignment",
+                        "src": "275:13:70"
+                      }
+                    ],
+                    "id": 10883,
+                    "name": "ExpressionStatement",
+                    "src": "275:13:70"
+                  }
+                ],
+                "id": 10884,
+                "name": "Block",
+                "src": "265:30:70"
               }
             ],
-            "name": "unlock",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 4719,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "400:2:35"
+            "id": 10885,
+            "name": "FunctionDefinition",
+            "src": "242:53:70"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "unlock",
+              "scope": 10894,
+              "stateMutability": "nonpayable",
+              "superFunction": 26902,
+              "visibility": "public"
             },
-            "returnParameters": {
-              "id": 4722,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "427:0:35"
-            },
-            "scope": 4729,
-            "src": "385:73:35",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "external"
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10886,
+                "name": "ParameterList",
+                "src": "316:2:70"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10887,
+                "name": "ParameterList",
+                "src": "326:0:70"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10860,
+                              "type": "bool",
+                              "value": "locked"
+                            },
+                            "id": 10888,
+                            "name": "Identifier",
+                            "src": "336:6:70"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 10889,
+                            "name": "Literal",
+                            "src": "345:5:70"
+                          }
+                        ],
+                        "id": 10890,
+                        "name": "Assignment",
+                        "src": "336:14:70"
+                      }
+                    ],
+                    "id": 10891,
+                    "name": "ExpressionStatement",
+                    "src": "336:14:70"
+                  }
+                ],
+                "id": 10892,
+                "name": "Block",
+                "src": "326:31:70"
+              }
+            ],
+            "id": 10893,
+            "name": "FunctionDefinition",
+            "src": "301:56:70"
           }
         ],
-        "scope": 4730,
-        "src": "83:377:35"
+        "id": 10894,
+        "name": "ContractDefinition",
+        "src": "25:334:70"
       }
     ],
-    "src": "0:461:35"
+    "id": 10895,
+    "name": "SourceUnit",
+    "src": "0:360:70"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
   },
   "networks": {},
-  "schemaVersion": "3.0.14",
-  "updatedAt": "2022-06-14T12:01:14.553Z",
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-07-08T08:23:54.114Z",
   "devdoc": {
     "methods": {}
   },
