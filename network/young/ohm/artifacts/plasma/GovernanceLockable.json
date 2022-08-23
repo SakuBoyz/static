@@ -62,15 +62,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"governance\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"governance\",\"outputs\":[{\"internalType\":\"contract IGovernance\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol\":\"GovernanceLockable\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/root/matic-cli/devnet/code/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0xc6039fc5f9cd606721afc20b51248040531adb7b2c7e8aa1931aee98114bc2b1\",\"urls\":[\"bzz-raw://f8626f084251f5dd581773f48bdd68a47eb93beeb1ec9eeaa116f04c7b2f1cd8\",\"dweb:/ipfs/Qmb2pGgXovzgwWEP6KnpXt9p9tszHgfqck8j4TCF9J9nRN\"]},\"/root/matic-cli/devnet/code/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]},\"/root/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol\":{\"keccak256\":\"0x4364d3542a1a4975ec5cb926017e551d17496d06fdfff08a15e0709500e1bff1\",\"urls\":[\"bzz-raw://af1af54cf2da561a759f4e0c3bd4f12aa0ceb22b957f1424b064de901ead209b\",\"dweb:/ipfs/Qmc8xArcsw9fzZkAGLCrdNkdeApMnxMom2o2th8RxqiaHy\"]},\"/root/matic-cli/devnet/code/contracts/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x59d2acf07b49a615d1bb5be488fdbc819a4b31c318a99800802455fc8ea1d562\",\"urls\":[\"bzz-raw://165e0ff5c1cb060ec4ffc7f2e352d38402959ecab77de2de1e39d6a637058220\",\"dweb:/ipfs/QmXtFFpKq5VBLwmfabs9oBiH56aTmWQzJqRWmyJnmbi5cT\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516102103803806102108339818101604052602081101561003357600080fd5b5051600080546001600160a01b0390921661010002610100600160a81b03199092169190911790556101a68061006a6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80635aa6e67514610051578063a69df4b514610075578063cf3090121461007f578063f83d08ba1461009b575b600080fd5b6100596100a3565b604080516001600160a01b039092168252519081900360200190f35b61007d6100b7565b005b6100876100c9565b604080519115158252519081900360200190f35b61007d6100d2565b60005461010090046001600160a01b031681565b6100bf6100e2565b6100c7610130565b565b60005460ff1681565b6100da6100e2565b6100c761013c565b60005461010090046001600160a01b031633146100c75760405162461bcd60e51b815260040180806020018281038252602681526020018061014c6026913960400191505060405180910390fd5b6000805460ff19169055565b6000805460ff1916600117905556fe4f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820148ad3f569e7f6b90fba218cfc153e18ea24c452e91b21d8f69fdaa61cc4ff7864736f6c63430005110032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80635aa6e67514610051578063a69df4b514610075578063cf3090121461007f578063f83d08ba1461009b575b600080fd5b6100596100a3565b604080516001600160a01b039092168252519081900360200190f35b61007d6100b7565b005b6100876100c9565b604080519115158252519081900360200190f35b61007d6100d2565b60005461010090046001600160a01b031681565b6100bf6100e2565b6100c7610130565b565b60005460ff1681565b6100da6100e2565b6100c761013c565b60005461010090046001600160a01b031633146100c75760405162461bcd60e51b815260040180806020018281038252602681526020018061014c6026913960400191505060405180910390fd5b6000805460ff19169055565b6000805460ff1916600117905556fe4f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820148ad3f569e7f6b90fba218cfc153e18ea24c452e91b21d8f69fdaa61cc4ff7864736f6c63430005110032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"governance\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"governance\",\"outputs\":[{\"internalType\":\"contract IGovernance\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol\":\"GovernanceLockable\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0xc6039fc5f9cd606721afc20b51248040531adb7b2c7e8aa1931aee98114bc2b1\",\"urls\":[\"bzz-raw://f8626f084251f5dd581773f48bdd68a47eb93beeb1ec9eeaa116f04c7b2f1cd8\",\"dweb:/ipfs/Qmb2pGgXovzgwWEP6KnpXt9p9tszHgfqck8j4TCF9J9nRN\"]},\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]},\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol\":{\"keccak256\":\"0x4364d3542a1a4975ec5cb926017e551d17496d06fdfff08a15e0709500e1bff1\",\"urls\":[\"bzz-raw://af1af54cf2da561a759f4e0c3bd4f12aa0ceb22b957f1424b064de901ead209b\",\"dweb:/ipfs/Qmc8xArcsw9fzZkAGLCrdNkdeApMnxMom2o2th8RxqiaHy\"]},\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x59d2acf07b49a615d1bb5be488fdbc819a4b31c318a99800802455fc8ea1d562\",\"urls\":[\"bzz-raw://165e0ff5c1cb060ec4ffc7f2e352d38402959ecab77de2de1e39d6a637058220\",\"dweb:/ipfs/QmXtFFpKq5VBLwmfabs9oBiH56aTmWQzJqRWmyJnmbi5cT\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516102103803806102108339818101604052602081101561003357600080fd5b5051600080546001600160a01b0390921661010002610100600160a81b03199092169190911790556101a68061006a6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80635aa6e67514610051578063a69df4b514610075578063cf3090121461007f578063f83d08ba1461009b575b600080fd5b6100596100a3565b604080516001600160a01b039092168252519081900360200190f35b61007d6100b7565b005b6100876100c9565b604080519115158252519081900360200190f35b61007d6100d2565b60005461010090046001600160a01b031681565b6100bf6100e2565b6100c7610130565b565b60005460ff1681565b6100da6100e2565b6100c761013c565b60005461010090046001600160a01b031633146100c75760405162461bcd60e51b815260040180806020018281038252602681526020018061014c6026913960400191505060405180910390fd5b6000805460ff19169055565b6000805460ff1916600117905556fe4f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820ca871b1244775df2621684e003153b46ce925e38461b145590f8249941f07cb364736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80635aa6e67514610051578063a69df4b514610075578063cf3090121461007f578063f83d08ba1461009b575b600080fd5b6100596100a3565b604080516001600160a01b039092168252519081900360200190f35b61007d6100b7565b005b6100876100c9565b604080519115158252519081900360200190f35b61007d6100d2565b60005461010090046001600160a01b031681565b6100bf6100e2565b6100c7610130565b565b60005460ff1681565b6100da6100e2565b6100c761013c565b60005461010090046001600160a01b031633146100c75760405162461bcd60e51b815260040180806020018281038252602681526020018061014c6026913960400191505060405180910390fd5b6000805460ff19169055565b6000805460ff1916600117905556fe4f6e6c7920676f7665726e616e636520636f6e747261637420697320617574686f72697a6564a265627a7a72315820ca871b1244775df2621684e003153b46ce925e38461b145590f8249941f07cb364736f6c63430005110032",
   "sourceMap": "124:274:44:-;;;182:64;8:9:-1;5:2;;;30:1;27;20:12;5:2;182:64:44;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;182:64:44;185:10:22;:37;;-1:-1:-1;;;;;185:37:22;;;;;-1:-1:-1;;;;;;185:37:22;;;;;;;;;124:274:44;;;;;;",
   "deployedSourceMap": "124:274:44:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;124:274:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:29:22;;;:::i;:::-;;;;-1:-1:-1;;;;;99:29:22;;;;;;;;;;;;;;325:71:44;;;:::i;:::-;;49:18:46;;;:::i;:::-;;;;;;;;;;;;;;;;;;252:67:44;;;:::i;99:29:22:-;;;;;;-1:-1:-1;;;;;99:29:22;;:::o;325:71:44:-;271:19:22;:17;:19::i;:::-;375:14:44;:12;:14::i;:::-;325:71::o;49:18:46:-;;;;;;:::o;252:67:44:-;271:19:22;:17;:19::i;:::-;300:12:44;:10;:12::i;314:177:22:-;409:10;;;;;-1:-1:-1;;;;;409:10:22;387;:33;366:118;;;;-1:-1:-1;;;366:118:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;301:56:46;345:5;336:14;;-1:-1:-1;;336:14:46;;;301:56::o;242:53::-;275:6;:13;;-1:-1:-1;;275:13:46;284:4;275:13;;;242:53::o",
   "source": "pragma solidity ^0.5.2;\n\nimport {Governable} from \"../governance/Governable.sol\";\nimport {Lockable} from \"./Lockable.sol\";\n\ncontract GovernanceLockable is Lockable, Governable {\n    constructor(address governance) public Governable(governance) {}\n\n    function lock() public onlyGovernance {\n        super.lock();\n    }\n\n    function unlock() public onlyGovernance {\n        super.unlock();\n    }\n}\n",
-  "sourcePath": "/root/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol",
+  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol",
   "ast": {
-    "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol",
+    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol",
     "exportedSymbols": {
       "GovernanceLockable": [
         8220
@@ -91,7 +91,7 @@
         "src": "0:23:44"
       },
       {
-        "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/governance/Governable.sol",
+        "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/governance/Governable.sol",
         "file": "../governance/Governable.sol",
         "id": 8182,
         "nodeType": "ImportDirective",
@@ -107,7 +107,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/mixin/Lockable.sol",
+        "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/mixin/Lockable.sol",
         "file": "./Lockable.sol",
         "id": 8184,
         "nodeType": "ImportDirective",
@@ -487,7 +487,7 @@
     "src": "0:399:44"
   },
   "legacyAST": {
-    "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol",
+    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/mixin/GovernanceLockable.sol",
     "exportedSymbols": {
       "GovernanceLockable": [
         8220
@@ -508,7 +508,7 @@
         "src": "0:23:44"
       },
       {
-        "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/governance/Governable.sol",
+        "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/governance/Governable.sol",
         "file": "../governance/Governable.sol",
         "id": 8182,
         "nodeType": "ImportDirective",
@@ -524,7 +524,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/common/mixin/Lockable.sol",
+        "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/mixin/Lockable.sol",
         "file": "./Lockable.sol",
         "id": 8184,
         "nodeType": "ImportDirective",
@@ -909,7 +909,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.14",
-  "updatedAt": "2022-07-11T04:28:08.281Z",
+  "updatedAt": "2022-08-10T08:13:56.157Z",
   "devdoc": {
     "methods": {}
   },

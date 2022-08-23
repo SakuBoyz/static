@@ -1,1 +1,940 @@
-{"abi":[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"id","type":"uint256"},{"indexed":true,"internalType":"address","name":"contractAddress","type":"address"},{"indexed":false,"internalType":"bytes","name":"data","type":"bytes"}],"name":"StateSynced","type":"event"},{"inputs":[{"internalType":"address","name":"receiver","type":"address"},{"internalType":"bytes","name":"data","type":"bytes"}],"name":"syncState","outputs":[],"stateMutability":"nonpayable","type":"function"}]}
+{
+  "contractName": "DummyStateSender",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "contractAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "StateSynced",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "syncState",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"StateSynced\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"syncState\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"syncState(address,bytes)\":{\"details\":\"sender and receiver contracts need to be registered in case of actual state sender contract\",\"params\":{\"data\":\"bytes data to be sent\",\"receiver\":\"the contract receiving data on child chain\"}}}},\"userdoc\":{\"methods\":{\"syncState(address,bytes)\":{\"notice\":\"called to send data to child chain\"}},\"notice\":\"Dummy State Sender contract to simulate plasma state sender while testing\"}},\"settings\":{\"compilationTarget\":{\"project:/contracts/root/StateSender/DummyStateSender.sol\":\"DummyStateSender\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/root/StateSender/DummyStateSender.sol\":{\"keccak256\":\"0x1da16d68582052f6265cc3ec6706f8e2b975ca4733c21533480398981834a96f\",\"urls\":[\"bzz-raw://8f75f06b5ec8f0d65e029902b1837d00a62c5c411b3136b39d968e5bfd614f09\",\"dweb:/ipfs/QmURoN29PkautP7cX7Ar4yiXKDRYhQX1pmovVMnu2sK3he\"]},\"project:/contracts/root/StateSender/IStateSender.sol\":{\"keccak256\":\"0x8f260b4eeb18f8cd86b144aa410c06f365827b99b177901c1497dff4d55c0e30\",\"urls\":[\"bzz-raw://2954e25696c7e80769d04282f0bfc7d7a3da22ae1928831d6144ffeb2c92fca9\",\"dweb:/ipfs/QmcJZPP4ZusGemWLxi1YBkkvSfpTHvjMHXAdL7U7KfQcLB\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610159806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806316f1983114610030575b600080fd5b6100b06004803603604081101561004657600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561007157600080fd5b82018360208201111561008357600080fd5b803590602001918460018302840111640100000000831117156100a557600080fd5b5090925090506100b2565b005b826001600160a01b031660017f103fed9db65eac19c4d870f49ab7520fe03b99f1838e5996caf47e9e43308392848460405180806020018281038252848482818152602001925080828437600083820152604051601f909101601f19169092018290039550909350505050a350505056fea264697066735822122003286ad6aae33c44111be6b1d3044c6555310ecf648b14fed9634e157aabe85f64736f6c63430006060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806316f1983114610030575b600080fd5b6100b06004803603604081101561004657600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561007157600080fd5b82018360208201111561008357600080fd5b803590602001918460018302840111640100000000831117156100a557600080fd5b5090925090506100b2565b005b826001600160a01b031660017f103fed9db65eac19c4d870f49ab7520fe03b99f1838e5996caf47e9e43308392848460405180806020018281038252848482818152602001925080828437600083820152604051601f909101601f19169092018290039550909350505050a350505056fea264697066735822122003286ad6aae33c44111be6b1d3044c6555310ecf648b14fed9634e157aabe85f64736f6c63430006060033",
+  "immutableReferences": {},
+  "sourceMap": "178:969:67:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;178:969:67;;;;;;;",
+  "deployedSourceMap": "178:969:67:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;178:969:67;;;;;;;;;;;;;;;;12:1:-1;9;2:12;1017:128:67;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;;;;;1017:128:67;;;;;;;;;;;;;;;27:11:-1;11:28;;8:2;;;52:1;49;42:12;8:2;1017:128:67;;41:9:-1;34:4;18:14;14:25;11:40;8:2;;;64:1;61;54:12;8:2;1017:128:67;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;-1:-1;1017:128:67;;-1:-1:-1;1017:128:67;-1:-1:-1;1017:128:67;:::i;:::-;;;1123:8;-1:-1:-1;;;;;1108:30:67;1120:1;1108:30;1133:4;;1108:30;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;;74:27;1108:30:67;;137:4:-1;117:14;;;-1:-1;;113:30;157:16;;;1108:30:67;;;;-1:-1:-1;1108:30:67;;-1:-1:-1;;;;1108:30:67;1017:128;;;:::o",
+  "source": "pragma solidity 0.6.6;\n\nimport {IStateSender} from \"../StateSender/IStateSender.sol\";\n\n/**\n* @notice Dummy State Sender contract to simulate plasma state sender while testing\n*/\ncontract DummyStateSender is IStateSender {\n    /**\n     * @notice Event emitted when when syncState is called\n     * @dev Heimdall bridge listens to this event and sends the data to receiver contract on child chain\n     * @param id Id of the sync, increamented for each event in case of actual state sender contract\n     * @param contractAddress the contract receiving data on child chain\n     * @param data bytes data to be sent\n     */\n    event StateSynced(\n        uint256 indexed id,\n        address indexed contractAddress,\n        bytes data\n    );\n\n    /**\n     * @notice called to send data to child chain\n     * @dev sender and receiver contracts need to be registered in case of actual state sender contract\n     * @param receiver the contract receiving data on child chain\n     * @param data bytes data to be sent\n     */\n    function syncState(address receiver, bytes calldata data) external override {\n        emit StateSynced(1, receiver, data);\n    }\n}\n",
+  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/pos-portal/contracts/root/StateSender/DummyStateSender.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/root/StateSender/DummyStateSender.sol",
+    "exportedSymbols": {
+      "DummyStateSender": [
+        11751
+      ]
+    },
+    "id": 11752,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11720,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:67"
+      },
+      {
+        "absolutePath": "project:/contracts/root/StateSender/IStateSender.sol",
+        "file": "../StateSender/IStateSender.sol",
+        "id": 11722,
+        "nodeType": "ImportDirective",
+        "scope": 11752,
+        "sourceUnit": 11762,
+        "src": "24:61:67",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 11721,
+              "name": "IStateSender",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "32:12:67",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 11724,
+              "name": "IStateSender",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11761,
+              "src": "207:12:67",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IStateSender_$11761",
+                "typeString": "contract IStateSender"
+              }
+            },
+            "id": 11725,
+            "nodeType": "InheritanceSpecifier",
+            "src": "207:12:67"
+          }
+        ],
+        "contractDependencies": [
+          11761
+        ],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 11723,
+          "nodeType": "StructuredDocumentation",
+          "src": "87:90:67",
+          "text": "@notice Dummy State Sender contract to simulate plasma state sender while testing"
+        },
+        "fullyImplemented": true,
+        "id": 11751,
+        "linearizedBaseContracts": [
+          11751,
+          11761
+        ],
+        "name": "DummyStateSender",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 11726,
+              "nodeType": "StructuredDocumentation",
+              "src": "226:390:67",
+              "text": "@notice Event emitted when when syncState is called\n@dev Heimdall bridge listens to this event and sends the data to receiver contract on child chain\n@param id Id of the sync, increamented for each event in case of actual state sender contract\n@param contractAddress the contract receiving data on child chain\n@param data bytes data to be sent"
+            },
+            "id": 11734,
+            "name": "StateSynced",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 11733,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11728,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11734,
+                  "src": "648:18:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11727,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "648:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11730,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "contractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11734,
+                  "src": "676:31:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11729,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "676:7:67",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11732,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11734,
+                  "src": "717:10:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11731,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "717:5:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "638:95:67"
+            },
+            "src": "621:113:67"
+          },
+          {
+            "baseFunctions": [
+              11760
+            ],
+            "body": {
+              "id": 11749,
+              "nodeType": "Block",
+              "src": "1093:52:67",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 11744,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1120:1:67",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11745,
+                        "name": "receiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11737,
+                        "src": "1123:8:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11746,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11739,
+                        "src": "1133:4:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      ],
+                      "id": 11743,
+                      "name": "StateSynced",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11734,
+                      "src": "1108:11:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_bytes_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,address,bytes memory)"
+                      }
+                    },
+                    "id": 11747,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1108:30:67",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11748,
+                  "nodeType": "EmitStatement",
+                  "src": "1103:35:67"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11735,
+              "nodeType": "StructuredDocumentation",
+              "src": "740:272:67",
+              "text": "@notice called to send data to child chain\n@dev sender and receiver contracts need to be registered in case of actual state sender contract\n@param receiver the contract receiving data on child chain\n@param data bytes data to be sent"
+            },
+            "functionSelector": "16f19831",
+            "id": 11750,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "syncState",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 11741,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1084:8:67"
+            },
+            "parameters": {
+              "id": 11740,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11737,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11750,
+                  "src": "1036:16:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11736,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1036:7:67",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11739,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11750,
+                  "src": "1054:19:67",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11738,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1054:5:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1035:39:67"
+            },
+            "returnParameters": {
+              "id": 11742,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1093:0:67"
+            },
+            "scope": 11751,
+            "src": "1017:128:67",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11752,
+        "src": "178:969:67"
+      }
+    ],
+    "src": "0:1148:67"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/root/StateSender/DummyStateSender.sol",
+      "exportedSymbols": {
+        "DummyStateSender": [
+          11751
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".6"
+          ]
+        },
+        "id": 11720,
+        "name": "PragmaDirective",
+        "src": "0:22:67"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 11762,
+          "absolutePath": "project:/contracts/root/StateSender/IStateSender.sol",
+          "file": "../StateSender/IStateSender.sol",
+          "scope": 11752,
+          "symbolAliases": [
+            {
+              "foreign": {
+                "attributes": {
+                  "argumentTypes": null,
+                  "overloadedDeclarations": [
+                    null
+                  ],
+                  "referencedDeclaration": null,
+                  "type": null,
+                  "value": "IStateSender"
+                },
+                "id": 11721,
+                "name": "Identifier",
+                "src": "32:12:67"
+              },
+              "local": null
+            }
+          ],
+          "unitAlias": ""
+        },
+        "id": 11722,
+        "name": "ImportDirective",
+        "src": "24:61:67"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "contractDependencies": [
+            11761
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            11751,
+            11761
+          ],
+          "name": "DummyStateSender",
+          "scope": 11752
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@notice Dummy State Sender contract to simulate plasma state sender while testing"
+            },
+            "id": 11723,
+            "name": "StructuredDocumentation",
+            "src": "87:90:67"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IStateSender",
+                  "referencedDeclaration": 11761,
+                  "type": "contract IStateSender"
+                },
+                "id": 11724,
+                "name": "UserDefinedTypeName",
+                "src": "207:12:67"
+              }
+            ],
+            "id": 11725,
+            "name": "InheritanceSpecifier",
+            "src": "207:12:67"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "StateSynced"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice Event emitted when when syncState is called\n@dev Heimdall bridge listens to this event and sends the data to receiver contract on child chain\n@param id Id of the sync, increamented for each event in case of actual state sender contract\n@param contractAddress the contract receiving data on child chain\n@param data bytes data to be sent"
+                },
+                "id": 11726,
+                "name": "StructuredDocumentation",
+                "src": "226:390:67"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "overrides": null,
+                      "scope": 11734,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 11727,
+                        "name": "ElementaryTypeName",
+                        "src": "648:7:67"
+                      }
+                    ],
+                    "id": 11728,
+                    "name": "VariableDeclaration",
+                    "src": "648:18:67"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "mutability": "mutable",
+                      "name": "contractAddress",
+                      "overrides": null,
+                      "scope": 11734,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 11729,
+                        "name": "ElementaryTypeName",
+                        "src": "676:7:67"
+                      }
+                    ],
+                    "id": 11730,
+                    "name": "VariableDeclaration",
+                    "src": "676:31:67"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "data",
+                      "overrides": null,
+                      "scope": 11734,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 11731,
+                        "name": "ElementaryTypeName",
+                        "src": "717:5:67"
+                      }
+                    ],
+                    "id": 11732,
+                    "name": "VariableDeclaration",
+                    "src": "717:10:67"
+                  }
+                ],
+                "id": 11733,
+                "name": "ParameterList",
+                "src": "638:95:67"
+              }
+            ],
+            "id": 11734,
+            "name": "EventDefinition",
+            "src": "621:113:67"
+          },
+          {
+            "attributes": {
+              "baseFunctions": [
+                11760
+              ],
+              "functionSelector": "16f19831",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "syncState",
+              "scope": 11751,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice called to send data to child chain\n@dev sender and receiver contracts need to be registered in case of actual state sender contract\n@param receiver the contract receiving data on child chain\n@param data bytes data to be sent"
+                },
+                "id": 11735,
+                "name": "StructuredDocumentation",
+                "src": "740:272:67"
+              },
+              {
+                "attributes": {
+                  "overrides": [
+                    null
+                  ]
+                },
+                "id": 11741,
+                "name": "OverrideSpecifier",
+                "src": "1084:8:67"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "receiver",
+                      "overrides": null,
+                      "scope": 11750,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 11736,
+                        "name": "ElementaryTypeName",
+                        "src": "1036:7:67"
+                      }
+                    ],
+                    "id": 11737,
+                    "name": "VariableDeclaration",
+                    "src": "1036:16:67"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "data",
+                      "overrides": null,
+                      "scope": 11750,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 11738,
+                        "name": "ElementaryTypeName",
+                        "src": "1054:5:67"
+                      }
+                    ],
+                    "id": 11739,
+                    "name": "VariableDeclaration",
+                    "src": "1054:19:67"
+                  }
+                ],
+                "id": 11740,
+                "name": "ParameterList",
+                "src": "1035:39:67"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 11742,
+                "name": "ParameterList",
+                "src": "1093:0:67"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_1_by_1",
+                                  "typeString": "int_const 1"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_bytes_calldata_ptr",
+                                  "typeString": "bytes calldata"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 11734,
+                              "type": "function (uint256,address,bytes memory)",
+                              "value": "StateSynced"
+                            },
+                            "id": 11743,
+                            "name": "Identifier",
+                            "src": "1108:11:67"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 11744,
+                            "name": "Literal",
+                            "src": "1120:1:67"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 11737,
+                              "type": "address",
+                              "value": "receiver"
+                            },
+                            "id": 11745,
+                            "name": "Identifier",
+                            "src": "1123:8:67"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 11739,
+                              "type": "bytes calldata",
+                              "value": "data"
+                            },
+                            "id": 11746,
+                            "name": "Identifier",
+                            "src": "1133:4:67"
+                          }
+                        ],
+                        "id": 11747,
+                        "name": "FunctionCall",
+                        "src": "1108:30:67"
+                      }
+                    ],
+                    "id": 11748,
+                    "name": "EmitStatement",
+                    "src": "1103:35:67"
+                  }
+                ],
+                "id": 11749,
+                "name": "Block",
+                "src": "1093:52:67"
+              }
+            ],
+            "id": 11750,
+            "name": "FunctionDefinition",
+            "src": "1017:128:67"
+          }
+        ],
+        "id": 11751,
+        "name": "ContractDefinition",
+        "src": "178:969:67"
+      }
+    ],
+    "id": 11752,
+    "name": "SourceUnit",
+    "src": "0:1148:67"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Linux.g++"
+  },
+  "networks": {
+    "12123": {
+      "events": {},
+      "links": {},
+      "address": "0x65c7f23D0D93F80BAAF5d7156479d202D397b1b2",
+      "transactionHash": "0xade0ce93839284d6c97b18f8e6a1fb53b6e5b9c65745fb134d7db06b92e350e5"
+    }
+  },
+  "schemaVersion": "3.4.9",
+  "updatedAt": "2022-08-22T08:24:35.562Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {
+      "syncState(address,bytes)": {
+        "details": "sender and receiver contracts need to be registered in case of actual state sender contract",
+        "params": {
+          "data": "bytes data to be sent",
+          "receiver": "the contract receiving data on child chain"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "syncState(address,bytes)": {
+        "notice": "called to send data to child chain"
+      }
+    },
+    "notice": "Dummy State Sender contract to simulate plasma state sender while testing"
+  }
+}

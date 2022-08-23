@@ -33,15 +33,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"beforeTransfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol\":\"IParentToken\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/root/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol\":{\"keccak256\":\"0x98498021f61abb16e001a1c4193280412b6fd3dc0b6992a15730f084404babd2\",\"urls\":[\"bzz-raw://c0437d04e8ca4da434f78d0cb38ada16008815f5316f8fd5657eceb90f68e868\",\"dweb:/ipfs/QmZpa9MA83C13RJa251v55UicCrtvf6DqnxEpRVrMLZooK\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"beforeTransfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol\":\"IParentToken\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol\":{\"keccak256\":\"0x98498021f61abb16e001a1c4193280412b6fd3dc0b6992a15730f084404babd2\",\"urls\":[\"bzz-raw://c0437d04e8ca4da434f78d0cb38ada16008815f5316f8fd5657eceb90f68e868\",\"dweb:/ipfs/QmZpa9MA83C13RJa251v55UicCrtvf6DqnxEpRVrMLZooK\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n//interface for parent contract of any child token\n\ninterface IParentToken {\n    function beforeTransfer(address sender, address to, uint256 value)\n        external\n        returns (bool);\n}\n",
-  "sourcePath": "/root/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol",
+  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol",
   "ast": {
-    "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol",
+    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol",
     "exportedSymbols": {
       "IParentToken": [
         2017
@@ -217,7 +217,7 @@
     "src": "0:215:12"
   },
   "legacyAST": {
-    "absolutePath": "/root/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol",
+    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/IParentToken.sol",
     "exportedSymbols": {
       "IParentToken": [
         2017
@@ -398,7 +398,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.14",
-  "updatedAt": "2022-07-11T04:28:07.946Z",
+  "updatedAt": "2022-08-10T08:13:55.762Z",
   "devdoc": {
     "methods": {}
   },

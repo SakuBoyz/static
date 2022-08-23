@@ -17,15 +17,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"SYSTEM_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/matic-cli/devnet/code/genesis-contracts/contracts/System.sol\":\"System\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/root/matic-cli/devnet/code/genesis-contracts/contracts/System.sol\":{\"keccak256\":\"0x9daa2480e57d3606de7d7a5f3dc8740189733bbe3029d00ac1e881f8be8b33f9\",\"urls\":[\"bzz-raw://60a5f56a16fb2b21b6f40e58b109ebff9061eef0447904269bbc829c8a9beaf4\",\"dweb:/ipfs/QmSXohMQjMvf8yLaVXQvcospH8sV5XwjECFVbvx1aMkj4i\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060df8061001f6000396000f3fe6080604052348015600f57600080fd5b50600436106045576000357c0100000000000000000000000000000000000000000000000000000000900480633434735f14604a575b600080fd5b60506092565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b73fffffffffffffffffffffffffffffffffffffffe8156fea265627a7a723158200a17dd6d255575c01c6861f62bd68f7bd278c01e5f564ca5e71239dae22f781a64736f6c634300050b0032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b50600436106045576000357c0100000000000000000000000000000000000000000000000000000000900480633434735f14604a575b600080fd5b60506092565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b73fffffffffffffffffffffffffffffffffffffffe8156fea265627a7a723158200a17dd6d255575c01c6861f62bd68f7bd278c01e5f564ca5e71239dae22f781a64736f6c634300050b0032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"SYSTEM_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/System.sol\":\"System\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/System.sol\":{\"keccak256\":\"0x9daa2480e57d3606de7d7a5f3dc8740189733bbe3029d00ac1e881f8be8b33f9\",\"urls\":[\"bzz-raw://60a5f56a16fb2b21b6f40e58b109ebff9061eef0447904269bbc829c8a9beaf4\",\"dweb:/ipfs/QmSXohMQjMvf8yLaVXQvcospH8sV5XwjECFVbvx1aMkj4i\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060df8061001f6000396000f3fe6080604052348015600f57600080fd5b50600436106045576000357c0100000000000000000000000000000000000000000000000000000000900480633434735f14604a575b600080fd5b60506092565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b73fffffffffffffffffffffffffffffffffffffffe8156fea265627a7a72315820fcfc17fcd3c4bb05d2d7055b66f04c6f5c49779cc479d5c5a83e57a0763ec2ee64736f6c634300050b0032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b50600436106045576000357c0100000000000000000000000000000000000000000000000000000000900480633434735f14604a575b600080fd5b60506092565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b73fffffffffffffffffffffffffffffffffffffffe8156fea265627a7a72315820fcfc17fcd3c4bb05d2d7055b66f04c6f5c49779cc479d5c5a83e57a0763ec2ee64736f6c634300050b0032",
   "sourceMap": "26:209:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:209:6;;;;;;;",
   "deployedSourceMap": "26:209:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:209:6;;;;;;;;;;;;;;;;;;;;46:83;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;87:42;46:83;:::o",
   "source": "pragma solidity ^0.5.11;\n\ncontract System {\n  address public constant SYSTEM_ADDRESS = 0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE;\n\n  modifier onlySystem() {\n    require(msg.sender == SYSTEM_ADDRESS, \"Not System Addess!\");\n    _;\n  }\n}\n",
-  "sourcePath": "/root/matic-cli/devnet/code/genesis-contracts/contracts/System.sol",
+  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/System.sol",
   "ast": {
-    "absolutePath": "/root/matic-cli/devnet/code/genesis-contracts/contracts/System.sol",
+    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/System.sol",
     "exportedSymbols": {
       "System": [
         1873
@@ -263,7 +263,7 @@
     "src": "0:236:6"
   },
   "legacyAST": {
-    "absolutePath": "/root/matic-cli/devnet/code/genesis-contracts/contracts/System.sol",
+    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/System.sol",
     "exportedSymbols": {
       "System": [
         1873
@@ -506,7 +506,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.14",
-  "updatedAt": "2022-07-11T06:06:04.785Z",
+  "updatedAt": "2022-08-16T05:17:47.587Z",
   "devdoc": {
     "methods": {}
   },
