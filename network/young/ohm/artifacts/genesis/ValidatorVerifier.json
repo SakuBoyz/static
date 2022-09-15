@@ -80,25 +80,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"validatorSet\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isValidatorSetContract\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"signer\",\"type\":\"address\"}],\"name\":\"isProducer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"signer\",\"type\":\"address\"}],\"name\":\"isValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{\"isValidatorSetContract()\":{\"details\":\"Returns true if the caller is the current validator set contract.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol\":\"ValidatorVerifier\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/ValidatorSet.sol\":{\"keccak256\":\"0x8db4ce94c006b7add0de8faba9b1210989208ec3e61b6d76593aba6c33991167\",\"urls\":[\"bzz-raw://f431c6dff7d0bb61c811c94dca5bbcb5d30a1a360f9508070c30305461cd1363\",\"dweb:/ipfs/QmaxSMF9kwTzN5iiPRdTCrW3TUCEeRxmgcDLYVjoiosQQ9\"]},\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol\":{\"keccak256\":\"0x2025e30c87f70e2629be37fe4f17057a9f4e4cb5191a4e89c1940992d23e575e\",\"urls\":[\"bzz-raw://48bec8232c44f21e37fc6c55db707471e10496a11a0e0daf0aef700de2b3d1db\",\"dweb:/ipfs/QmW2s262W13tkLoVNfqJoeui3ZAWwTHZmeEiwXs7DmuZpG\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506103c3806100206000396000f3fe608060405234801561001057600080fd5b5060043610610069576000357c0100000000000000000000000000000000000000000000000000000000900480639426e2261461006e578063d79e60b7146100b8578063f5521022146100da578063facd743b14610136575b600080fd5b610076610192565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100c0610198565b604051808215151515815260200191505060405180910390f35b61011c600480360360208110156100f057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101d0565b604051808215151515815260200191505060405180910390f35b6101786004803603602081101561014c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102af565b604051808215151515815260200191505060405180910390f35b61100081565b600061100073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600061100073ffffffffffffffffffffffffffffffffffffffff166370ba5707836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561026d57600080fd5b505afa158015610281573d6000803e3d6000fd5b505050506040513d602081101561029757600080fd5b81019080805190602001909291905050509050919050565b600061100073ffffffffffffffffffffffffffffffffffffffff166355614fcc836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561034c57600080fd5b505afa158015610360573d6000803e3d6000fd5b505050506040513d602081101561037657600080fd5b8101908080519060200190929190505050905091905056fea265627a7a72315820b2b8321a262a7d05632db46ae8f77601bdddc7756c5887e88b4f61daf5e31a4964736f6c634300050b0032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b5060043610610069576000357c0100000000000000000000000000000000000000000000000000000000900480639426e2261461006e578063d79e60b7146100b8578063f5521022146100da578063facd743b14610136575b600080fd5b610076610192565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100c0610198565b604051808215151515815260200191505060405180910390f35b61011c600480360360208110156100f057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101d0565b604051808215151515815260200191505060405180910390f35b6101786004803603602081101561014c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102af565b604051808215151515815260200191505060405180910390f35b61100081565b600061100073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600061100073ffffffffffffffffffffffffffffffffffffffff166370ba5707836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561026d57600080fd5b505afa158015610281573d6000803e3d6000fd5b505050506040513d602081101561029757600080fd5b81019080805190602001909291905050509050919050565b600061100073ffffffffffffffffffffffffffffffffffffffff166355614fcc836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561034c57600080fd5b505afa158015610360573d6000803e3d6000fd5b505050506040513d602081101561037657600080fd5b8101908080519060200190929190505050905091905056fea265627a7a72315820b2b8321a262a7d05632db46ae8f77601bdddc7756c5887e88b4f61daf5e31a4964736f6c634300050b0032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"validatorSet\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isValidatorSetContract\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"signer\",\"type\":\"address\"}],\"name\":\"isProducer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"signer\",\"type\":\"address\"}],\"name\":\"isValidator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{\"isValidatorSetContract()\":{\"details\":\"Returns true if the caller is the current validator set contract.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol\":\"ValidatorVerifier\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/ValidatorSet.sol\":{\"keccak256\":\"0x8db4ce94c006b7add0de8faba9b1210989208ec3e61b6d76593aba6c33991167\",\"urls\":[\"bzz-raw://f431c6dff7d0bb61c811c94dca5bbcb5d30a1a360f9508070c30305461cd1363\",\"dweb:/ipfs/QmaxSMF9kwTzN5iiPRdTCrW3TUCEeRxmgcDLYVjoiosQQ9\"]},\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol\":{\"keccak256\":\"0x2025e30c87f70e2629be37fe4f17057a9f4e4cb5191a4e89c1940992d23e575e\",\"urls\":[\"bzz-raw://48bec8232c44f21e37fc6c55db707471e10496a11a0e0daf0aef700de2b3d1db\",\"dweb:/ipfs/QmW2s262W13tkLoVNfqJoeui3ZAWwTHZmeEiwXs7DmuZpG\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506103c3806100206000396000f3fe608060405234801561001057600080fd5b5060043610610069576000357c0100000000000000000000000000000000000000000000000000000000900480639426e2261461006e578063d79e60b7146100b8578063f5521022146100da578063facd743b14610136575b600080fd5b610076610192565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100c0610198565b604051808215151515815260200191505060405180910390f35b61011c600480360360208110156100f057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101d0565b604051808215151515815260200191505060405180910390f35b6101786004803603602081101561014c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102af565b604051808215151515815260200191505060405180910390f35b61100081565b600061100073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600061100073ffffffffffffffffffffffffffffffffffffffff166370ba5707836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561026d57600080fd5b505afa158015610281573d6000803e3d6000fd5b505050506040513d602081101561029757600080fd5b81019080805190602001909291905050509050919050565b600061100073ffffffffffffffffffffffffffffffffffffffff166355614fcc836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561034c57600080fd5b505afa158015610360573d6000803e3d6000fd5b505050506040513d602081101561037657600080fd5b8101908080519060200190929190505050905091905056fea265627a7a723158207d3b5920cbc8edac1fe5532c6bccfbf294d2c3fa7cdd2277bc0ed18a5b0633ad64736f6c634300050b0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b5060043610610069576000357c0100000000000000000000000000000000000000000000000000000000900480639426e2261461006e578063d79e60b7146100b8578063f5521022146100da578063facd743b14610136575b600080fd5b610076610192565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100c0610198565b604051808215151515815260200191505060405180910390f35b61011c600480360360208110156100f057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101d0565b604051808215151515815260200191505060405180910390f35b6101786004803603602081101561014c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102af565b604051808215151515815260200191505060405180910390f35b61100081565b600061100073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b600061100073ffffffffffffffffffffffffffffffffffffffff166370ba5707836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561026d57600080fd5b505afa158015610281573d6000803e3d6000fd5b505050506040513d602081101561029757600080fd5b81019080805190602001909291905050509050919050565b600061100073ffffffffffffffffffffffffffffffffffffffff166355614fcc836040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561034c57600080fd5b505afa158015610360573d6000803e3d6000fd5b505050506040513d602081101561037657600080fd5b8101908080519060200190929190505050905091905056fea265627a7a723158207d3b5920cbc8edac1fe5532c6bccfbf294d2c3fa7cdd2277bc0ed18a5b0633ad64736f6c634300050b0032",
   "sourceMap": "79:963:8:-;;;424:76;8:9:-1;5:2;;;30:1;27;20:12;5:2;424:76:8;79:963;;;;;;",
   "deployedSourceMap": "79:963:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;79:963:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;110:81;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;592:105;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;907:133;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;907:133:8;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;735:135;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;735:135:8;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;110:81;149:42;110:81;:::o;592:105::-;647:4;149:42;666:26;;:10;:26;;;659:33;;592:105;:::o;907:133::-;964:4;149:42;983:44;;;1028:6;983:52;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;983:52:8;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;983:52:8;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;983:52:8;;;;;;;;;;;;;;;;976:59;;907:133;;;:::o;735:135::-;793:4;149:42;812:45;;;858:6;812:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;812:53:8;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;812:53:8;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;812:53:8;;;;;;;;;;;;;;;;805:60;;735:135;;;:::o",
   "source": "pragma solidity ^0.5.11;\n\nimport { ValidatorSet } from \"./ValidatorSet.sol\";\n\n\ncontract ValidatorVerifier {\n  address constant public validatorSet = 0x0000000000000000000000000000000000001000;\n\n  /**\n   * @dev Throws if called by any account other than the validator set.\n   */\n  modifier onlyValidatorSetContract() {\n    require(isValidatorSetContract(), \"Verifiable: caller is not the verifiable contract\");\n    _;\n  }\n\n  constructor () public {\n    // Doesn't work since contract is in genesis\n  }\n\n  /**\n   * @dev Returns true if the caller is the current validator set contract.\n   */\n  function isValidatorSetContract() public view returns (bool) {\n    return msg.sender == validatorSet;\n  }\n\n  // check if signer is validator\n  function isValidator(address signer) public view returns (bool) {\n    return ValidatorSet(validatorSet).isCurrentValidator(signer);\n  }\n\n  // check if signer is producer\n  function isProducer(address signer) public view returns (bool) {\n    return ValidatorSet(validatorSet).isCurrentProducer(signer);\n  }\n}\n",
-  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol",
+  "sourcePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol",
   "ast": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol",
     "exportedSymbols": {
       "ValidatorVerifier": [
-        2062
+        2086
       ]
     },
-    "id": 2063,
+    "id": 2087,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2001,
+        "id": 2025,
         "literals": [
           "solidity",
           "^",
@@ -109,16 +109,16 @@
         "src": "0:24:8"
       },
       {
-        "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/ValidatorSet.sol",
+        "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/ValidatorSet.sol",
         "file": "./ValidatorSet.sol",
-        "id": 2003,
+        "id": 2027,
         "nodeType": "ImportDirective",
-        "scope": 2063,
-        "sourceUnit": 2000,
+        "scope": 2087,
+        "sourceUnit": 2024,
         "src": "26:50:8",
         "symbolAliases": [
           {
-            "foreign": 2002,
+            "foreign": 2026,
             "local": null
           }
         ],
@@ -130,19 +130,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2062,
+        "id": 2086,
         "linearizedBaseContracts": [
-          2062
+          2086
         ],
         "name": "ValidatorVerifier",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 2006,
+            "id": 2030,
             "name": "validatorSet",
             "nodeType": "VariableDeclaration",
-            "scope": 2062,
+            "scope": 2086,
             "src": "110:81:8",
             "stateVariable": true,
             "storageLocation": "default",
@@ -151,7 +151,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2004,
+              "id": 2028,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "110:7:8",
@@ -164,7 +164,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "307830303030303030303030303030303030303030303030303030303030303030303030303031303030",
-              "id": 2005,
+              "id": 2029,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -183,7 +183,7 @@
           },
           {
             "body": {
-              "id": 2015,
+              "id": 2039,
               "nodeType": "Block",
               "src": "316:104:8",
               "statements": [
@@ -196,18 +196,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 2009,
+                          "id": 2033,
                           "name": "isValidatorSetContract",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2031,
+                          "referencedDeclaration": 2055,
                           "src": "330:22:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                             "typeString": "function () view returns (bool)"
                           }
                         },
-                        "id": 2010,
+                        "id": 2034,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -224,7 +224,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "56657269666961626c653a2063616c6c6572206973206e6f74207468652076657269666961626c6520636f6e7472616374",
-                        "id": 2011,
+                        "id": 2035,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -251,21 +251,21 @@
                           "typeString": "literal_string \"Verifiable: caller is not the verifiable contract\""
                         }
                       ],
-                      "id": 2008,
+                      "id": 2032,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3262,
-                        3263
+                        3286,
+                        3287
                       ],
-                      "referencedDeclaration": 3263,
+                      "referencedDeclaration": 3287,
                       "src": "322:7:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2012,
+                    "id": 2036,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -279,23 +279,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2013,
+                  "id": 2037,
                   "nodeType": "ExpressionStatement",
                   "src": "322:86:8"
                 },
                 {
-                  "id": 2014,
+                  "id": 2038,
                   "nodeType": "PlaceholderStatement",
                   "src": "414:1:8"
                 }
               ]
             },
             "documentation": "@dev Throws if called by any account other than the validator set.",
-            "id": 2016,
+            "id": 2040,
             "name": "onlyValidatorSetContract",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 2007,
+              "id": 2031,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "313:2:8"
@@ -305,31 +305,31 @@
           },
           {
             "body": {
-              "id": 2019,
+              "id": 2043,
               "nodeType": "Block",
               "src": "446:54:8",
               "statements": []
             },
             "documentation": null,
-            "id": 2020,
+            "id": 2044,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2017,
+              "id": 2041,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "436:2:8"
             },
             "returnParameters": {
-              "id": 2018,
+              "id": 2042,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "446:0:8"
             },
-            "scope": 2062,
+            "scope": 2086,
             "src": "424:76:8",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -337,7 +337,7 @@
           },
           {
             "body": {
-              "id": 2030,
+              "id": 2054,
               "nodeType": "Block",
               "src": "653:44:8",
               "statements": [
@@ -348,7 +348,7 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 2028,
+                    "id": 2052,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -357,18 +357,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 2025,
+                        "id": 2049,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3259,
+                        "referencedDeclaration": 3283,
                         "src": "666:3:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 2026,
+                      "id": 2050,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -386,11 +386,11 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 2027,
+                      "id": 2051,
                       "name": "validatorSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2006,
+                      "referencedDeclaration": 2030,
                       "src": "680:12:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -403,36 +403,36 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2024,
-                  "id": 2029,
+                  "functionReturnParameters": 2048,
+                  "id": 2053,
                   "nodeType": "Return",
                   "src": "659:33:8"
                 }
               ]
             },
             "documentation": "@dev Returns true if the caller is the current validator set contract.",
-            "id": 2031,
+            "id": 2055,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isValidatorSetContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2021,
+              "id": 2045,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "623:2:8"
             },
             "returnParameters": {
-              "id": 2024,
+              "id": 2048,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2023,
+                  "id": 2047,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2031,
+                  "scope": 2055,
                   "src": "647:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -441,7 +441,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2022,
+                    "id": 2046,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "647:4:8",
@@ -456,7 +456,7 @@
               ],
               "src": "646:6:8"
             },
-            "scope": 2062,
+            "scope": 2086,
             "src": "592:105:8",
             "stateMutability": "view",
             "superFunction": null,
@@ -464,7 +464,7 @@
           },
           {
             "body": {
-              "id": 2045,
+              "id": 2069,
               "nodeType": "Block",
               "src": "799:71:8",
               "statements": [
@@ -474,11 +474,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 2042,
+                        "id": 2066,
                         "name": "signer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2033,
+                        "referencedDeclaration": 2057,
                         "src": "858:6:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -498,11 +498,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 2039,
+                            "id": 2063,
                             "name": "validatorSet",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2006,
+                            "referencedDeclaration": 2030,
                             "src": "825:12:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -517,18 +517,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 2038,
+                          "id": 2062,
                           "name": "ValidatorSet",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1999,
+                          "referencedDeclaration": 2023,
                           "src": "812:12:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_ValidatorSet_$1999_$",
+                            "typeIdentifier": "t_type$_t_contract$_ValidatorSet_$2023_$",
                             "typeString": "type(contract ValidatorSet)"
                           }
                         },
-                        "id": 2040,
+                        "id": 2064,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -538,25 +538,25 @@
                         "nodeType": "FunctionCall",
                         "src": "812:26:8",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ValidatorSet_$1999",
+                          "typeIdentifier": "t_contract$_ValidatorSet_$2023",
                           "typeString": "contract ValidatorSet"
                         }
                       },
-                      "id": 2041,
+                      "id": 2065,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "isCurrentValidator",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1918,
+                      "referencedDeclaration": 1942,
                       "src": "812:45:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                         "typeString": "function (address) view external returns (bool)"
                       }
                     },
-                    "id": 2043,
+                    "id": 2067,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -570,30 +570,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2037,
-                  "id": 2044,
+                  "functionReturnParameters": 2061,
+                  "id": 2068,
                   "nodeType": "Return",
                   "src": "805:60:8"
                 }
               ]
             },
             "documentation": null,
-            "id": 2046,
+            "id": 2070,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isValidator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2034,
+              "id": 2058,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2033,
+                  "id": 2057,
                   "name": "signer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2046,
+                  "scope": 2070,
                   "src": "756:14:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -602,7 +602,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2032,
+                    "id": 2056,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "756:7:8",
@@ -619,15 +619,15 @@
               "src": "755:16:8"
             },
             "returnParameters": {
-              "id": 2037,
+              "id": 2061,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2036,
+                  "id": 2060,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2046,
+                  "scope": 2070,
                   "src": "793:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -636,7 +636,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2035,
+                    "id": 2059,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "793:4:8",
@@ -651,7 +651,7 @@
               ],
               "src": "792:6:8"
             },
-            "scope": 2062,
+            "scope": 2086,
             "src": "735:135:8",
             "stateMutability": "view",
             "superFunction": null,
@@ -659,7 +659,7 @@
           },
           {
             "body": {
-              "id": 2060,
+              "id": 2084,
               "nodeType": "Block",
               "src": "970:70:8",
               "statements": [
@@ -669,11 +669,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 2057,
+                        "id": 2081,
                         "name": "signer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2048,
+                        "referencedDeclaration": 2072,
                         "src": "1028:6:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -693,11 +693,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 2054,
+                            "id": 2078,
                             "name": "validatorSet",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2006,
+                            "referencedDeclaration": 2030,
                             "src": "996:12:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -712,18 +712,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 2053,
+                          "id": 2077,
                           "name": "ValidatorSet",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1999,
+                          "referencedDeclaration": 2023,
                           "src": "983:12:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_ValidatorSet_$1999_$",
+                            "typeIdentifier": "t_type$_t_contract$_ValidatorSet_$2023_$",
                             "typeString": "type(contract ValidatorSet)"
                           }
                         },
-                        "id": 2055,
+                        "id": 2079,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -733,25 +733,25 @@
                         "nodeType": "FunctionCall",
                         "src": "983:26:8",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ValidatorSet_$1999",
+                          "typeIdentifier": "t_contract$_ValidatorSet_$2023",
                           "typeString": "contract ValidatorSet"
                         }
                       },
-                      "id": 2056,
+                      "id": 2080,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "isCurrentProducer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1925,
+                      "referencedDeclaration": 1949,
                       "src": "983:44:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                         "typeString": "function (address) view external returns (bool)"
                       }
                     },
-                    "id": 2058,
+                    "id": 2082,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -765,30 +765,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2052,
-                  "id": 2059,
+                  "functionReturnParameters": 2076,
+                  "id": 2083,
                   "nodeType": "Return",
                   "src": "976:59:8"
                 }
               ]
             },
             "documentation": null,
-            "id": 2061,
+            "id": 2085,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isProducer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2049,
+              "id": 2073,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2048,
+                  "id": 2072,
                   "name": "signer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2061,
+                  "scope": 2085,
                   "src": "927:14:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -797,7 +797,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2047,
+                    "id": 2071,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "927:7:8",
@@ -814,15 +814,15 @@
               "src": "926:16:8"
             },
             "returnParameters": {
-              "id": 2052,
+              "id": 2076,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2051,
+                  "id": 2075,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2061,
+                  "scope": 2085,
                   "src": "964:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -831,7 +831,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2050,
+                    "id": 2074,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "964:4:8",
@@ -846,31 +846,31 @@
               ],
               "src": "963:6:8"
             },
-            "scope": 2062,
+            "scope": 2086,
             "src": "907:133:8",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2063,
+        "scope": 2087,
         "src": "79:963:8"
       }
     ],
     "src": "0:1043:8"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/ValidatorVerifier.sol",
     "exportedSymbols": {
       "ValidatorVerifier": [
-        2062
+        2086
       ]
     },
-    "id": 2063,
+    "id": 2087,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2001,
+        "id": 2025,
         "literals": [
           "solidity",
           "^",
@@ -881,16 +881,16 @@
         "src": "0:24:8"
       },
       {
-        "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/ValidatorSet.sol",
+        "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/ValidatorSet.sol",
         "file": "./ValidatorSet.sol",
-        "id": 2003,
+        "id": 2027,
         "nodeType": "ImportDirective",
-        "scope": 2063,
-        "sourceUnit": 2000,
+        "scope": 2087,
+        "sourceUnit": 2024,
         "src": "26:50:8",
         "symbolAliases": [
           {
-            "foreign": 2002,
+            "foreign": 2026,
             "local": null
           }
         ],
@@ -902,19 +902,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2062,
+        "id": 2086,
         "linearizedBaseContracts": [
-          2062
+          2086
         ],
         "name": "ValidatorVerifier",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 2006,
+            "id": 2030,
             "name": "validatorSet",
             "nodeType": "VariableDeclaration",
-            "scope": 2062,
+            "scope": 2086,
             "src": "110:81:8",
             "stateVariable": true,
             "storageLocation": "default",
@@ -923,7 +923,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2004,
+              "id": 2028,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "110:7:8",
@@ -936,7 +936,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "307830303030303030303030303030303030303030303030303030303030303030303030303031303030",
-              "id": 2005,
+              "id": 2029,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -955,7 +955,7 @@
           },
           {
             "body": {
-              "id": 2015,
+              "id": 2039,
               "nodeType": "Block",
               "src": "316:104:8",
               "statements": [
@@ -968,18 +968,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 2009,
+                          "id": 2033,
                           "name": "isValidatorSetContract",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2031,
+                          "referencedDeclaration": 2055,
                           "src": "330:22:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                             "typeString": "function () view returns (bool)"
                           }
                         },
-                        "id": 2010,
+                        "id": 2034,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -996,7 +996,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "56657269666961626c653a2063616c6c6572206973206e6f74207468652076657269666961626c6520636f6e7472616374",
-                        "id": 2011,
+                        "id": 2035,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1023,21 +1023,21 @@
                           "typeString": "literal_string \"Verifiable: caller is not the verifiable contract\""
                         }
                       ],
-                      "id": 2008,
+                      "id": 2032,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3262,
-                        3263
+                        3286,
+                        3287
                       ],
-                      "referencedDeclaration": 3263,
+                      "referencedDeclaration": 3287,
                       "src": "322:7:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2012,
+                    "id": 2036,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1051,23 +1051,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2013,
+                  "id": 2037,
                   "nodeType": "ExpressionStatement",
                   "src": "322:86:8"
                 },
                 {
-                  "id": 2014,
+                  "id": 2038,
                   "nodeType": "PlaceholderStatement",
                   "src": "414:1:8"
                 }
               ]
             },
             "documentation": "@dev Throws if called by any account other than the validator set.",
-            "id": 2016,
+            "id": 2040,
             "name": "onlyValidatorSetContract",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 2007,
+              "id": 2031,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "313:2:8"
@@ -1077,31 +1077,31 @@
           },
           {
             "body": {
-              "id": 2019,
+              "id": 2043,
               "nodeType": "Block",
               "src": "446:54:8",
               "statements": []
             },
             "documentation": null,
-            "id": 2020,
+            "id": 2044,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2017,
+              "id": 2041,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "436:2:8"
             },
             "returnParameters": {
-              "id": 2018,
+              "id": 2042,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "446:0:8"
             },
-            "scope": 2062,
+            "scope": 2086,
             "src": "424:76:8",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1109,7 +1109,7 @@
           },
           {
             "body": {
-              "id": 2030,
+              "id": 2054,
               "nodeType": "Block",
               "src": "653:44:8",
               "statements": [
@@ -1120,7 +1120,7 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 2028,
+                    "id": 2052,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1129,18 +1129,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 2025,
+                        "id": 2049,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3259,
+                        "referencedDeclaration": 3283,
                         "src": "666:3:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 2026,
+                      "id": 2050,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1158,11 +1158,11 @@
                     "operator": "==",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 2027,
+                      "id": 2051,
                       "name": "validatorSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2006,
+                      "referencedDeclaration": 2030,
                       "src": "680:12:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1175,36 +1175,36 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2024,
-                  "id": 2029,
+                  "functionReturnParameters": 2048,
+                  "id": 2053,
                   "nodeType": "Return",
                   "src": "659:33:8"
                 }
               ]
             },
             "documentation": "@dev Returns true if the caller is the current validator set contract.",
-            "id": 2031,
+            "id": 2055,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isValidatorSetContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2021,
+              "id": 2045,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "623:2:8"
             },
             "returnParameters": {
-              "id": 2024,
+              "id": 2048,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2023,
+                  "id": 2047,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2031,
+                  "scope": 2055,
                   "src": "647:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1213,7 +1213,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2022,
+                    "id": 2046,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "647:4:8",
@@ -1228,7 +1228,7 @@
               ],
               "src": "646:6:8"
             },
-            "scope": 2062,
+            "scope": 2086,
             "src": "592:105:8",
             "stateMutability": "view",
             "superFunction": null,
@@ -1236,7 +1236,7 @@
           },
           {
             "body": {
-              "id": 2045,
+              "id": 2069,
               "nodeType": "Block",
               "src": "799:71:8",
               "statements": [
@@ -1246,11 +1246,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 2042,
+                        "id": 2066,
                         "name": "signer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2033,
+                        "referencedDeclaration": 2057,
                         "src": "858:6:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1270,11 +1270,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 2039,
+                            "id": 2063,
                             "name": "validatorSet",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2006,
+                            "referencedDeclaration": 2030,
                             "src": "825:12:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -1289,18 +1289,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 2038,
+                          "id": 2062,
                           "name": "ValidatorSet",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1999,
+                          "referencedDeclaration": 2023,
                           "src": "812:12:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_ValidatorSet_$1999_$",
+                            "typeIdentifier": "t_type$_t_contract$_ValidatorSet_$2023_$",
                             "typeString": "type(contract ValidatorSet)"
                           }
                         },
-                        "id": 2040,
+                        "id": 2064,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1310,25 +1310,25 @@
                         "nodeType": "FunctionCall",
                         "src": "812:26:8",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ValidatorSet_$1999",
+                          "typeIdentifier": "t_contract$_ValidatorSet_$2023",
                           "typeString": "contract ValidatorSet"
                         }
                       },
-                      "id": 2041,
+                      "id": 2065,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "isCurrentValidator",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1918,
+                      "referencedDeclaration": 1942,
                       "src": "812:45:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                         "typeString": "function (address) view external returns (bool)"
                       }
                     },
-                    "id": 2043,
+                    "id": 2067,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1342,30 +1342,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2037,
-                  "id": 2044,
+                  "functionReturnParameters": 2061,
+                  "id": 2068,
                   "nodeType": "Return",
                   "src": "805:60:8"
                 }
               ]
             },
             "documentation": null,
-            "id": 2046,
+            "id": 2070,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isValidator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2034,
+              "id": 2058,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2033,
+                  "id": 2057,
                   "name": "signer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2046,
+                  "scope": 2070,
                   "src": "756:14:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1374,7 +1374,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2032,
+                    "id": 2056,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "756:7:8",
@@ -1391,15 +1391,15 @@
               "src": "755:16:8"
             },
             "returnParameters": {
-              "id": 2037,
+              "id": 2061,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2036,
+                  "id": 2060,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2046,
+                  "scope": 2070,
                   "src": "793:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1408,7 +1408,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2035,
+                    "id": 2059,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "793:4:8",
@@ -1423,7 +1423,7 @@
               ],
               "src": "792:6:8"
             },
-            "scope": 2062,
+            "scope": 2086,
             "src": "735:135:8",
             "stateMutability": "view",
             "superFunction": null,
@@ -1431,7 +1431,7 @@
           },
           {
             "body": {
-              "id": 2060,
+              "id": 2084,
               "nodeType": "Block",
               "src": "970:70:8",
               "statements": [
@@ -1441,11 +1441,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 2057,
+                        "id": 2081,
                         "name": "signer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2048,
+                        "referencedDeclaration": 2072,
                         "src": "1028:6:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1465,11 +1465,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 2054,
+                            "id": 2078,
                             "name": "validatorSet",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2006,
+                            "referencedDeclaration": 2030,
                             "src": "996:12:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -1484,18 +1484,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 2053,
+                          "id": 2077,
                           "name": "ValidatorSet",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1999,
+                          "referencedDeclaration": 2023,
                           "src": "983:12:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_ValidatorSet_$1999_$",
+                            "typeIdentifier": "t_type$_t_contract$_ValidatorSet_$2023_$",
                             "typeString": "type(contract ValidatorSet)"
                           }
                         },
-                        "id": 2055,
+                        "id": 2079,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1505,25 +1505,25 @@
                         "nodeType": "FunctionCall",
                         "src": "983:26:8",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ValidatorSet_$1999",
+                          "typeIdentifier": "t_contract$_ValidatorSet_$2023",
                           "typeString": "contract ValidatorSet"
                         }
                       },
-                      "id": 2056,
+                      "id": 2080,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "isCurrentProducer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1925,
+                      "referencedDeclaration": 1949,
                       "src": "983:44:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                         "typeString": "function (address) view external returns (bool)"
                       }
                     },
-                    "id": 2058,
+                    "id": 2082,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1537,30 +1537,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2052,
-                  "id": 2059,
+                  "functionReturnParameters": 2076,
+                  "id": 2083,
                   "nodeType": "Return",
                   "src": "976:59:8"
                 }
               ]
             },
             "documentation": null,
-            "id": 2061,
+            "id": 2085,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isProducer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2049,
+              "id": 2073,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2048,
+                  "id": 2072,
                   "name": "signer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2061,
+                  "scope": 2085,
                   "src": "927:14:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1569,7 +1569,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2047,
+                    "id": 2071,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "927:7:8",
@@ -1586,15 +1586,15 @@
               "src": "926:16:8"
             },
             "returnParameters": {
-              "id": 2052,
+              "id": 2076,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2051,
+                  "id": 2075,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2061,
+                  "scope": 2085,
                   "src": "964:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1603,7 +1603,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2050,
+                    "id": 2074,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "964:4:8",
@@ -1618,14 +1618,14 @@
               ],
               "src": "963:6:8"
             },
-            "scope": 2062,
+            "scope": 2086,
             "src": "907:133:8",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2063,
+        "scope": 2087,
         "src": "79:963:8"
       }
     ],
@@ -1637,7 +1637,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.14",
-  "updatedAt": "2022-08-16T05:17:47.588Z",
+  "updatedAt": "2022-09-15T09:24:45.281Z",
   "devdoc": {
     "methods": {
       "isValidatorSetContract()": {

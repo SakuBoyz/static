@@ -22,25 +22,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"stateId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"onStateReceive\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol\":\"IStateReceiver\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol\":{\"keccak256\":\"0x5793218f3d8f6d9e996176e96534602004aeb5864249f123f89478b43f260d36\",\"urls\":[\"bzz-raw://454cb7aebe4c00264618edc37a865ff7137e2003082adf6bfd687167ded98cd1\",\"dweb:/ipfs/QmWNtT6VRvQxjdrEUovT2nZG14qu3im3qnmrMw4JJRw6ST\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"stateId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"onStateReceive\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol\":\"IStateReceiver\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol\":{\"keccak256\":\"0x5793218f3d8f6d9e996176e96534602004aeb5864249f123f89478b43f260d36\",\"urls\":[\"bzz-raw://454cb7aebe4c00264618edc37a865ff7137e2003082adf6bfd687167ded98cd1\",\"dweb:/ipfs/QmWNtT6VRvQxjdrEUovT2nZG14qu3im3qnmrMw4JJRw6ST\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.11;\n\n// IStateReceiver represents interface to receive state\ninterface IStateReceiver {\n  function onStateReceive(uint256 stateId, bytes calldata data) external;\n}",
-  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol",
+  "sourcePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol",
   "ast": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol",
     "exportedSymbols": {
       "IStateReceiver": [
-        1434
+        1458
       ]
     },
-    "id": 1435,
+    "id": 1459,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1426,
+        "id": 1450,
         "literals": [
           "solidity",
           "^",
@@ -56,9 +56,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 1434,
+        "id": 1458,
         "linearizedBaseContracts": [
-          1434
+          1458
         ],
         "name": "IStateReceiver",
         "nodeType": "ContractDefinition",
@@ -66,22 +66,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1433,
+            "id": 1457,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "onStateReceive",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1431,
+              "id": 1455,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1428,
+                  "id": 1452,
                   "name": "stateId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1433,
+                  "scope": 1457,
                   "src": "135:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -90,7 +90,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1427,
+                    "id": 1451,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "135:7:2",
@@ -104,10 +104,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1430,
+                  "id": 1454,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1433,
+                  "scope": 1457,
                   "src": "152:19:2",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -116,7 +116,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1429,
+                    "id": 1453,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "152:5:2",
@@ -132,36 +132,36 @@
               "src": "134:38:2"
             },
             "returnParameters": {
-              "id": 1432,
+              "id": 1456,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "181:0:2"
             },
-            "scope": 1434,
+            "scope": 1458,
             "src": "111:71:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1435,
+        "scope": 1459,
         "src": "82:102:2"
       }
     ],
     "src": "0:184:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/genesis-contracts/contracts/IStateReceiver.sol",
     "exportedSymbols": {
       "IStateReceiver": [
-        1434
+        1458
       ]
     },
-    "id": 1435,
+    "id": 1459,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1426,
+        "id": 1450,
         "literals": [
           "solidity",
           "^",
@@ -177,9 +177,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 1434,
+        "id": 1458,
         "linearizedBaseContracts": [
-          1434
+          1458
         ],
         "name": "IStateReceiver",
         "nodeType": "ContractDefinition",
@@ -187,22 +187,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1433,
+            "id": 1457,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "onStateReceive",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1431,
+              "id": 1455,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1428,
+                  "id": 1452,
                   "name": "stateId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1433,
+                  "scope": 1457,
                   "src": "135:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -211,7 +211,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1427,
+                    "id": 1451,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "135:7:2",
@@ -225,10 +225,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1430,
+                  "id": 1454,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1433,
+                  "scope": 1457,
                   "src": "152:19:2",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -237,7 +237,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1429,
+                    "id": 1453,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "152:5:2",
@@ -253,19 +253,19 @@
               "src": "134:38:2"
             },
             "returnParameters": {
-              "id": 1432,
+              "id": 1456,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "181:0:2"
             },
-            "scope": 1434,
+            "scope": 1458,
             "src": "111:71:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1435,
+        "scope": 1459,
         "src": "82:102:2"
       }
     ],
@@ -277,7 +277,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.14",
-  "updatedAt": "2022-08-16T05:17:47.584Z",
+  "updatedAt": "2022-09-15T09:24:45.277Z",
   "devdoc": {
     "methods": {}
   },

@@ -351,42 +351,42 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"}],\"name\":\"TransferBatch\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"TransferSingle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"URI\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"accounts\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"}],\"name\":\"balanceOfBatch\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"mintBatch\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeBatchTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"balanceOf(address,uint256)\":{\"details\":\"Returns the amount of tokens of token type `id` owned by `account`.     * Requirements:     * - `account` cannot be the zero address.\"},\"balanceOfBatch(address[],uint256[])\":{\"details\":\"xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {balanceOf}.     * Requirements:     * - `accounts` and `ids` must have the same length.\"},\"isApprovedForAll(address,address)\":{\"details\":\"Returns true if `operator` is approved to transfer ``account``'s tokens.     * See {setApprovalForAll}.\"},\"mint(address,uint256,uint256,bytes)\":{\"details\":\"Should be callable only by MintableERC1155Predicate Make sure minting is done only by this function\",\"params\":{\"account\":\"user address for whom token is being minted\",\"amount\":\"amount of token being minted\",\"data\":\"extra byte data to be accompanied with minted tokens\",\"id\":\"token which is being minted\"}},\"mintBatch(address,uint256[],uint256[],bytes)\":{\"details\":\"Should be callable only by MintableERC1155Predicate Make sure minting is done only by this function\",\"params\":{\"amounts\":\"amount of each token being minted\",\"data\":\"extra byte data to be accompanied with minted tokens\",\"ids\":\"tokens which are being minted\",\"to\":\"user address for whom token is being minted\"}},\"safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)\":{\"details\":\"xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {safeTransferFrom}.     * Emits a {TransferBatch} event.     * Requirements:     * - `ids` and `amounts` must have the same length. - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155BatchReceived} and return the acceptance magic value.\"},\"safeTransferFrom(address,address,uint256,uint256,bytes)\":{\"details\":\"Transfers `amount` tokens of token type `id` from `from` to `to`.     * Emits a {TransferSingle} event.     * Requirements:     * - `to` cannot be the zero address. - If the caller is not `from`, it must be have been approved to spend ``from``'s tokens via {setApprovalForAll}. - `from` must have a balance of tokens of type `id` of at least `amount`. - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155Received} and return the acceptance magic value.\"},\"setApprovalForAll(address,bool)\":{\"details\":\"Grants or revokes permission to `operator` to transfer the caller's tokens, according to `approved`,     * Emits an {ApprovalForAll} event.     * Requirements:     * - `operator` cannot be the caller.\"},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created.     * This function call must use less than 30 000 gas.\"}}},\"userdoc\":{\"methods\":{\"mint(address,uint256,uint256,bytes)\":{\"notice\":\"Creates `amount` tokens of token type `id`, and assigns them to `account`.\"},\"mintBatch(address,uint256[],uint256[],bytes)\":{\"notice\":\"Batched version of singular token minting, where for each token in `ids` respective amount to be minted from `amounts` array, for address `to`.\"}}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/root/RootToken/IMintableERC1155.sol\":\"IMintableERC1155\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xfa152b6e88a1dc50780e8f1580426dc23ad2e1e2c2f086a088adf206a202f453\",\"urls\":[\"bzz-raw://5127b264994adab88fae419b1c493efc5acd07134c19ee5c0397e50018291ebf\",\"dweb:/ipfs/QmWwJZVhvdmvUCdimbb6R2Jiu59zjPqm6XTMchM6LaEHAp\"]},\"@openzeppelin/contracts/token/ERC1155/IERC1155.sol\":{\"keccak256\":\"0xd9419564852ea941cb2a393aa489651a3174785436244e3e02681b587a184820\",\"urls\":[\"bzz-raw://6ff6a41c418e3b70628ec100d5deeb2d96e96029472f1309a1d474a9f7bc69c6\",\"dweb:/ipfs/QmZkKmXCbTZD6MrxDJSdxfYZdoDYPSDGK6NwR7msmudowF\"]},\"project:/contracts/root/RootToken/IMintableERC1155.sol\":{\"keccak256\":\"0x62ac4a9f7bb9a9cbbeedf244043833ff2e3f43e67ae88e458647a92db61f5c25\",\"urls\":[\"bzz-raw://040c6ff6b17a8d441ba095db4e0c8520992b652d27c4c7380575b876a1b6eee1\",\"dweb:/ipfs/QmSdS8dfEo3HDttrcUB7GoBGGACHyQZTVJPH58xv5yjekG\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"}],\"name\":\"TransferBatch\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"TransferSingle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"URI\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"accounts\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"}],\"name\":\"balanceOfBatch\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"mintBatch\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeBatchTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"balanceOf(address,uint256)\":{\"details\":\"Returns the amount of tokens of token type `id` owned by `account`.     * Requirements:     * - `account` cannot be the zero address.\"},\"balanceOfBatch(address[],uint256[])\":{\"details\":\"xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {balanceOf}.     * Requirements:     * - `accounts` and `ids` must have the same length.\"},\"isApprovedForAll(address,address)\":{\"details\":\"Returns true if `operator` is approved to transfer ``account``'s tokens.     * See {setApprovalForAll}.\"},\"mint(address,uint256,uint256,bytes)\":{\"details\":\"Should be callable only by MintableERC1155Predicate Make sure minting is done only by this function\",\"params\":{\"account\":\"user address for whom token is being minted\",\"amount\":\"amount of token being minted\",\"data\":\"extra byte data to be accompanied with minted tokens\",\"id\":\"token which is being minted\"}},\"mintBatch(address,uint256[],uint256[],bytes)\":{\"details\":\"Should be callable only by MintableERC1155Predicate Make sure minting is done only by this function\",\"params\":{\"amounts\":\"amount of each token being minted\",\"data\":\"extra byte data to be accompanied with minted tokens\",\"ids\":\"tokens which are being minted\",\"to\":\"user address for whom token is being minted\"}},\"safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)\":{\"details\":\"xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {safeTransferFrom}.     * Emits a {TransferBatch} event.     * Requirements:     * - `ids` and `amounts` must have the same length. - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155BatchReceived} and return the acceptance magic value.\"},\"safeTransferFrom(address,address,uint256,uint256,bytes)\":{\"details\":\"Transfers `amount` tokens of token type `id` from `from` to `to`.     * Emits a {TransferSingle} event.     * Requirements:     * - `to` cannot be the zero address. - If the caller is not `from`, it must be have been approved to spend ``from``'s tokens via {setApprovalForAll}. - `from` must have a balance of tokens of type `id` of at least `amount`. - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155Received} and return the acceptance magic value.\"},\"setApprovalForAll(address,bool)\":{\"details\":\"Grants or revokes permission to `operator` to transfer the caller's tokens, according to `approved`,     * Emits an {ApprovalForAll} event.     * Requirements:     * - `operator` cannot be the caller.\"},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created.     * This function call must use less than 30 000 gas.\"}}},\"userdoc\":{\"methods\":{\"mint(address,uint256,uint256,bytes)\":{\"notice\":\"Creates `amount` tokens of token type `id`, and assigns them to `account`.\"},\"mintBatch(address,uint256[],uint256[],bytes)\":{\"notice\":\"Batched version of singular token minting, where for each token in `ids` respective amount to be minted from `amounts` array, for address `to`.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/RootToken/IMintableERC1155.sol\":\"IMintableERC1155\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/RootToken/IMintableERC1155.sol\":{\"keccak256\":\"0x62ac4a9f7bb9a9cbbeedf244043833ff2e3f43e67ae88e458647a92db61f5c25\",\"urls\":[\"bzz-raw://040c6ff6b17a8d441ba095db4e0c8520992b652d27c4c7380575b876a1b6eee1\",\"dweb:/ipfs/QmSdS8dfEo3HDttrcUB7GoBGGACHyQZTVJPH58xv5yjekG\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xfa152b6e88a1dc50780e8f1580426dc23ad2e1e2c2f086a088adf206a202f453\",\"urls\":[\"bzz-raw://5127b264994adab88fae419b1c493efc5acd07134c19ee5c0397e50018291ebf\",\"dweb:/ipfs/QmWwJZVhvdmvUCdimbb6R2Jiu59zjPqm6XTMchM6LaEHAp\"]},\"@openzeppelin/contracts/token/ERC1155/IERC1155.sol\":{\"keccak256\":\"0xd9419564852ea941cb2a393aa489651a3174785436244e3e02681b587a184820\",\"urls\":[\"bzz-raw://6ff6a41c418e3b70628ec100d5deeb2d96e96029472f1309a1d474a9f7bc69c6\",\"dweb:/ipfs/QmZkKmXCbTZD6MrxDJSdxfYZdoDYPSDGK6NwR7msmudowF\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "import {IERC1155} from \"@openzeppelin/contracts/token/ERC1155/IERC1155.sol\";\n\npragma solidity 0.6.6;\n\ninterface IMintableERC1155 is IERC1155 {\n    /**\n     * @notice Creates `amount` tokens of token type `id`, and assigns them to `account`.\n     * @dev Should be callable only by MintableERC1155Predicate\n     * Make sure minting is done only by this function\n     * @param account user address for whom token is being minted\n     * @param id token which is being minted\n     * @param amount amount of token being minted\n     * @param data extra byte data to be accompanied with minted tokens\n     */\n    function mint(address account, uint256 id, uint256 amount, bytes calldata data) external;\n\n    /**\n     * @notice Batched version of singular token minting, where\n     * for each token in `ids` respective amount to be minted from `amounts`\n     * array, for address `to`.\n     * @dev Should be callable only by MintableERC1155Predicate\n     * Make sure minting is done only by this function\n     * @param to user address for whom token is being minted\n     * @param ids tokens which are being minted\n     * @param amounts amount of each token being minted\n     * @param data extra byte data to be accompanied with minted tokens\n     */\n    function mintBatch(address to, uint256[] calldata ids, uint256[] calldata amounts, bytes calldata data) external;\n}\n",
-  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/pos-portal/contracts/root/RootToken/IMintableERC1155.sol",
+  "sourcePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/RootToken/IMintableERC1155.sol",
   "ast": {
-    "absolutePath": "project:/contracts/root/RootToken/IMintableERC1155.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/RootToken/IMintableERC1155.sol",
     "exportedSymbols": {
       "IMintableERC1155": [
-        11670
+        6904
       ]
     },
-    "id": 11671,
+    "id": 6905,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
         "file": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
-        "id": 11640,
+        "id": 6874,
         "nodeType": "ImportDirective",
-        "scope": 11671,
-        "sourceUnit": 1741,
-        "src": "0:76:64",
+        "scope": 6905,
+        "sourceUnit": 13150,
+        "src": "0:76:42",
         "symbolAliases": [
           {
             "foreign": {
               "argumentTypes": null,
-              "id": 11639,
+              "id": 6873,
               "name": "IERC1155",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": null,
-              "src": "8:8:64",
+              "src": "8:8:42",
               "typeDescriptions": {
                 "typeIdentifier": null,
                 "typeString": null
@@ -398,14 +398,14 @@
         "unitAlias": ""
       },
       {
-        "id": 11641,
+        "id": 6875,
         "literals": [
           "solidity",
           "0.6",
           ".6"
         ],
         "nodeType": "PragmaDirective",
-        "src": "78:22:64"
+        "src": "78:22:42"
       },
       {
         "abstract": false,
@@ -414,33 +414,33 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 11642,
+              "id": 6876,
               "name": "IERC1155",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1740,
-              "src": "132:8:64",
+              "referencedDeclaration": 13149,
+              "src": "132:8:42",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IERC1155_$1740",
+                "typeIdentifier": "t_contract$_IERC1155_$13149",
                 "typeString": "contract IERC1155"
               }
             },
-            "id": 11643,
+            "id": 6877,
             "nodeType": "InheritanceSpecifier",
-            "src": "132:8:64"
+            "src": "132:8:42"
           }
         ],
         "contractDependencies": [
-          373,
-          1740
+          11782,
+          13149
         ],
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 11670,
+        "id": 6904,
         "linearizedBaseContracts": [
-          11670,
-          1740,
-          373
+          6904,
+          13149,
+          11782
         ],
         "name": "IMintableERC1155",
         "nodeType": "ContractDefinition",
@@ -448,13 +448,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 11644,
+              "id": 6878,
               "nodeType": "StructuredDocumentation",
-              "src": "147:453:64",
+              "src": "147:453:42",
               "text": "@notice Creates `amount` tokens of token type `id`, and assigns them to `account`.\n@dev Should be callable only by MintableERC1155Predicate\nMake sure minting is done only by this function\n@param account user address for whom token is being minted\n@param id token which is being minted\n@param amount amount of token being minted\n@param data extra byte data to be accompanied with minted tokens"
             },
             "functionSelector": "731133e9",
-            "id": 11655,
+            "id": 6889,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -462,18 +462,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 11653,
+              "id": 6887,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11646,
+                  "id": 6880,
                   "mutability": "mutable",
                   "name": "account",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11655,
-                  "src": "619:15:64",
+                  "scope": 6889,
+                  "src": "619:15:42",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -481,10 +481,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11645,
+                    "id": 6879,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "619:7:64",
+                    "src": "619:7:42",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -496,13 +496,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 11648,
+                  "id": 6882,
                   "mutability": "mutable",
                   "name": "id",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11655,
-                  "src": "636:10:64",
+                  "scope": 6889,
+                  "src": "636:10:42",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -510,10 +510,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11647,
+                    "id": 6881,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "636:7:64",
+                    "src": "636:7:42",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -524,13 +524,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 11650,
+                  "id": 6884,
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11655,
-                  "src": "648:14:64",
+                  "scope": 6889,
+                  "src": "648:14:42",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -538,10 +538,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11649,
+                    "id": 6883,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "648:7:64",
+                    "src": "648:7:42",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -552,13 +552,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 11652,
+                  "id": 6886,
                   "mutability": "mutable",
                   "name": "data",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11655,
-                  "src": "664:19:64",
+                  "scope": 6889,
+                  "src": "664:19:42",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -566,10 +566,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 11651,
+                    "id": 6885,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "664:5:64",
+                    "src": "664:5:42",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -579,16 +579,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "618:66:64"
+              "src": "618:66:42"
             },
             "returnParameters": {
-              "id": 11654,
+              "id": 6888,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "693:0:64"
+              "src": "693:0:42"
             },
-            "scope": 11670,
-            "src": "605:89:64",
+            "scope": 6904,
+            "src": "605:89:42",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -596,13 +596,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 11656,
+              "id": 6890,
               "nodeType": "StructuredDocumentation",
-              "src": "700:540:64",
+              "src": "700:540:42",
               "text": "@notice Batched version of singular token minting, where\nfor each token in `ids` respective amount to be minted from `amounts`\narray, for address `to`.\n@dev Should be callable only by MintableERC1155Predicate\nMake sure minting is done only by this function\n@param to user address for whom token is being minted\n@param ids tokens which are being minted\n@param amounts amount of each token being minted\n@param data extra byte data to be accompanied with minted tokens"
             },
             "functionSelector": "1f7fdffa",
-            "id": 11669,
+            "id": 6903,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -610,18 +610,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 11667,
+              "id": 6901,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11658,
+                  "id": 6892,
                   "mutability": "mutable",
                   "name": "to",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11669,
-                  "src": "1264:10:64",
+                  "scope": 6903,
+                  "src": "1264:10:42",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -629,10 +629,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11657,
+                    "id": 6891,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1264:7:64",
+                    "src": "1264:7:42",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -644,13 +644,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 11661,
+                  "id": 6895,
                   "mutability": "mutable",
                   "name": "ids",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11669,
-                  "src": "1276:22:64",
+                  "scope": 6903,
+                  "src": "1276:22:42",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -659,19 +659,19 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 11659,
+                      "id": 6893,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "1276:7:64",
+                      "src": "1276:7:42",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 11660,
+                    "id": 6894,
                     "length": null,
                     "nodeType": "ArrayTypeName",
-                    "src": "1276:9:64",
+                    "src": "1276:9:42",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -682,13 +682,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 11664,
+                  "id": 6898,
                   "mutability": "mutable",
                   "name": "amounts",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11669,
-                  "src": "1300:26:64",
+                  "scope": 6903,
+                  "src": "1300:26:42",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -697,19 +697,19 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 11662,
+                      "id": 6896,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "1300:7:64",
+                      "src": "1300:7:42",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 11663,
+                    "id": 6897,
                     "length": null,
                     "nodeType": "ArrayTypeName",
-                    "src": "1300:9:64",
+                    "src": "1300:9:42",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -720,13 +720,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 11666,
+                  "id": 6900,
                   "mutability": "mutable",
                   "name": "data",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11669,
-                  "src": "1328:19:64",
+                  "scope": 6903,
+                  "src": "1328:19:42",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -734,10 +734,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 11665,
+                    "id": 6899,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1328:5:64",
+                    "src": "1328:5:42",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -747,483 +747,443 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1263:85:64"
+              "src": "1263:85:42"
             },
             "returnParameters": {
-              "id": 11668,
+              "id": 6902,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1357:0:64"
+              "src": "1357:0:42"
             },
-            "scope": 11670,
-            "src": "1245:113:64",
+            "scope": 6904,
+            "src": "1245:113:42",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 11671,
-        "src": "102:1258:64"
+        "scope": 6905,
+        "src": "102:1258:42"
       }
     ],
-    "src": "0:1361:64"
+    "src": "0:1361:42"
   },
   "legacyAST": {
-    "attributes": {
-      "absolutePath": "project:/contracts/root/RootToken/IMintableERC1155.sol",
-      "exportedSymbols": {
-        "IMintableERC1155": [
-          11670
-        ]
-      }
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/RootToken/IMintableERC1155.sol",
+    "exportedSymbols": {
+      "IMintableERC1155": [
+        6904
+      ]
     },
-    "children": [
+    "id": 6905,
+    "nodeType": "SourceUnit",
+    "nodes": [
       {
-        "attributes": {
-          "SourceUnit": 1741,
-          "absolutePath": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
-          "file": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
-          "scope": 11671,
-          "symbolAliases": [
-            {
-              "foreign": {
-                "attributes": {
-                  "argumentTypes": null,
-                  "overloadedDeclarations": [
-                    null
-                  ],
-                  "referencedDeclaration": null,
-                  "type": null,
-                  "value": "IERC1155"
-                },
-                "id": 11639,
-                "name": "Identifier",
-                "src": "8:8:64"
-              },
-              "local": null
-            }
-          ],
-          "unitAlias": ""
-        },
-        "id": 11640,
-        "name": "ImportDirective",
-        "src": "0:76:64"
-      },
-      {
-        "attributes": {
-          "literals": [
-            "solidity",
-            "0.6",
-            ".6"
-          ]
-        },
-        "id": 11641,
-        "name": "PragmaDirective",
-        "src": "78:22:64"
-      },
-      {
-        "attributes": {
-          "abstract": false,
-          "contractDependencies": [
-            373,
-            1740
-          ],
-          "contractKind": "interface",
-          "documentation": null,
-          "fullyImplemented": false,
-          "linearizedBaseContracts": [
-            11670,
-            1740,
-            373
-          ],
-          "name": "IMintableERC1155",
-          "scope": 11671
-        },
-        "children": [
+        "absolutePath": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
+        "file": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
+        "id": 6874,
+        "nodeType": "ImportDirective",
+        "scope": 6905,
+        "sourceUnit": 13150,
+        "src": "0:76:42",
+        "symbolAliases": [
           {
-            "attributes": {
-              "arguments": null
-            },
-            "children": [
-              {
-                "attributes": {
-                  "contractScope": null,
-                  "name": "IERC1155",
-                  "referencedDeclaration": 1740,
-                  "type": "contract IERC1155"
-                },
-                "id": 11642,
-                "name": "UserDefinedTypeName",
-                "src": "132:8:64"
+            "foreign": {
+              "argumentTypes": null,
+              "id": 6873,
+              "name": "IERC1155",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "8:8:42",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
               }
-            ],
-            "id": 11643,
-            "name": "InheritanceSpecifier",
-            "src": "132:8:64"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "functionSelector": "731133e9",
-              "implemented": false,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "mint",
-              "overrides": null,
-              "scope": 11670,
-              "stateMutability": "nonpayable",
-              "virtual": false,
-              "visibility": "external"
             },
-            "children": [
-              {
-                "attributes": {
-                  "text": "@notice Creates `amount` tokens of token type `id`, and assigns them to `account`.\n@dev Should be callable only by MintableERC1155Predicate\nMake sure minting is done only by this function\n@param account user address for whom token is being minted\n@param id token which is being minted\n@param amount amount of token being minted\n@param data extra byte data to be accompanied with minted tokens"
-                },
-                "id": 11644,
-                "name": "StructuredDocumentation",
-                "src": "147:453:64"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "account",
-                      "overrides": null,
-                      "scope": 11655,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
-                        },
-                        "id": 11645,
-                        "name": "ElementaryTypeName",
-                        "src": "619:7:64"
-                      }
-                    ],
-                    "id": 11646,
-                    "name": "VariableDeclaration",
-                    "src": "619:15:64"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "id",
-                      "overrides": null,
-                      "scope": 11655,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 11647,
-                        "name": "ElementaryTypeName",
-                        "src": "636:7:64"
-                      }
-                    ],
-                    "id": 11648,
-                    "name": "VariableDeclaration",
-                    "src": "636:10:64"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "amount",
-                      "overrides": null,
-                      "scope": 11655,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 11649,
-                        "name": "ElementaryTypeName",
-                        "src": "648:7:64"
-                      }
-                    ],
-                    "id": 11650,
-                    "name": "VariableDeclaration",
-                    "src": "648:14:64"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "data",
-                      "overrides": null,
-                      "scope": 11655,
-                      "stateVariable": false,
-                      "storageLocation": "calldata",
-                      "type": "bytes",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes",
-                          "type": "bytes"
-                        },
-                        "id": 11651,
-                        "name": "ElementaryTypeName",
-                        "src": "664:5:64"
-                      }
-                    ],
-                    "id": 11652,
-                    "name": "VariableDeclaration",
-                    "src": "664:19:64"
-                  }
-                ],
-                "id": 11653,
-                "name": "ParameterList",
-                "src": "618:66:64"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 11654,
-                "name": "ParameterList",
-                "src": "693:0:64"
-              }
-            ],
-            "id": 11655,
-            "name": "FunctionDefinition",
-            "src": "605:89:64"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "functionSelector": "1f7fdffa",
-              "implemented": false,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "mintBatch",
-              "overrides": null,
-              "scope": 11670,
-              "stateMutability": "nonpayable",
-              "virtual": false,
-              "visibility": "external"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "text": "@notice Batched version of singular token minting, where\nfor each token in `ids` respective amount to be minted from `amounts`\narray, for address `to`.\n@dev Should be callable only by MintableERC1155Predicate\nMake sure minting is done only by this function\n@param to user address for whom token is being minted\n@param ids tokens which are being minted\n@param amounts amount of each token being minted\n@param data extra byte data to be accompanied with minted tokens"
-                },
-                "id": 11656,
-                "name": "StructuredDocumentation",
-                "src": "700:540:64"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "to",
-                      "overrides": null,
-                      "scope": 11669,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
-                        },
-                        "id": 11657,
-                        "name": "ElementaryTypeName",
-                        "src": "1264:7:64"
-                      }
-                    ],
-                    "id": 11658,
-                    "name": "VariableDeclaration",
-                    "src": "1264:10:64"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "ids",
-                      "overrides": null,
-                      "scope": 11669,
-                      "stateVariable": false,
-                      "storageLocation": "calldata",
-                      "type": "uint256[]",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "length": null,
-                          "type": "uint256[]"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "name": "uint256",
-                              "type": "uint256"
-                            },
-                            "id": 11659,
-                            "name": "ElementaryTypeName",
-                            "src": "1276:7:64"
-                          }
-                        ],
-                        "id": 11660,
-                        "name": "ArrayTypeName",
-                        "src": "1276:9:64"
-                      }
-                    ],
-                    "id": 11661,
-                    "name": "VariableDeclaration",
-                    "src": "1276:22:64"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "amounts",
-                      "overrides": null,
-                      "scope": 11669,
-                      "stateVariable": false,
-                      "storageLocation": "calldata",
-                      "type": "uint256[]",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "length": null,
-                          "type": "uint256[]"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "name": "uint256",
-                              "type": "uint256"
-                            },
-                            "id": 11662,
-                            "name": "ElementaryTypeName",
-                            "src": "1300:7:64"
-                          }
-                        ],
-                        "id": 11663,
-                        "name": "ArrayTypeName",
-                        "src": "1300:9:64"
-                      }
-                    ],
-                    "id": 11664,
-                    "name": "VariableDeclaration",
-                    "src": "1300:26:64"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "data",
-                      "overrides": null,
-                      "scope": 11669,
-                      "stateVariable": false,
-                      "storageLocation": "calldata",
-                      "type": "bytes",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes",
-                          "type": "bytes"
-                        },
-                        "id": 11665,
-                        "name": "ElementaryTypeName",
-                        "src": "1328:5:64"
-                      }
-                    ],
-                    "id": 11666,
-                    "name": "VariableDeclaration",
-                    "src": "1328:19:64"
-                  }
-                ],
-                "id": 11667,
-                "name": "ParameterList",
-                "src": "1263:85:64"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 11668,
-                "name": "ParameterList",
-                "src": "1357:0:64"
-              }
-            ],
-            "id": 11669,
-            "name": "FunctionDefinition",
-            "src": "1245:113:64"
+            "local": null
           }
         ],
-        "id": 11670,
-        "name": "ContractDefinition",
-        "src": "102:1258:64"
+        "unitAlias": ""
+      },
+      {
+        "id": 6875,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "78:22:42"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6876,
+              "name": "IERC1155",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 13149,
+              "src": "132:8:42",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1155_$13149",
+                "typeString": "contract IERC1155"
+              }
+            },
+            "id": 6877,
+            "nodeType": "InheritanceSpecifier",
+            "src": "132:8:42"
+          }
+        ],
+        "contractDependencies": [
+          11782,
+          13149
+        ],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6904,
+        "linearizedBaseContracts": [
+          6904,
+          13149,
+          11782
+        ],
+        "name": "IMintableERC1155",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 6878,
+              "nodeType": "StructuredDocumentation",
+              "src": "147:453:42",
+              "text": "@notice Creates `amount` tokens of token type `id`, and assigns them to `account`.\n@dev Should be callable only by MintableERC1155Predicate\nMake sure minting is done only by this function\n@param account user address for whom token is being minted\n@param id token which is being minted\n@param amount amount of token being minted\n@param data extra byte data to be accompanied with minted tokens"
+            },
+            "functionSelector": "731133e9",
+            "id": 6889,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6887,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6880,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6889,
+                  "src": "619:15:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6879,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "619:7:42",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6882,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6889,
+                  "src": "636:10:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6881,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "636:7:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6884,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6889,
+                  "src": "648:14:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6883,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "648:7:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6886,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6889,
+                  "src": "664:19:42",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6885,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:5:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "618:66:42"
+            },
+            "returnParameters": {
+              "id": 6888,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "693:0:42"
+            },
+            "scope": 6904,
+            "src": "605:89:42",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6890,
+              "nodeType": "StructuredDocumentation",
+              "src": "700:540:42",
+              "text": "@notice Batched version of singular token minting, where\nfor each token in `ids` respective amount to be minted from `amounts`\narray, for address `to`.\n@dev Should be callable only by MintableERC1155Predicate\nMake sure minting is done only by this function\n@param to user address for whom token is being minted\n@param ids tokens which are being minted\n@param amounts amount of each token being minted\n@param data extra byte data to be accompanied with minted tokens"
+            },
+            "functionSelector": "1f7fdffa",
+            "id": 6903,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintBatch",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6892,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6903,
+                  "src": "1264:10:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1264:7:42",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6895,
+                  "mutability": "mutable",
+                  "name": "ids",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6903,
+                  "src": "1276:22:42",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 6893,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1276:7:42",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 6894,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1276:9:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6898,
+                  "mutability": "mutable",
+                  "name": "amounts",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6903,
+                  "src": "1300:26:42",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 6896,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1300:7:42",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 6897,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1300:9:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6900,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6903,
+                  "src": "1328:19:42",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6899,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1328:5:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1263:85:42"
+            },
+            "returnParameters": {
+              "id": 6902,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1357:0:42"
+            },
+            "scope": 6904,
+            "src": "1245:113:42",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6905,
+        "src": "102:1258:42"
       }
     ],
-    "id": 11671,
-    "name": "SourceUnit",
-    "src": "0:1361:64"
+    "src": "0:1361:42"
   },
   "compiler": {
     "name": "solc",
     "version": "0.6.6+commit.6c089d02.Linux.g++"
   },
   "networks": {},
-  "schemaVersion": "3.4.9",
-  "updatedAt": "2022-08-18T05:43:41.491Z",
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2022-09-14T10:03:22.830Z",
   "devdoc": {
     "methods": {
       "balanceOf(address,uint256)": {

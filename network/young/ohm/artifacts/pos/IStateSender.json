@@ -20,33 +20,33 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"syncState\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/root/StateSender/IStateSender.sol\":\"IStateSender\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/root/StateSender/IStateSender.sol\":{\"keccak256\":\"0x8f260b4eeb18f8cd86b144aa410c06f365827b99b177901c1497dff4d55c0e30\",\"urls\":[\"bzz-raw://2954e25696c7e80769d04282f0bfc7d7a3da22ae1928831d6144ffeb2c92fca9\",\"dweb:/ipfs/QmcJZPP4ZusGemWLxi1YBkkvSfpTHvjMHXAdL7U7KfQcLB\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"syncState\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/StateSender/IStateSender.sol\":\"IStateSender\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/StateSender/IStateSender.sol\":{\"keccak256\":\"0x8f260b4eeb18f8cd86b144aa410c06f365827b99b177901c1497dff4d55c0e30\",\"urls\":[\"bzz-raw://2954e25696c7e80769d04282f0bfc7d7a3da22ae1928831d6144ffeb2c92fca9\",\"dweb:/ipfs/QmcJZPP4ZusGemWLxi1YBkkvSfpTHvjMHXAdL7U7KfQcLB\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.6.6;\n\ninterface IStateSender {\n    function syncState(address receiver, bytes calldata data) external;\n}\n",
-  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/pos-portal/contracts/root/StateSender/IStateSender.sol",
+  "sourcePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/StateSender/IStateSender.sol",
   "ast": {
-    "absolutePath": "project:/contracts/root/StateSender/IStateSender.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/StateSender/IStateSender.sol",
     "exportedSymbols": {
       "IStateSender": [
-        11761
+        7009
       ]
     },
-    "id": 11762,
+    "id": 7010,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11753,
+        "id": 7001,
         "literals": [
           "solidity",
           "0.6",
           ".6"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:22:68"
+        "src": "0:22:47"
       },
       {
         "abstract": false,
@@ -55,9 +55,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 11761,
+        "id": 7009,
         "linearizedBaseContracts": [
-          11761
+          7009
         ],
         "name": "IStateSender",
         "nodeType": "ContractDefinition",
@@ -66,7 +66,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "16f19831",
-            "id": 11760,
+            "id": 7008,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -74,18 +74,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 11758,
+              "id": 7006,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11755,
+                  "id": 7003,
                   "mutability": "mutable",
                   "name": "receiver",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11760,
-                  "src": "72:16:68",
+                  "scope": 7008,
+                  "src": "72:16:47",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -93,10 +93,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11754,
+                    "id": 7002,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "72:7:68",
+                    "src": "72:7:47",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -108,13 +108,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 11757,
+                  "id": 7005,
                   "mutability": "mutable",
                   "name": "data",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 11760,
-                  "src": "90:19:68",
+                  "scope": 7008,
+                  "src": "90:19:47",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -122,10 +122,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 11756,
+                    "id": 7004,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "90:5:68",
+                    "src": "90:5:47",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -135,184 +135,162 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "71:39:68"
+              "src": "71:39:47"
             },
             "returnParameters": {
-              "id": 11759,
+              "id": 7007,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "119:0:68"
+              "src": "119:0:47"
             },
-            "scope": 11761,
-            "src": "53:67:68",
+            "scope": 7009,
+            "src": "53:67:47",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 11762,
-        "src": "24:98:68"
+        "scope": 7010,
+        "src": "24:98:47"
       }
     ],
-    "src": "0:123:68"
+    "src": "0:123:47"
   },
   "legacyAST": {
-    "attributes": {
-      "absolutePath": "project:/contracts/root/StateSender/IStateSender.sol",
-      "exportedSymbols": {
-        "IStateSender": [
-          11761
-        ]
-      }
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/pos-portal/contracts/root/StateSender/IStateSender.sol",
+    "exportedSymbols": {
+      "IStateSender": [
+        7009
+      ]
     },
-    "children": [
+    "id": 7010,
+    "nodeType": "SourceUnit",
+    "nodes": [
       {
-        "attributes": {
-          "literals": [
-            "solidity",
-            "0.6",
-            ".6"
-          ]
-        },
-        "id": 11753,
-        "name": "PragmaDirective",
-        "src": "0:22:68"
+        "id": 7001,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:47"
       },
       {
-        "attributes": {
-          "abstract": false,
-          "baseContracts": [
-            null
-          ],
-          "contractDependencies": [
-            null
-          ],
-          "contractKind": "interface",
-          "documentation": null,
-          "fullyImplemented": false,
-          "linearizedBaseContracts": [
-            11761
-          ],
-          "name": "IStateSender",
-          "scope": 11762
-        },
-        "children": [
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7009,
+        "linearizedBaseContracts": [
+          7009
+        ],
+        "name": "IStateSender",
+        "nodeType": "ContractDefinition",
+        "nodes": [
           {
-            "attributes": {
-              "body": null,
-              "documentation": null,
-              "functionSelector": "16f19831",
-              "implemented": false,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "syncState",
-              "overrides": null,
-              "scope": 11761,
-              "stateMutability": "nonpayable",
-              "virtual": false,
-              "visibility": "external"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "receiver",
-                      "overrides": null,
-                      "scope": 11760,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
-                        },
-                        "id": 11754,
-                        "name": "ElementaryTypeName",
-                        "src": "72:7:68"
-                      }
-                    ],
-                    "id": 11755,
-                    "name": "VariableDeclaration",
-                    "src": "72:16:68"
+            "body": null,
+            "documentation": null,
+            "functionSelector": "16f19831",
+            "id": 7008,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "syncState",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7006,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7003,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7008,
+                  "src": "72:16:47",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
                   },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "data",
-                      "overrides": null,
-                      "scope": 11760,
-                      "stateVariable": false,
-                      "storageLocation": "calldata",
-                      "type": "bytes",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes",
-                          "type": "bytes"
-                        },
-                        "id": 11756,
-                        "name": "ElementaryTypeName",
-                        "src": "90:5:68"
-                      }
-                    ],
-                    "id": 11757,
-                    "name": "VariableDeclaration",
-                    "src": "90:19:68"
-                  }
-                ],
-                "id": 11758,
-                "name": "ParameterList",
-                "src": "71:39:68"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "typeName": {
+                    "id": 7002,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "72:7:47",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
                 },
-                "children": [],
-                "id": 11759,
-                "name": "ParameterList",
-                "src": "119:0:68"
-              }
-            ],
-            "id": 11760,
-            "name": "FunctionDefinition",
-            "src": "53:67:68"
+                {
+                  "constant": false,
+                  "id": 7005,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7008,
+                  "src": "90:19:47",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 7004,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "90:5:47",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "71:39:47"
+            },
+            "returnParameters": {
+              "id": 7007,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "119:0:47"
+            },
+            "scope": 7009,
+            "src": "53:67:47",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
           }
         ],
-        "id": 11761,
-        "name": "ContractDefinition",
-        "src": "24:98:68"
+        "scope": 7010,
+        "src": "24:98:47"
       }
     ],
-    "id": 11762,
-    "name": "SourceUnit",
-    "src": "0:123:68"
+    "src": "0:123:47"
   },
   "compiler": {
     "name": "solc",
     "version": "0.6.6+commit.6c089d02.Linux.g++"
   },
   "networks": {},
-  "schemaVersion": "3.4.9",
-  "updatedAt": "2022-08-18T05:43:41.494Z",
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2022-09-14T10:03:22.832Z",
   "devdoc": {
     "methods": {}
   },

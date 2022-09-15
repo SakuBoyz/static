@@ -1,15 +1,15 @@
 {
   "contractName": "BytesLib",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol\":\"BytesLib\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol\":{\"keccak256\":\"0xfab8066886f17875ca203d9df49666528b798a6b6099883a884767862d0b7b55\",\"urls\":[\"bzz-raw://5df28eb907729ccfb33917576652046c4516fdb3b5820e2be76e3fc1cb2e3742\",\"dweb:/ipfs/QmXMzHwoMX57FSXMybH87oq2L2k4TLYd9MVvi89KEac5Nu\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xc2a200a877c4a9b2475c246c54ffecc69ffde3e11af83319c63c2dc5458bac80\",\"urls\":[\"bzz-raw://d6ee2095166a8fc1dbaff1949d786b91b8ef8ce41a7b5801a81dd2453220e770\",\"dweb:/ipfs/QmYBLFvCr9zKndkP8e7nFoKuZGcQEQtbHdwttC1MqckCgv\"]}},\"version\":1}",
-  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a7231582082631441649dd6c65cc156a99c8b87eb9d8f268984bfca0892bff92c33b8f0a364736f6c63430005110032",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a7231582082631441649dd6c65cc156a99c8b87eb9d8f268984bfca0892bff92c33b8f0a364736f6c63430005110032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol\":\"BytesLib\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol\":{\"keccak256\":\"0xfab8066886f17875ca203d9df49666528b798a6b6099883a884767862d0b7b55\",\"urls\":[\"bzz-raw://5df28eb907729ccfb33917576652046c4516fdb3b5820e2be76e3fc1cb2e3742\",\"dweb:/ipfs/QmXMzHwoMX57FSXMybH87oq2L2k4TLYd9MVvi89KEac5Nu\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xc2a200a877c4a9b2475c246c54ffecc69ffde3e11af83319c63c2dc5458bac80\",\"urls\":[\"bzz-raw://d6ee2095166a8fc1dbaff1949d786b91b8ef8ce41a7b5801a81dd2453220e770\",\"dweb:/ipfs/QmYBLFvCr9zKndkP8e7nFoKuZGcQEQtbHdwttC1MqckCgv\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158203ce2c102e59713a0941d2cae2f5d682d85997d0574b3f7750280d7e66b2174e964736f6c63430005110032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158203ce2c102e59713a0941d2cae2f5d682d85997d0574b3f7750280d7e66b2174e964736f6c63430005110032",
   "sourceMap": "86:7878:26:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "86:7878:26:-;;;;;;;;",
   "source": "pragma solidity ^0.5.2;\n\nimport \"openzeppelin-solidity/contracts/math/SafeMath.sol\";\n\nlibrary BytesLib {\n    function concat(bytes memory _preBytes, bytes memory _postBytes)\n        internal\n        pure\n        returns (bytes memory)\n    {\n        bytes memory tempBytes;\n        assembly {\n            // Get a location of some free memory and store it in tempBytes as\n            // Solidity does for memory variables.\n            tempBytes := mload(0x40)\n\n            // Store the length of the first bytes array at the beginning of\n            // the memory for tempBytes.\n            let length := mload(_preBytes)\n            mstore(tempBytes, length)\n\n            // Maintain a memory counter for the current write location in the\n            // temp bytes array by adding the 32 bytes for the array length to\n            // the starting location.\n            let mc := add(tempBytes, 0x20)\n            // Stop copying when the memory counter reaches the length of the\n            // first bytes array.\n            let end := add(mc, length)\n\n            for {\n                // Initialize a copy counter to the start of the _preBytes data,\n                // 32 bytes into its memory.\n                let cc := add(_preBytes, 0x20)\n            } lt(mc, end) {\n                // Increase both counters by 32 bytes each iteration.\n                mc := add(mc, 0x20)\n                cc := add(cc, 0x20)\n            } {\n                // Write the _preBytes data into the tempBytes memory 32 bytes\n                // at a time.\n                mstore(mc, mload(cc))\n            }\n\n            // Add the length of _postBytes to the current length of tempBytes\n            // and store it as the new length in the first 32 bytes of the\n            // tempBytes memory.\n            length := mload(_postBytes)\n            mstore(tempBytes, add(length, mload(tempBytes)))\n\n            // Move the memory counter back from a multiple of 0x20 to the\n            // actual end of the _preBytes data.\n            mc := end\n            // Stop copying when the memory counter reaches the new combined\n            // length of the arrays.\n            end := add(mc, length)\n\n            for {\n                let cc := add(_postBytes, 0x20)\n            } lt(mc, end) {\n                mc := add(mc, 0x20)\n                cc := add(cc, 0x20)\n            } {\n                mstore(mc, mload(cc))\n            }\n\n            // Update the free-memory pointer by padding our last write location\n            // to 32 bytes: add 31 bytes to the end of tempBytes to move to the\n            // next 32 byte block, then round down to the nearest multiple of\n            // 32. If the sum of the length of the two arrays is zero then add\n            // one before rounding down to leave a blank 32 bytes (the length block with 0).\n            mstore(\n                0x40,\n                and(\n                    add(add(end, iszero(add(length, mload(_preBytes)))), 31),\n                    not(31) // Round down to the nearest 32 bytes.\n                )\n            )\n        }\n        return tempBytes;\n    }\n\n    function slice(bytes memory _bytes, uint256 _start, uint256 _length)\n        internal\n        pure\n        returns (bytes memory)\n    {\n        require(_bytes.length >= (_start + _length));\n        bytes memory tempBytes;\n        assembly {\n            switch iszero(_length)\n                case 0 {\n                    // Get a location of some free memory and store it in tempBytes as\n                    // Solidity does for memory variables.\n                    tempBytes := mload(0x40)\n\n                    // The first word of the slice result is potentially a partial\n                    // word read from the original array. To read it, we calculate\n                    // the length of that partial word and start copying that many\n                    // bytes into the array. The first word we copy will start with\n                    // data we don't care about, but the last `lengthmod` bytes will\n                    // land at the beginning of the contents of the new array. When\n                    // we're done copying, we overwrite the full first word with\n                    // the actual length of the slice.\n                    let lengthmod := and(_length, 31)\n\n                    // The multiplication in the next line is necessary\n                    // because when slicing multiples of 32 bytes (lengthmod == 0)\n                    // the following copy loop was copying the origin's length\n                    // and then ending prematurely not copying everything it should.\n                    let mc := add(\n                        add(tempBytes, lengthmod),\n                        mul(0x20, iszero(lengthmod))\n                    )\n                    let end := add(mc, _length)\n\n                    for {\n                        // The multiplication in the next line has the same exact purpose\n                        // as the one above.\n                        let cc := add(\n                            add(\n                                add(_bytes, lengthmod),\n                                mul(0x20, iszero(lengthmod))\n                            ),\n                            _start\n                        )\n                    } lt(mc, end) {\n                        mc := add(mc, 0x20)\n                        cc := add(cc, 0x20)\n                    } {\n                        mstore(mc, mload(cc))\n                    }\n\n                    mstore(tempBytes, _length)\n\n                    //update free-memory pointer\n                    //allocating the array padded to 32 bytes like the compiler does now\n                    mstore(0x40, and(add(mc, 31), not(31)))\n                }\n                //if we want a zero-length slice let's just return a zero-length array\n                default {\n                    tempBytes := mload(0x40)\n                    mstore(0x40, add(tempBytes, 0x20))\n                }\n        }\n\n        return tempBytes;\n    }\n\n    // Pad a bytes array to 32 bytes\n    function leftPad(bytes memory _bytes) internal pure returns (bytes memory) {\n        // may underflow if bytes.length < 32. Hence using SafeMath.sub\n        bytes memory newBytes = new bytes(SafeMath.sub(32, _bytes.length));\n        return concat(newBytes, _bytes);\n    }\n\n    function toBytes32(bytes memory b) internal pure returns (bytes32) {\n        require(b.length >= 32, \"Bytes array should atleast be 32 bytes\");\n        bytes32 out;\n        for (uint256 i = 0; i < 32; i++) {\n            out |= bytes32(b[i] & 0xFF) >> (i * 8);\n        }\n        return out;\n    }\n\n    function toBytes4(bytes memory b) internal pure returns (bytes4 result) {\n        assembly {\n            result := mload(add(b, 32))\n        }\n    }\n\n    function fromBytes32(bytes32 x) internal pure returns (bytes memory) {\n        bytes memory b = new bytes(32);\n        for (uint256 i = 0; i < 32; i++) {\n            b[i] = bytes1(uint8(uint256(x) / (2**(8 * (31 - i)))));\n        }\n        return b;\n    }\n\n    function fromUint(uint256 _num) internal pure returns (bytes memory _ret) {\n        _ret = new bytes(32);\n        assembly {\n            mstore(add(_ret, 32), _num)\n        }\n    }\n\n    function toUint(bytes memory _bytes, uint256 _start)\n        internal\n        pure\n        returns (uint256)\n    {\n        require(_bytes.length >= (_start + 32));\n        uint256 tempUint;\n        assembly {\n            tempUint := mload(add(add(_bytes, 0x20), _start))\n        }\n        return tempUint;\n    }\n\n    function toAddress(bytes memory _bytes, uint256 _start)\n        internal\n        pure\n        returns (address)\n    {\n        require(_bytes.length >= (_start + 20));\n        address tempAddress;\n        assembly {\n            tempAddress := div(\n                mload(add(add(_bytes, 0x20), _start)),\n                0x1000000000000000000000000\n            )\n        }\n\n        return tempAddress;\n    }\n}\n",
-  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol",
+  "sourcePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol",
   "ast": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol",
     "exportedSymbols": {
       "BytesLib": [
         5490
@@ -148,15 +148,6 @@
                         "declaration": 5247,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "2223:10:26",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "_postBytes": {
-                        "declaration": 5247,
-                        "isOffset": false,
-                        "isSlot": false,
                         "src": "1805:10:26",
                         "valueSize": 1
                       }
@@ -176,6 +167,15 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1865:9:26",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "_postBytes": {
+                        "declaration": 5247,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2223:10:26",
                         "valueSize": 1
                       }
                     },
@@ -569,15 +569,6 @@
                         "declaration": 5281,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5879:9:26",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "tempBytes": {
-                        "declaration": 5281,
-                        "isOffset": false,
-                        "isSlot": false,
                         "src": "5509:9:26",
                         "valueSize": 1
                       }
@@ -606,6 +597,15 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "5232:6:26",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "tempBytes": {
+                        "declaration": 5281,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "5879:9:26",
                         "valueSize": 1
                       }
                     },
@@ -3578,7 +3578,7 @@
     "src": "0:7965:26"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/common/lib/BytesLib.sol",
     "exportedSymbols": {
       "BytesLib": [
         5490
@@ -3717,15 +3717,6 @@
                         "declaration": 5247,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "2223:10:26",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "_postBytes": {
-                        "declaration": 5247,
-                        "isOffset": false,
-                        "isSlot": false,
                         "src": "1805:10:26",
                         "valueSize": 1
                       }
@@ -3745,6 +3736,15 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1865:9:26",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "_postBytes": {
+                        "declaration": 5247,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2223:10:26",
                         "valueSize": 1
                       }
                     },
@@ -4138,15 +4138,6 @@
                         "declaration": 5281,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5879:9:26",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "tempBytes": {
-                        "declaration": 5281,
-                        "isOffset": false,
-                        "isSlot": false,
                         "src": "5509:9:26",
                         "valueSize": 1
                       }
@@ -4175,6 +4166,15 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "5232:6:26",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "tempBytes": {
+                        "declaration": 5281,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "5879:9:26",
                         "valueSize": 1
                       }
                     },
@@ -7154,12 +7154,12 @@
     "12123": {
       "events": {},
       "links": {},
-      "address": "0xc27F78B5FC79890e35885972B10c11B5675518C9",
-      "transactionHash": "0xa4287294908582e880cef8627cb4ee96220a44b1d53f3222dc9cbcdf3274978b"
+      "address": "0xa6b00B7B8c8373d4ed2070704E3f886fd0126573",
+      "transactionHash": "0x08d93294090ce91fdf090f01cae035a8bde46fa2c9e64f48c97734bffe14b151"
     }
   },
   "schemaVersion": "3.0.14",
-  "updatedAt": "2022-08-22T03:31:33.563Z",
+  "updatedAt": "2022-09-14T09:53:00.191Z",
   "devdoc": {
     "methods": {}
   },

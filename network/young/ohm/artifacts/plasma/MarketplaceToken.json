@@ -43,15 +43,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"sig\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"tokenIdOrAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"data\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"expiration\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"transferWithSig\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol\":\"MarketplaceToken\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol\":{\"keccak256\":\"0x057372d7c1d0140b91d15fb5def5acc60c98f860ff8be7fe46b18dd4c7551568\",\"urls\":[\"bzz-raw://cbf88d1d5bcb41bbd3223b747c90a6f9ec5f20f7b30f1226726e9bfe5112c074\",\"dweb:/ipfs/QmeigGjxUvNYXMGC2FfY5bZia9JYFRXL31GXrP1vPZ3bLv\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"sig\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"tokenIdOrAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"data\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"expiration\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"transferWithSig\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol\":\"MarketplaceToken\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol\":{\"keccak256\":\"0x057372d7c1d0140b91d15fb5def5acc60c98f860ff8be7fe46b18dd4c7551568\",\"urls\":[\"bzz-raw://cbf88d1d5bcb41bbd3223b747c90a6f9ec5f20f7b30f1226726e9bfe5112c074\",\"dweb:/ipfs/QmeigGjxUvNYXMGC2FfY5bZia9JYFRXL31GXrP1vPZ3bLv\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.2;\n\ninterface MarketplaceToken {\n    function transferWithSig(\n        bytes calldata sig,\n        uint256 tokenIdOrAmount,\n        bytes32 data,\n        uint256 expiration,\n        address to\n    ) external returns (address);\n}\n\ncontract Marketplace {\n    struct Order {\n        address token;\n        bytes sig;\n        uint256 tokenIdOrAmount;\n    }\n\n    function executeOrder(\n        bytes memory data1,\n        bytes memory data2,\n        bytes32 orderId,\n        uint256 expiration,\n        address taker\n    ) public {\n        Order memory order1 = decode(data1);\n        Order memory order2 = decode(data2);\n\n        // Transferring order1.token tokens from tradeParticipant1 to address2\n        address tradeParticipant1 = MarketplaceToken(order1.token)\n            .transferWithSig(\n            order1.sig,\n            order1.tokenIdOrAmount,\n            keccak256(\n                abi.encodePacked(orderId, order2.token, order2.tokenIdOrAmount)\n            ),\n            expiration,\n            taker\n        );\n\n        // Transferring token2 from tradeParticipant2 to tradeParticipant1\n        address tradeParticipant2 = MarketplaceToken(order2.token)\n            .transferWithSig(\n            order2.sig,\n            order2.tokenIdOrAmount,\n            keccak256(\n                abi.encodePacked(orderId, order1.token, order1.tokenIdOrAmount)\n            ),\n            expiration,\n            tradeParticipant1\n        );\n        require(taker == tradeParticipant2, \"Orders are not complimentary\");\n    }\n\n    function decode(bytes memory data)\n        internal\n        pure\n        returns (Order memory order)\n    {\n        (order.token, order.sig, order.tokenIdOrAmount) = abi.decode(\n            data,\n            (address, bytes, uint256)\n        );\n    }\n}\n",
-  "sourcePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol",
+  "sourcePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol",
   "ast": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol",
     "exportedSymbols": {
       "Marketplace": [
         2225
@@ -1999,7 +1999,7 @@
     "src": "0:1803:14"
   },
   "legacyAST": {
-    "absolutePath": "/Users/ohm.jirapon/playground/blockhain/layer-2/plasma-ploygon/matic-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol",
+    "absolutePath": "/Users/ohm.jirapon/internal/layer-2/layer2-plasma-cli/devnet/code/contracts/contracts/child/misc/Marketplace.sol",
     "exportedSymbols": {
       "Marketplace": [
         2225
@@ -3952,7 +3952,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.14",
-  "updatedAt": "2022-08-10T08:13:55.771Z",
+  "updatedAt": "2022-09-14T09:49:11.942Z",
   "devdoc": {
     "methods": {}
   },
